@@ -1,0 +1,6074 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ALIM-27 "Top Achievers Ignition Batch" (BOM)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:wght@400;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Default Page Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    #default-page {
+      font-family: "Poppins", sans-serif;
+      color: white;
+      background: linear-gradient(135deg, #14002b, #260042, #000000, #32005f, #001f3f);
+      background-size: 500% 500%;
+      animation: gradientShift 18s ease infinite;
+      background-attachment: fixed;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* HEADER */
+    #default-page header {
+      display: block;
+      text-align: center;
+      padding: 7px 10px;
+      background: linear-gradient(90deg, #3a0ca3aa, #7209b7aa, #f72585aa);
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+
+    #default-page header .logo h3 {
+      font-family: "Russo One", sans-serif;
+      font-size: 40px;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #ff00ff, #00eaff, #ffea00, #ff6bcb, #00ff55);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 12px #ffffff55;
+      display: inline-block;
+      margin: 6px 0;
+    }
+    
+    /* TITLE */
+    #default-page h1 {
+      text-align: center;
+      font-size: 38px;
+      margin-top: 20px;
+      font-family: "Russo One", sans-serif;
+      background: linear-gradient(90deg, #ff00ff, #00eaff, #ffea00, #ff6bcb, #00ff55);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 12px #ffffff55;
+    }
+
+    #default-page h2 {
+      text-align: center;
+      margin-top: 5px;
+      font-size: 18px;
+      opacity: 0.85;
+      color: #e5dfff;
+    }
+
+    /* BANNER */
+    #default-page .teacher-banner img {
+      width: 98%;
+      height: 200px;
+      display: block;
+      margin: 25px auto;
+      border-radius: 22px;
+      object-fit: cover;
+      border: 3px solid #00c3ff;
+      box-shadow: 0 8px 30px #00000088;
+    }
+
+    /* MAIN BUTTON */
+    #default-page .main-btn {
+      margin: 25px auto;
+      padding: 18px 45px;
+      display: block;
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
+      border-radius: 50px;
+      cursor: pointer;
+      background: linear-gradient(45deg, #ff00c8, #00eaff, #ffea00, #ff0080, #00ff55);
+      background-size: 400% 400%;
+      animation: glowMove 4s linear infinite;
+      color: white;
+      border: none;
+      box-shadow: 0 0 25px #ff00ff88;
+      width: fit-content;
+    }
+
+    @keyframes glowMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* MOTIVATION BOX */
+    #default-page .motivation-box {
+      width: 90%;
+      margin: 20px auto 35px;
+      padding: 18px 20px;
+      background: linear-gradient(135deg, #ffffff10, #00eaff22, #ff00c822);
+      border-radius: 18px;
+      text-align: center;
+      border: 2px solid #00eaff66;
+      box-shadow: 0 0 25px #00eaff44;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #default-page .motivation-box p {
+      font-size: 18px;
+      font-weight: 600;
+      color: #00ffea;
+      animation: fadeText 1s ease;
+    }
+
+    /* COURSES */
+    #default-page .courses {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 90%;
+      margin: auto;
+      gap: 20px;
+    }
+
+    #default-page .course-box {
+      background: linear-gradient(135deg, #ffffff10, #8900f522);
+      padding: 15px;
+      border-radius: 20px;
+      text-align: center;
+      border: 2px solid #ffffff22;
+      box-shadow: 0 0 20px #5500ff55;
+    }
+
+    #default-page .course-img img {
+      width: 100%;
+      height: 140px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 2px solid #00eaff44;
+    }
+
+    #default-page .course-box p {
+      margin-top: 10px;
+      font-size: 17px;
+      color: #ffea00;
+      cursor: pointer;
+    }
+
+    /* TEACHER BOX */
+    #default-page .teacher-box {
+      width: 85%;
+      margin: 40px auto;
+      padding: 35px;
+      background: linear-gradient(135deg, #ffffff10, #ff00c822, #00eaff22);
+      border-radius: 25px;
+      text-align: center;
+      border: 3px solid #ff00ff55;
+      box-shadow: 0 0 35px #ff00ff55;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    #default-page .single-teacher {
+      text-align: center;
+    }
+
+    #default-page .single-teacher img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #00ffe5;
+      box-shadow: 0 0 20px #00ffe588;
+    }
+
+    #default-page .t-name {
+      margin-top: 15px;
+      color: #ffea00;
+      font-size: 22px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #ff00ff, #00eaff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px #ffea0044;
+    }
+
+    #default-page .t-position {
+      margin-top: 8px;
+      font-size: 18px;
+      color: #00ffea;
+    }
+
+    #default-page .t-exp {
+      margin-top: 5px;
+      font-size: 16px;
+      color: #e5dfff;
+    }
+
+    #default-page .t-summary {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #ffffffcc;
+      padding: 0 10px;
+    }
+
+    /* FOOTER */
+    #default-page footer {
+      margin-top: 40px;
+      background: linear-gradient(135deg, #1a0033ee, #320059ee, #000522ee);
+      padding: 35px 20px;
+      text-align: center;
+      color: #e2d9ff;
+      border-top: 3px solid #ff00ff88;
+      box-shadow: 0 -5px 35px #000000aa;
+      border-radius: 20px 20px 0 0;
+    }
+
+    #default-page footer h3 {
+      margin-top: 10px;
+      font-size: 23px;
+      color: #00eaff;
+      font-family: "Pacifico", cursive;
+      text-shadow: 0 0 13px #00eaff99;
+    }
+
+    #default-page .social-icons img {
+      width: 45px;
+      margin: 12px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #00eaffaa;
+    }
+
+    /* MODAL STYLES */
+    #default-page .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+      padding-top: 60px;
+    }
+
+    #default-page .modal-content {
+      position: relative;
+      background: linear-gradient(135deg, #1a0033, #320059, #000522);
+      margin: 5% auto;
+      padding: 30px;
+      border: 2px solid #00eaff66;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #00eaff44;
+      text-align: center;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    #default-page .modal-img {
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      border: 2px solid #00eaff44;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    #default-page .modal-details {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #e5dfff;
+      text-align: left;
+      padding: 0 15px;
+      font-weight: 400;
+    }
+
+    #default-page .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      background: rgba(255, 0, 128, 0.2);
+      padding: 5px 10px;
+      border: 1px solid #ff00ff;
+      border-radius: 0;
+      box-shadow: 0 0 10px #ff00ff88;
+    }
+
+    #default-page .close:hover,
+    #default-page .close:focus {
+      color: #ffea00;
+      background: rgba(255, 0, 128, 0.4);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      #default-page .courses { grid-template-columns: 1fr; }
+      #default-page h1 { font-size: 30px; }
+      #default-page .teacher-box { grid-template-columns: 1fr; }
+    }
+
+    /* Main Website Styles */
+    :root {
+      --primary: #4CB0D8; /* Vibrant blue */
+      --primary-dark: #2A8FB8; /* Dark blue for depth */
+      --secondary: #EF7674; /* Vibrant pink */
+      --accent: #A898C8; /* Vibrant purple for accent */
+      --danger: #EF7674; /* Vibrant pink for errors */
+      --warning: #F8E45B; /* Vibrant yellow for warnings */
+      --dark: #020617; /* Dark black - background */
+      --darker: #000000; /* Even darker - depth */
+      --light: #f1f5f9; /* Light white - light elements */
+      --text: #f1f5f9; /* White text - clear */
+      --text-muted: #94a3b8; /* Light gray - muted */
+      --card-bg: rgba(15, 23, 42, 0.85); /* Glossy glassy card - slightly blue tint */
+      --card-border: rgba(255, 255, 255, 0.2); /* Light white border */
+      --glass: rgba(2, 6, 23, 0.75); /* Glass effect - glossy */
+      --glass-border: rgba(255, 255, 255, 0.25); /* Slightly glossy border */
+      --gradient-primary: linear-gradient(135deg, #4CB0D8 0%, #EF7674 50%, #F8E45B 100%); /* Blue-pink-yellow gradient */
+      --gradient-secondary: linear-gradient(135deg, #A898C8 0%, #EC88BF 50%, #4CB0D8 100%); /* Purple-pink-blue - vibrant */
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slight shadow */
+      --shadow-md: 0 10px 24px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.35);
+      --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.4);
+      --radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-primary: 'Poppins', sans-serif;
+      --font-bangla: 'Tiro Bangla', serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background: var(--darker);
+      color: var(--text);
+      font-family: var(--font-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    .bangla-font {
+      font-family: var(--font-bangla);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(20px) saturate(180%);
+      background: rgba(2, 6, 23, 0.9); /* Glossy glassy header */
+      border-bottom: 1px solid var(--card-border);
+      box-shadow: var(--shadow-md);
+    }
+
+    .nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      font-size: 1.6rem;
+      color: var(--text);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .brand:hover {
+      color: var(--primary);
+    }
+
+    .tag {
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: var(--gradient-secondary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .searchbar {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      width: 100%;
+      max-width: 500px;
+      position: relative;
+    }
+
+    .searchbar input {
+      width: 100%;
+      padding: 14px 20px 14px 45px;
+      border-radius: var(--radius);
+      border: 1px solid var(--card-border);
+      background: var(--glass);
+      color: var(--text);
+      outline: none;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+      font-size: 0.95rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .searchbar input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(76, 176, 216, 0.2); /* Glossy glow focus */
+    }
+
+    .searchbar i {
+      position: absolute;
+      left: 18px;
+      color: var(--text-muted);
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .searchbar input:focus + i {
+      color: var(--primary);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 40px;
+      margin: 40px 0;
+      border-radius: var(--radius);
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(15px);
+      box-shadow: var(--shadow-xl);
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(76, 176, 216, 0.15) 10%, transparent 40%); /* Glossy glow gradient */
+      animation: rotateGradient 20s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes rotateGradient {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 16px;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 800;
+      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .slideshow-container {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 0;
+      backdrop-filter: blur(16px);
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+      font-size: 0.95rem;
+      max-height: 300px;
+      margin-bottom: 24px;
+    }
+
+    .slideshow-image {
+      width: 100%;
+      height: auto;
+      display: none;
+      transition: opacity 0.5s ease-in-out;
+      cursor: pointer;
+    }
+
+    .slideshow-image.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .today-classes-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 24px 0;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      font-size: 0.9rem;
+      border: 1px solid var(--card-border);
+    }
+
+    .today-classes-table th {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .today-classes-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--card-border);
+      transition: var(--transition);
+    }
+
+    .today-classes-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .today-classes-table tr:hover {
+      background: rgba(255, 255, 255, 0.1); /* Glossy hover */
+    }
+
+    .subject-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: var(--primary);
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 500;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .subject-badge:hover {
+      background: var(--primary-dark);
+    }
+
+    .class-info {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 28px;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      margin-top: 32px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 24px;
+      backdrop-filter: blur(16px);
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+      font-size: 0.95rem;
+    }
+
+    .card.highlight {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(76, 176, 216, 0.3), var(--shadow-xl); /* Glossy highlight glow */
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: var(--gradient-primary);
+      opacity: 0.95;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .subject {
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #7dd3fc; /* Light cyan - glossy */
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .time {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: none;
+      background: var(--gradient-primary);
+      color: white;
+      font-weight: 600;
+      transition: var(--transition);
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+      font-size: 0.9rem;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn.disabled {
+      background: var(--text-muted);
+      cursor: not-allowed;
+      box-shadow: none;
+      opacity: 0.7;
+    }
+
+    .btn.disabled:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .subj-list {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      margin-top: 32px;
+    }
+
+    .pill {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      transition: var(--transition);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+      font-size: 0.95rem;
+    }
+
+    .pill::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: var(--gradient-primary);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .pill:hover::before {
+      opacity: 1;
+    }
+
+    .pill:hover {
+      transform: translateY(-3px);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .pill .go {
+      padding: 8px 16px;
+      border-radius: 10px;
+      background: var(--gradient-primary);
+      color: white;
+      font-weight: 600;
+      transition: var(--transition);
+      font-size: 0.85rem;
+    }
+
+    .pill:hover .go {
+      transform: translateX(3px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .owner-wrap {
+      max-width: 980px;
+      margin: 32px auto 16px;
+      padding: 24px;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.03)); /* Glossy gradient */
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .owner-messages {
+      display: none;
+    }
+
+    .owner-intro {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .owner-sub2 {
+      font-size: 0.85rem;
+      color: rgba(226,232,240,0.8);
+      margin-top: 0;
+      margin-bottom: 8px;
+      text-transform: lowercase;
+      }
+
+    .owner-name {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-top: 8px;
+      margin-bottom: 4px;
+      background: linear-gradient(90deg, #A898C8, #EC88BF, #4CB0D8); /* Vibrant gradient */
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-transform: none;
+      letter-spacing: 0.5px;
+    }
+
+    .owner-sub {
+      font-size: 0.85rem;
+      color: rgba(226,232,240,0.8);
+      margin-top: 0;
+      margin-bottom: 8px;
+      text-transform: lowercase;
+    }
+
+    .designer-credit {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--text);
+      text-transform: none;
+      font-weight: 600;
+    }
+
+    .designer-name {
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 0.9rem;
+      position: relative;
+      padding: 4px 10px;
+      border-radius: 8px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .site-footer {
+      max-width: 980px;
+      margin: 16px auto 64px;
+      padding: 20px 24px;
+      border-radius: 12px;
+      background: rgba(15,23,42,0.75); /* Glossy footer */
+      border: 1px solid rgba(255,255,255,0.08);
+      color: rgba(226,232,240,0.85);
+      text-align: center;
+      font-size: 0.85rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    @media (max-width: 768px) {
+      .owner-name { font-size: 1.2rem; }
+      .owner-messages { font-size: 0.75rem; gap: 8px; }
+      .designer-credit { font-size: 0.75rem; }
+      .owner-intro { font-size: 0.9rem; }
+
+      .today-classes-table {
+        font-size: 0.8rem;
+      }
+
+      .today-classes-table th,
+      .today-classes-table td {
+        padding: 8px 12px;
+      }
+    }
+
+    .controls {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+      padding: 12px 20px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      transition: var(--transition);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(12px);
+      font-size: 0.95rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .back-button:hover {
+      background: rgba(76, 176, 216, 0.2); /* Glossy hover */
+      transform: translateX(-3px);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 48px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--card-border);
+      position: relative;
+    }
+
+    .section-title::before {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 32px;
+      background: var(--gradient-primary);
+      border-radius: 6px;
+    }
+
+    .section-title h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--text-muted);
+      grid-column: 1 / -1;
+      font-size: 1rem;
+    }
+
+    .empty-state svg {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 16px;
+      opacity: 0.7;
+    }
+
+    .loading {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border: 3px solid rgba(255, 255, 255, 0.35);
+      border-radius: 50%;
+      border-top-color: var(--primary);
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .notification {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      padding: 16px 24px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      box-shadow: var(--shadow-lg);
+      z-index: 9999; /* Increased z-index */
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.4s, transform 0.4s;
+      backdrop-filter: blur(15px);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 400px;
+      font-size: 0.95rem;
+    }
+
+    .notification.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .notification.error {
+      border-left: 5px solid var(--danger);
+    }
+
+    .notification.success {
+      border-left: 5px solid var(--secondary);
+    }
+
+    .notification.warning {
+      border-left: 5px solid var(--warning);
+    }
+
+    .card .video-title {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @media (max-width: 968px) {
+      .grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      .today-classes-table {
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .searchbar {
+        max-width: 100%;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .subj-list {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        margin-top: 32px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 40px 20px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .today-classes-table {
+        display: block;
+        overflow-x: auto;
+      }
+
+      .pill {
+        padding: 14px 20px;
+      }
+    }
+
+    .glow-effect {
+      position: relative;
+    }
+
+    .glow-effect::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      right: -4px;
+      bottom: -4px;
+      z-index: -1;
+      border-radius: inherit;
+      background: var(--gradient-primary);
+      background-size: 600% 600%;
+      animation: gradientGlow 8s ease infinite; /* Slower animation speed */
+      filter: blur(18px);
+      opacity: 0.45; /* Slight glow */
+    }
+
+    @keyframes gradientGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    #subject-page .container {
+      padding-top: 32px;
+    }
+
+    #subject-title {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .filter-bar {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .filter-bar select {
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      background: var(--glass);
+      color: var(--text);
+      outline: none;
+      transition: var(--transition);
+      backdrop-filter: blur(12px);
+      min-width: 150px;
+      font-size: 0.85rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .filter-bar input {
+      padding: 14px 20px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      background: var(--glass);
+      color: var(--text);
+      outline: none;
+      transition: var(--transition);
+      backdrop-filter: blur(12px);
+      min-width: 200px;
+      font-size: 0.95rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .filter-bar input:focus, .filter-bar select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(76, 176, 216, 0.2);
+    }
+
+    .class-serial {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: var(--gradient-primary);
+      color: white;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .class-serial:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-md);
+    }
+
+    #login-page {
+      background: var(--darker);
+      color: var(--text);
+      font-family: var(--font-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 480px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 40px;
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow-xl);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .login-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: var(--gradient-primary);
+      z-index: 1;
+    }
+
+    .welcome-message {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .welcome-message h1 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 800;
+      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .welcome-message p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .login-form {
+      margin-bottom: 32px;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      background: var(--glass);
+      color: var(--text);
+      outline: none;
+      transition: var(--transition);
+      font-size: 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .form-group input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(76, 176, 216, 0.2);
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 16px;
+      border-radius: 12px;
+      border: none;
+      background: var(--gradient-primary);
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+    }
+
+    .login-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .support-info {
+      text-align: center;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--card-border);
+    }
+
+    .support-info p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+    }
+
+    .whatsapp-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: #25D366;
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+    }
+
+    .whatsapp-link:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .error-message {
+      color: var(--danger);
+      text-align: center;
+      margin-top: 16px;
+      font-size: 0.95rem;
+      display: none;
+    }
+
+    .warning-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s, visibility 0.4s;
+    }
+
+    .warning-modal.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 40px;
+      max-width: 560px;
+      width: 90%;
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .modal-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .modal-header h2 {
+      font-size: 1.6rem;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .modal-body {
+      margin-bottom: 32px;
+    }
+
+    .modal-body p {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .modal-footer {
+      text-align: center;
+    }
+
+    .modal-ok-btn {
+      padding: 14px 40px;
+      border-radius: 12px;
+      border: none;
+      background: var(--gradient-primary);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+    }
+
+    .modal-ok-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    @media (max-width: 480px) {
+      .login-container {
+        padding: 24px;
+      }
+
+      .welcome-message h1 {
+        font-size: 1.6rem;
+      }
+
+      .modal-content {
+        padding: 24px;
+      }
+    }
+
+    #refresh-data-btn {
+      margin-left: auto;
+    }
+
+    /* Additional styles for your specific components */
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .form-button, .submissions-button, .comment-button, .reply-button, .admin-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: none;
+      background: var(--gradient-primary);
+      color: white;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form-button:hover, .submissions-button:hover, .comment-button:hover, .reply-button:hover, .admin-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      backdrop-filter: blur(5px);
+    }
+
+    .modal-content {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 25px;
+      max-width: 600px;
+      width: 90%;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow-y: auto;
+      max-height: 90vh;
+      scroll-behavior: smooth;
+    }
+
+    .modal-content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-primary);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .modal-close:hover {
+      color: var(--danger);
+    }
+
+    .modal-intro {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .modal-intro h2 {
+      font-size: 1.4rem;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 10px;
+    }
+
+    .modal-intro p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .form-section {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .form-section label {
+      font-weight: bold;
+      font-size: 0.95rem;
+      color: var(--text);
+      text-align: left;
+    }
+
+    .form-section input, .form-section select, .form-section textarea {
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      background: var(--glass);
+      color: var(--text);
+      outline: none;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+      font-size: 0.9rem;
+    }
+
+    .form-section input:focus, .form-section select:focus, .form-section textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(76, 176, 216, 0.2);
+    }
+
+    .form-section textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-button {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      background: var(--gradient-primary);
+      color: white;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 4px 10px rgba(76, 176, 216, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .submit-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(76, 176, 216, 0.4);
+    }
+
+    .submit-button.loading .spinner {
+      display: inline-block;
+    }
+
+    .submit-button.loading {
+      animation: none !important;
+    }
+
+    .spinner {
+      display: none;
+      width: 16px;
+      height: 16px;
+      border: 2px solid white;
+      border-top: 2px solid transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    .success-message {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--secondary);
+      color: white;
+      padding: 20px 40px;
+      border-radius: 10px;
+      z-index: 10000; /* Increased z-index */
+      font-size: 1rem;
+      box-shadow: var(--shadow-md);
+      text-align: center;
+      max-width: 80%;
+    }
+
+    .submissions-list, .reply-list, .sub-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-height: 60vh;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+
+    .submission-item {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .submission-item:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .submission-name {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--primary);
+    }
+
+    .submission-batch {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .submission-message {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    .submission-reply {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      border-top: 1px solid var(--card-border);
+      padding-top: 10px;
+      color: var(--secondary);
+    }
+
+    .submission-time {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 5px;
+      text-align: right;
+    }
+
+    .reply-btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: var(--gradient-secondary);
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .reply-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .warning-message {
+      background: var(--warning);
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .notice-bar {
+      overflow: hidden;
+      white-space: nowrap;
+      background: rgba(76, 176, 216, 0.1);
+      color: var(--warning);
+      font-size: 0.8rem;
+      padding: 6px 0;
+      text-align: center;
+      border-bottom: 1px solid var(--card-border);
+      margin-top: 0;
+      position: relative;
+    }
+
+    .notice-bar span {
+      display: inline-block;
+      animation: marquee 40s linear infinite 0s;
+      padding-left: 100%;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Notice bar color classes */
+    .notice-color1 { color: #FF5733; } /* Vibrant Orange-Red */
+    .notice-color2 { color: #FFC300; } /* Vibrant Yellow */
+    .notice-color3 { color: #DAF7A6; } /* Vibrant Lime Green */
+    .notice-color4 { color: #33FFBD; } /* Vibrant Cyan */
+    .notice-color5 { color: #339CFF; } /* Vibrant Blue */
+    .notice-color6 { color: #A833FF; } /* Vibrant Purple */
+    .notice-color7 { color: #FF33A8; } /* Vibrant Pink */
+
+    .clock-container {
+      text-align: center;
+      margin: 20px auto;
+      padding: 25px 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      backdrop-filter: blur(10px);
+      max-width: 300px;
+      width: 100%;
+    }
+
+    .clock-time {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 5px;
+    }
+
+    .clock-time small {
+      font-size: 0.5em;
+      vertical-align: middle;
+    }
+
+    .clock-date {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    #exam-countdown {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .clock-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-secondary);
+    }
+
+    #search-results {
+      margin: 10px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      max-height: 300px;
+      overflow-y: auto;
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: var(--shadow-sm);
+      display: none;
+    }
+
+    .search-result-item {
+      padding: 8px 12px;
+      background: var(--glass);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 0.9rem;
+      color: var(--text);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .search-result-item:hover {
+      background: rgba(76, 176, 216, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .search-result-item .title {
+      flex: 1;
+    }
+
+    .search-result-item .subject {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Dashboard Styles */
+    .dashboard-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    .dashboard-modal.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .stats-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-top: 15px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      background: var(--card-bg);
+    }
+
+    .stats-table th,
+    .stats-table td {
+      padding: 12px 16px;
+      text-align: center;
+      border-bottom: 1px solid var(--card-border);
+      font-size: 0.9rem;
+    }
+
+    .stats-table th {
+      background: var(--gradient-primary);
+      color: white;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .stats-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .stats-table tr:hover {
+      background: rgba(255, 255, 255, 0.05);
+      cursor: pointer;
+    }
+
+    .stats-table .total {
+      color: #4CB0D8;
+      font-weight: 600;
+    }
+
+    .stats-table .done {
+      color: #EF7674;
+      font-weight: 600;
+    }
+
+    .stats-table .pending {
+      color: #EF7674;
+      font-weight: 600;
+    }
+
+    .stats h2 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      background: var(--gradient-secondary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* Loading Overlay Styles */
+    #loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--darker);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0s, visibility 0s;
+    }
+
+    #loading-overlay.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loading-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+      backdrop-filter: blur(15px);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .loading-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-primary);
+    }
+
+    .loading-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 700;
+    }
+
+    .loading-message {
+      color: var(--text-muted);
+      margin-bottom: 25px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Updated modern loading spinner */
+    .loading-spinner {
+      width: 60px;
+      height: 60px;
+      border: 5px solid transparent;
+      border-radius: 50%;
+      border-top: 5px solid var(--primary);
+      border-right: 5px solid var(--secondary);
+      border-bottom: 5px solid var(--accent);
+      border-left: 5px solid var(--warning);
+      margin: 0 auto 20px;
+      animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    }
+
+    .loading-progress {
+      width: 100%;
+      height: 8px;
+      background: var(--glass);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .loading-progress-bar {
+      height: 100%;
+      background: var(--gradient-primary);
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+
+    .loading-dots {
+      display: inline-block;
+      margin-left: 5px;
+    }
+
+    .loading-dots::after {
+      content: '';
+      animation: dots 1.5s steps(4, end) infinite;
+    }
+
+    @keyframes dots {
+      0%, 20% { content: ''; }
+      40% { content: '.'; }
+      60% { content: '..'; }
+      80%, 100% { content: '...'; }
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--gradient-primary);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 15px;
+      box-shadow: 0 3px 8px rgba(76, 176, 216, 0.3);
+    }
+
+    .exam-expiry-notice {
+      color: var(--warning);
+      font-size: 0.8rem;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .alert-box {
+      background: rgba(239, 118, 116, 0.1);
+      border: 1px solid var(--danger);
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      color: var(--text);
+      position: relative;
+    }
+
+    .alert-box.warning {
+      background: rgba(248, 228, 91, 0.1);
+      border-color: var(--warning);
+    }
+
+    .alert-box i {
+      margin-right: 10px;
+    }
+
+    .name-input-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .name-input-form input {
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      background: var(--glass);
+      color: var(--text);
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .name-input-form button {
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      background: var(--gradient-primary);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      }
+
+    .progress-bar {
+      height: 10px;
+      background: var(--text-muted);
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--gradient-primary);
+      transition: width 0.5s ease;
+    }
+
+    .badge-current {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-left: 10px;
+      font-weight: 600;
+    }
+
+    .badge-starter {
+      background: #6b7280;
+      color: white;
+    }
+
+    .badge-bronze {
+      background: #cd7f32;
+      color: white;
+    }
+
+    .badge-silver {
+      background: #c0c0c0;
+      color: white;
+    }
+
+    .badge-gold {
+      background: #ffd700;
+      color: black;
+    }
+
+    .badge-platinum {
+      background: #e5e4e2;
+      color: black;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+
+    .close-btn:hover {
+      color: var(--text);
+    }
+
+    .notes-section textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      background: var(--glass);
+      color: var(--text);
+      outline: none;
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .notes-section button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      background: var(--gradient-primary);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .notes-section ul {
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    .notes-section li {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .notes-section li button {
+      background: var(--danger);
+      padding: 5px 10px;
+      font-size: 0.8rem;
+    }
+
+    #sort-classes {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: var(--glass);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 8px 30px 8px 12px;
+      font-size: 0.85rem;
+      color: var(--text);
+      position: relative;
+      min-width: 150px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23e2e8f0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 14px;
+      transition: var(--transition);
+    }
+
+    #sort-classes:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(76, 176, 216, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .form-button, .submissions-button, .comment-button, .reply-button, .admin-button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .modal-intro h2 {
+        font-size: 1.2rem;
+      }
+      
+      .form-section label, .form-section input, .form-section select, .form-section textarea, .submit-button {
+        font-size: 0.85rem;
+      }
+      
+      .submission-item {
+        padding: 12px;
+      }
+      
+      .submission-name, .submission-message {
+        font-size: 0.85rem;
+      }
+      
+      .submission-batch, .submission-time {
+        font-size: 0.75rem;
+      }
+    }
+
+    /* Video Player Page Styles */
+    #video-player-page {
+      display: none;
+      background: var(--darker);
+      color: var(--text);
+      font-family: var(--font-primary);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    #video-player-page .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+
+    #video-player-page h1 {
+      font-size: 22px;
+      text-align: center;
+      margin: 10px 0 15px;
+      letter-spacing: 0.5px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    #video-player-page .player-card {
+      background: linear-gradient(180deg, #0a1225 0%, #0f1a30 100%);
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease;
+    }
+
+    #video-player-page .player-card:hover {
+      transform: translateY(-5px);
+    }
+
+    #video-player-page .aspect {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #000;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    #video-player-page .aspect.portrait {
+      padding-top: 177.78%; /* 9:16 */
+    }
+
+    #video-player-page #player {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #video-player-page .blocker {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 40;
+      pointer-events: auto;
+      background: transparent;
+    }
+
+    /* Loading Indicator */
+    #video-player-page #loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 30;
+      color: #fff;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    #video-player-page #loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #video-player-page .spinner {
+      border: 4px solid rgba(255,255,255,0.3);
+      border-top: 4px solid #ff4d4d;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 10px;
+    }
+
+    #video-player-page #loading p {
+      font-size: 14px;
+      margin: 5px 0;
+      opacity: 0.8;
+    }
+
+    #video-player-page #loading-progress {
+      width: 200px;
+      height: 6px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 3px;
+      overflow: hidden;
+      margin: 10px auto;
+    }
+
+    #video-player-page #loading-progress-bar {
+      width: 0%;
+      height: 100%;
+      background: #ff4d4d;
+      transition: width 0.3s ease;
+    }
+
+    #video-player-page .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      justify-content: center;
+      margin-top: 14px;
+    }
+
+    #video-player-page .control-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    #video-player-page .btn {
+      background: #ff4d4d;
+      border: 0;
+      padding: 10px 14px;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: all 0.2s ease;
+    }
+
+    #video-player-page .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+    }
+
+    #video-player-page .btn.secondary {
+      background: #4d79ff;
+    }
+
+    #video-player-page .btn.small {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+
+    #video-player-page .btn.big-btn {
+      padding: 12px 24px;
+      font-size: 18px;
+    }
+
+    #video-player-page .btn.play-btn {
+      background: #4caf50;
+    }
+
+    /* Updated note styles - more attractive and table-like */
+    #video-player-page .note-section {
+      margin-top: 20px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    #video-player-page .note-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    #video-player-page .note-header {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 12px 16px;
+      font-weight: 600;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    #video-player-page .note-row {
+      display: flex;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    #video-player-page .note-row:last-child {
+      border-bottom: none;
+    }
+
+    #video-player-page .note-cell {
+      flex: 1;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    #video-player-page .note-cell i {
+      font-size: 18px;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    #video-player-page * {
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+    }
+
+    /* Portrait fullscreen style - FIXED */
+    #video-player-page .fullscreen-portrait {
+      position: fixed !important;
+      left: 50% !important;
+      top: 50% !important;
+      width: 100vh !important;
+      height: 100vw !important;
+      z-index: 9999 !important;
+      transform: translate(-50%, -50%) rotate(90deg);
+      transform-origin: center center;
+      border-radius: 10px !important;
+      padding-top: 0 !important;
+      max-width: none !important;
+      max-height: none !important;
+      margin: 0 !important;
+    }
+
+    /* Additional fix for mobile devices */
+    @media (max-width: 768px) {
+      #video-player-page .fullscreen-portrait {
+        width: 100vh !important;
+        height: 100vw !important;
+      }
+    }
+
+    #video-player-page body.fullscreen-locked {
+      overflow: hidden;
+      touch-action: none;
+    }
+
+    @media (max-width: 520px) {
+      #video-player-page .wrap { padding: 10px; }
+      #video-player-page h1 { font-size: 18px; }
+      #video-player-page .btn { padding: 8px 12px; }
+      #video-player-page .note-cell {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* Progress bar styles - UPDATED */
+    #video-player-page #progress-container {
+      width: 100%;
+      height: 12px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: height 0.2s ease;
+      margin-top: 10px;
+      position: relative;
+    }
+
+    #video-player-page #progress-container:hover {
+      height: 16px;
+    }
+
+    #video-player-page #progress-bar {
+      height: 100%;
+      background: #ff4d4d;
+      border-radius: 6px;
+      width: 0%;
+      transition: width 0.1s linear;
+      position: relative;
+    }
+
+    #video-player-page #progress-thumb {
+      position: absolute;
+      top: -2px;
+      right: -6px;
+      width: 16px;
+      height: 16px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 5px rgba(0,0,0,0.5);
+      cursor: grab;
+      z-index: 10;
+    }
+
+    #video-player-page #progress-thumb:active {
+      cursor: grabbing;
+    }
+
+    /* Top buttons styles */
+    #video-player-page .top-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      gap: 10px;
+    }
+
+    #video-player-page .custom-btn {
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      padding: 12px;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      width: 48%;
+      transition: all 0.2s ease;
+    }
+
+    #video-player-page .custom-btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+    }
+
+    #video-player-page .custom-btn small {
+      font-size: 11px;
+      display: block;
+      opacity: 0.8;
+    }
+
+    #video-player-page .custom-btn span {
+      font-size: 16px;
+      font-weight: bold;
+      display: block;
+    }
+
+    /* Drive Player Page Styles */
+    #drive-player-page {
+      display: none;
+      background: #000;
+      color: #fff;
+      font-family: sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    #drive-player-page body, #drive-player-page html{
+      margin:0;
+      padding:0;
+      height:100%;
+      background:#000;
+      overflow:hidden;
+    }
+
+    #drive-player-page iframe{
+  width:100%;
+  height:100vh; /* এটা পরিবর্তন করুন */
+  border:none;
+  pointer-events:none;
+  touch-action:pan-y pinch-zoom;
+  position: fixed; /* নতুন যোগ করুন */
+  top: 0; /* নতুন যোগ করুন */
+  left: 0; /* নতুন যোগ করুন */
+}
+
+    /* স্ক্রল + zoom পুরো সাইটে allowed */
+    #drive-player-page body {
+      overscroll-behavior:none;
+      touch-action:pan-y pinch-zoom;
+    }
+
+    #drive-player-page .loader{
+      position:fixed;top:0;left:0;width:100%;height:100%;
+      background:#000;color:#fff;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      z-index:5000;
+    }
+
+    #drive-player-page .spinner{font-size:60px;animation:spin 1.5s linear infinite}
+    @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+    /* উপরের অংশ ক্লিক ব্লক */
+    #drive-player-page .top-block {
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:80px;
+      background:transparent;
+      z-index:9999;
+      pointer-events:auto;
+      touch-action:none;
+    }
+
+    /* ------------------ FIXED BUTTON ------------------ */
+    #drive-player-page #backBtn {
+      position: fixed;
+      top: 6px;
+      right: 12px;
+
+      background: linear-gradient(135deg, #ff4da6, #ff6bd5);
+      box-shadow: 0 0 12px rgba(255, 80, 150, 0.8);
+
+      padding: 8px 14px;
+      border-radius: 12px;
+
+      border:none;
+      color: #fff;
+      font-family: sans-serif;
+
+      z-index: 15000;
+      cursor: pointer;
+
+      text-align:center;
+      transition: 0.15s;
+      user-select:none;
+    }
+
+    #drive-player-page #backBtn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 80, 150, 1);
+    }
+
+    #drive-player-page #backBtn .small {
+      font-size: 10px;
+      opacity: 0.85;
+      line-height: 12px;
+    }
+
+    #drive-player-page #backBtn .big {
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 15px;
+    }
+    
+    /* New Styles for Reply System */
+    .reply-btn {
+      background: var(--gradient-secondary);
+      color: white;
+      border: none;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.7rem;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 8px;
+    }
+
+    .reply-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .submission-item {
+      position: relative;
+    }
+
+    .reply-indicator {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: var(--secondary);
+      color: white;
+      font-size: 0.7rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Reply Modal Styles */
+    .reply-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    .reply-modal-content {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 25px;
+      max-width: 600px;
+      width: 90%;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+
+    .reply-modal-content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-primary);
+    }
+
+    .reply-modal-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .reply-modal-close:hover {
+      color: var(--danger);
+    }
+
+    .token-box {
+      background: rgba(76, 176, 216, 0.1);
+      border: 1px solid var(--primary);
+      border-radius: 10px;
+      padding: 10px 15px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .token-label {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 5px;
+    }
+
+    .token-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .student-info {
+      background: var(--glass);
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    .info-row {
+      display: flex;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    .info-label {
+      font-weight: 600;
+      width: 120px;
+      color: var(--text-muted);
+    }
+
+    .info-value {
+      flex: 1;
+      color: var(--text);
+    }
+
+    .student-comment-box {
+      background: rgba(239, 118, 116, 0.1);
+      border: 1px solid var(--secondary);
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .reply-form textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      background: var(--glass);
+      color: var(--text);
+      outline: none;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+      font-size: 0.9rem;
+      resize: vertical;
+      min-height: 120px;
+      margin-bottom: 15px;
+    }
+
+    .reply-form textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(76, 176, 216, 0.2);
+    }
+
+    /* Answer Modal Styles - UPDATED with higher z-index and better positioning */
+    .answer-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10001; /* Higher z-index to ensure it's on top */
+    }
+
+    .answer-modal-content {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 650px;
+      width: 90%;
+      backdrop-filter: blur(15px);
+      box-shadow: var(--shadow-xl);
+      position: relative;
+      overflow-y: auto;
+      max-height: 85vh;
+    }
+
+    .answer-modal-content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-primary);
+    }
+
+    .answer-modal-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.8rem;
+      cursor: pointer;
+      transition: var(--transition);
+      z-index: 10002;
+    }
+
+    .answer-modal-close:hover {
+      color: var(--danger);
+    }
+
+    .answer-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .answer-header h2 {
+      font-size: 1.8rem;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 10px;
+    }
+
+    .answer-box {
+      background: rgba(76, 176, 216, 0.1);
+      border: 1px solid var(--primary);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .question-box, .reply-box {
+      background: var(--glass);
+      border-radius: 10px;
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+
+    .question-label, .reply-label {
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .question-content, .reply-content {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    .answered-by {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .answered-by-name {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    /* New "বুঝেছি" Button Styles */
+    .answer-understood-btn {
+      display: block;
+      margin: 25px auto 10px;
+      padding: 14px 40px;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(135deg, #4CAF50, #2E7D32);
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+    }
+
+    .answer-understood-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, #2E7D32, #1B5E20);
+    }
+
+    /* Updated success message with countdown */
+    .success-message {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(135deg, var(--secondary), #4CAF50);
+      color: white;
+      padding: 25px 40px;
+      border-radius: 12px;
+      z-index: 10003;
+      font-size: 1.1rem;
+      box-shadow: var(--shadow-xl);
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+    }
+
+    .success-message-countdown {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.8);
+      background: rgba(0,0,0,0.2);
+      padding: 4px 8px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+
+    /* Token display in answer modal */
+    .token-display {
+      text-align: center;
+      margin: 15px 0;
+      padding: 12px;
+      background: rgba(76, 176, 216, 0.15);
+      border-radius: 10px;
+      border: 1px dashed var(--primary);
+    }
+
+    .token-display-label {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 5px;
+    }
+
+    .token-display-value {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Default Landing Page -->
+  <div id="default-page">
+    <header>
+      <div class="logo">
+        <h3>BOM</h3></div>
+    </header>
+
+    <h1>বাংলাদেশ অনলাইন মাদ্রাসা</h1>
+    <h2>দেশজুড়ে মাদ্রাসা শিক্ষার্থীদের বিশ্বস্ত শিক্ষা সঙ্গী</h2>
+
+    <div class="teacher-banner">
+      <img src="https://i.imgur.com/CR18xz1.jpeg" alt="">
+    </div>
+
+    <button class="main-btn" id="main-website-btn">আপনার এনরোলকৃত কোর্স</button>
+
+    <!-- MOTIVATION AREA -->
+    <div class="motivation-box">
+      <p id="motivationText">শেখা মানে প্রতিদিন এক ধাপ এগিয়ে যাওয়া।</p>
+    </div>
+
+    <!-- COURSES -->
+    <div class="courses">
+      <h2><u>চলমান কোর্স সমূহ</u></h2>
+
+      <div class="course-box">
+        <div class="course-img">
+          <img src="https://i.imgur.com/FCv9CTv.jpeg" alt="">
+        </div>
+        <p class="details-btn" data-course="1">ডিটেল্স</p>
+      </div>
+
+      <div class="course-box">
+        <div class="course-img">
+          <img src="https://i.imgur.com/6N1mH9F.jpeg" alt="">
+        </div>
+        <p class="details-btn" data-course="2">ডিটেল্স</p>
+      </div>
+
+      <div class="course-box">
+        <div class="course-img">
+          <img src="https://i.imgur.com/6VP1eFp.jpeg" alt="">
+        </div>
+        <p class="details-btn" data-course="3">ডিটেল্স</p>
+      </div>
+
+      <div class="course-box">
+        <div class="course-img">
+          <img src="https://i.imgur.com/m48Qi4s.png" alt="">
+        </div>
+        <p class="details-btn" data-course="4">ডিটেল্স</p>
+      </div>
+
+    </div>
+
+    <!-- TEACHER BOX -->
+    <div class="teacher-box" aria-label="Teachers">
+      <h2><u>সম্মানিত শিক্ষকবৃন্দ</u></h2>
+      <!-- Riab Hasan -->
+      <div class="single-teacher" role="article" aria-label="Riab Hasan">
+        <img src="https://i.imgur.com/Dl21S5x.jpeg" alt="Riab Hasan">
+        <div class="t-name">Riad Hasan</div>
+        <div class="t-position">CEO &amp; Founder</div>
+        <div class="t-exp">Experience: 6 Years</div>
+        <div class="t-summary">
+          Riad Hasan is the visionary founder and CEO of Bangladesh Online Madrasa. He studied at the International Islamic University Chittagong (IIUC) and focuses on integrating technology with education to create accessible learning platforms.
+        </div>
+      </div>
+
+      <!-- Arabic Language Teacher -->
+      <div class="single-teacher" role="article" aria-label="Arabic Language Teacher">
+        <img src="https://i.imgur.com/xbCkScP.jpeg" alt="Arabic Language Teacher">
+        <div class="t-name">Md. Osman Goni</div>
+        <div class="t-position">Lecturer in Arabic</div>
+        <div class="t-exp">Experience: 15 Years</div>
+        <div class="t-summary">
+          A skilled Arabic language instructor with academic training from the Islamic University, Kushtia. Uses clear explanation and structured lessons to build students' understanding of Arabic and Islamic studies.
+        </div>
+      </div>
+
+      <!-- Dh Shipon -->
+      <div class="single-teacher" role="article" aria-label="Dh Shipon">
+        <img src="https://i.imgur.com/TbM78cK.jpeg" alt="Dh Shipon">
+        <div class="t-name">Dh Shipon</div>
+        <div class="t-position">Lecturer, Department of English</div>
+        <div class="t-exp">Experience: 13 Years</div>
+        <div class="t-summary">
+          Dh Shipon is a dedicated English educator with B.A. (Honours) and M.A. (First Class) from the University of Chittagong. He focuses on literature and effective, engaging teaching methods.
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+
+      <h3>Md Riad Hasan</h3>
+      <p>CEO & Founder of <br>Bangladesh Online Madrasah</p>
+
+      <br>
+
+      <p>📍 Address: Madina Market, Sylhet, Bangladesh.</p>
+      <p>📞 HelpLine: XXXXXXXXXXX</p>
+      <p>📧 Email: <small>bangladeshonlinemadrasah4@gmail.com</small></p>
+
+      <div class="social-icons">
+    <a href="https://facebook.com/groups/1207366386972563/" target="_blank" rel="noopener noreferrer">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook Group">
+    </a>
+    <a href="https://wa.me/8801806234120" target="_blank" rel="noopener noreferrer">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+      </div>
+
+      <p style="opacity:0.7; margin-top:20px;">© বাংলাদেশ অনলাইন মাদ্রাসা 2025 — All Rights Reserved</p>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="courseModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modalImage" class="modal-img" src="" alt="">
+        <div id="modalDetails" class="modal-details"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Website Content (Hidden by Default) -->
+  <!-- Loading Overlay -->
+  <div id="loading-overlay" class="hidden">
+    <div class="loading-box">
+      <div class="loading-spinner"></div>
+      <h2 class="loading-title bangla-font">ডাটা লোড হচ্ছে<span class="loading-dots"></span></h2>
+      <p class="loading-message bangla-font">দয়াকরে ডাটা লোড সম্পন্ন হওয়া পর্যন্ত অপেক্ষা করুন</p>
+      <div class="loading-progress">
+        <div class="loading-progress-bar" id="loading-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="login-page" style="display: none;">
+    <div class="login-container">
+      <div class="welcome-message">
+        <h1 class="bangla-font">ALIM-27 "Top Achievers Ignition Batch"</h1>
+        <p class="bangla-font">শিক্ষার যাত্রায় এক নতুন দিগন্ত। বাংলাদেশ অনলাইন মাদ্রাসা (BOM) এর প্রাইভেট ব্যাচের আলিম-২৭ শিক্ষার্থীদের জন্য প্রিমিয়াম লার্নিং এক্সপেরিয়েন্স</p>
+      </div>
+      <div class="login-form">
+        <div class="form-group">
+          <label for="password" class="bangla-font">সিকিউরিটি কোড লিখুন</label>
+          <input type="password" id="password" placeholder="এখানে কোডটি লিখুন" class="bangla-font">
+        </div>
+        <button class="login-btn bangla-font" onclick="checkPassword()">লগইন করুন</button>
+        <div id="error-message" class="error-message bangla-font">সিকিউরিটি কোডটি ভুল হয়েছে। আবার চেষ্টা করুন।</div>
+      </div>
+      <div class="support-info">
+        <p class="bangla-font">এক্সেস পাসওয়ার্ড পেতে BOM এর এডমিনের সাথে যোগাযোগ করুন</p>
+        <a href="https://wa.me/8801806234120" class="whatsapp-link" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="main-page" style="display: none;">
+    <header>
+      <nav class="nav container">
+        <div class="brand">
+          <i class="fas fa-graduation-cap"></i>
+          <span>ALIM-27 <br>
+            <span class="tag">"Top Achievers Ignition Batch" (BOM)</span></span>
+        </div>
+        <div class="searchbar">
+          <i class="fas fa-search"></i>
+          <input id="search-subjects" type="search" placeholder="সার্চ করুন যা দরকার🔎" class="dynamic-placeholder">
+        </div>
+        <div id="search-results"></div>
+        <div class="controls">
+          <button class="btn" id="refresh-data-btn"><i class="fas fa-sync-alt"></i> <span class="bangla-font">ডেটা রিফ্রেশ</span></button>
+          <button class="btn" id="dashboard-btn" style="display: none;"><i class="fas fa-tachometer-alt"></i> <span class="bangla-font">ড্যাশবোর্ড</span></button>
+          <a class="btn" id="add-class-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScN81oeu4pnZb5vedyjh1WigjWrksnNAViMfmSL2wD3kkBqbQ/viewform?usp=header" target="_blank" rel="noopener" style="display: none;"><i class="fas fa-plus-circle"></i> <span class="bangla-font">ক্লাস যুক্ত করুন</span></a>
+        </div>
+      </nav>
+    </header>
+    <div class="notice-bar bangla-font"><span><b>📢 বার্তা: প্রিয় শিক্ষার্থীরা, কমেন্টের রিপ্লাই সুবিধাটি বর্তমানে স্থগিত আছে। তবে আপনাদের প্রতিটি মতামত আমরা যত্নসহকারে পড়ছি এবং প্রয়োজনীয় পদক্ষেপ নিচ্ছি। আপনাদের মূল্যবান মতামত জানাতে থাকুন — আন্তরিক ধন্যবাদ সাথে থাকার জন্য!</b></span></div>
+    <main class="container">
+      <div class="hero fade-in">
+        <h1 class="bangla-font">ALIM-27 "Top Achievers Ignition Batch"</h1>
+        <p class="bangla-font">শিক্ষার যাত্রায় এক নতুন দিগন্ত। বাংলাদেশ অনলাইন মাদ্রাসা (BOM) এর প্রাইভেট ব্যাচের আলিম-২৭ শিক্ষার্থীদের জন্য প্রিমিয়াম লার্নিং এক্সপেরিয়েন্স</p>
+      </div>
+      <!-- New Slideshow Box -->
+      <div class="slideshow-container fade-in">
+        <img class="slideshow-image" src="https://example.com/image1.jpg" alt="Image 1">
+        <img class="slideshow-image" src="https://example.com/image2.jpg" alt="Image 2">
+        <img class="slideshow-image" src="https://example.com/image3.jpg" alt="Image 3">
+        <img class="slideshow-image" src="https://example.com/image4.jpg" alt="Image 4">
+      </div>
+      <!-- Attractive Clock with Date -->
+      <div class="clock-container fade-in stat-card">
+        <div id="clock-time" class="clock-time"></div>
+        <div id="clock-date" class="clock-date"></div>
+        <div id="exam-countdown" class="stat-label bangla-font"></div>
+      </div>
+      <div class="section-title">
+        <h2 class="bangla-font">আজকের ক্লাস</h2>
+        <select id="sort-classes" class="bangla-font">
+          <option value="today" selected>আজকের ক্লাস</option>
+          <option value="week">সপ্তাহের ক্লাস</option>
+          <option value="month">মাসের ক্লাস</option>
+        </select>
+      </div>
+      <div id="today-classes">
+        <table class="today-classes-table">
+          <thead>
+            <tr>
+              <th class="bangla-font">সাবজেক্ট</th>
+              <th class="bangla-font">শিরোনাম</th>
+              <th class="bangla-font">সময়</th>
+            </tr>
+          </thead>
+          <tbody id="today-classes-body">
+            <tr>
+              <td colspan="3" class="bangla-font" style="text-align: center; padding: 20px;">
+                <div class="loading"></div> লোড হচ্ছে...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section-title">
+        <h2 class="bangla-font">সব সাবজেক্ট</h2>
+      </div>
+      <div class="subj-list">
+        <a class="pill subject-link" href="#" data-name="কুরআন মাজীদ"><span><i class="fas fa-book-quran"></i> <span class="bangla-font">কুরআন মাজীদ</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="হাদীস ও উসূলুল হাদীস"><span><i class="fas fa-book"></i> <span class="bangla-font">হাদীস ও উসূলুল হাদীস</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="আল ফিকহ প্রথম পত্র"><span><i class="fas fa-balance-scale"></i> <span class="bangla-font">আল ফিকহ প্রথম পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="আল ফিকহ দ্বিতীয় পত্র"><span><i class="fas fa-balance-scale"></i> <span class="bangla-font">আল ফিকহ দ্বিতীয় পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="আরবি প্রথম পত্র"><span><i class="fas fa-language"></i> <span class="bangla-font">আরবি প্রথম পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="আরবি দ্বিতীয় পত্র"><span><i class="fas fa-language"></i> <span class="bangla-font">আরবি দ্বিতীয় পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="আরবি সাহিত্য"><span><i class="fas fa-book-open"></i> <span class="bangla-font">আরবি সাহিত্য</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="বালাগাত ও মানতিক"><span><i class="fas fa-brain"></i> <span class="bangla-font">বালাগাত ও মানতিক</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="বাংলা প্রথম পত্র"><span><i class="fas fa-font"></i> <span class="bangla-font">বাংলা প্রথম পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="বাংলা দ্বিতীয় পত্র"><span><i class="fas fa-font"></i> <span class="bangla-font">বাংলা দ্বিতীয় পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="ইংরেজি প্রথম পত্র"><span><i class="fas fa-font"></i> <span class="bangla-font">ইংরেজি প্রথম পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="ইংরেজি দ্বিতীয় পত্র"><span><i class="fas fa-font"></i> <span class="bangla-font">ইংরেজি দ্বিতীয় পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="ইসলামের ইতিহাস"><span><i class="fas fa-landmark"></i> <span class="bangla-font">ইসলামের ইতিহাস</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="তথ্য ও যোগাযোগ প্রযুক্তি"><span><i class="fas fa-laptop-code"></i> <span class="bangla-font">তথ্য ও যোগাযোগ প্রযুক্তি</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="পদার্থবিজ্ঞান প্রথম পত্র"><span><i class="fas fa-atom"></i> <span class="bangla-font">পদার্থবিজ্ঞান প্রথম পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="পদার্থবিজ্ঞান দ্বিতীয় পত্র"><span><i class="fas fa-atom"></i> <span class="bangla-font">পদার্থবিজ্ঞান দ্বিতীয় পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="রসায়ন প্রথম পত্র"><span><i class="fas fa-flask"></i> <span class="bangla-font">রসায়ন প্রথম পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="রসায়ন দ্বিতীয় পত্র"><span><i class="fas fa-flask"></i> <span class="bangla-font">রসায়ন দ্বিতীয় পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="জীববিজ্ঞান প্রথম পত্র"><span><i class="fas fa-dna"></i> <span class="bangla-font">জীববিজ্ঞান প্রথম পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="জীবব�্ঞান দ্বিতীয় পত্র"><span><i class="fas fa-dna"></i> <span class="bangla-font">জীববিজ্ঞান দ্বিতীয় পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="অর্থনীতি প্রথম পত্র"><span><i class="fas fa-chart-line"></i> <span class="bangla-font">অর্থনীতি প্রথম পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="অর্থনীতি দ্বিতীয় পত্র"><span><i class="fas fa-chart-line"></i> <span class="bangla-font">অর্থনীতি দ্বিতীয় পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="পৌরনীতি ও সুশাসন প্রথম পত্র"><span><i class="fas fa-landmark"></i> <span class="bangla-font">পৌরনীতি ও সুশাসন প্রথম পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="পৌরনীতি ও সুশাসন দ্বিতীয় পত্র"><span><i class="fas fa-landmark"></i> <span class="bangla-font">পৌরনীতি ও সুশাসন দ্বিতীয় পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="উচ্চতর গণিত প্রথম পত্র"><span><i class="fas fa-calculator"></i> <span class="bangla-font">উচ্চতর গণিত প্রথম পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="উচ্চতর গণিত দ্বিতীয় পত্র"><span><i class="fas fa-calculator"></i> <span class="bangla-font">উচ্চতর গণিত দ্বিতীয় পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="মিশন"><span><i class="fas fa-bullseye"></i> <span class="bangla-font">মিশন</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="ইক্সাম"><span><i class="fas fa-file-alt"></i> <span class="bangla-font">ইক্সাম</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="ক্লাসের লেকচার শীট"><span><i class="fas fa-file-pdf"></i> <span class="bangla-font">ক্লাসের লেকচার শীট</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="পরীক্ষার রেজাল্ট শীট"><span><i class="fas fa-chart-bar"></i> <span class="bangla-font">পরীক্ষার রেজাল্ট শীট</span></span><span class="go bangla-font">খুলুন</span></a>
+        <a class="pill subject-link" href="#" data-name="সাজেশন্স"><span><i class="fas fa-lightbulb"></i> <span class="bangla-font">সাজেশন্স</span></span><span class="go bangla-font">খুলুন</span></a>
+          </div>
+    </main>
+    <div class="container">
+      <div class="action-buttons">
+        <button class="form-button" id="form-button" style="display: none;"><i class="fas fa-comment"></i> <span class="bangla-font">কমেন্ট করুন</span></button>
+        <button class="submissions-button" id="submissions-button" style="display: none;"><i class="fas fa-list"></i> <span class="bangla-font">সাবমিশন দেখুন</span></button>
+      </div>
+    </div>
+    <div class="owner-wrap">
+      <div class="owner-sub2">Founder and visionary leader of Bangladesh Online Madrasa, guiding students toward excellence.</p></div>
+      <div class="owner-name bangla-font">MD. RIAD HASAN<span style="font-weight:600; font-size:0.86rem; color:rgba(226,232,240,0.85); margin-left:8px;">(CEO & Founder)</span></div>
+      <div class="owner-sub">building brighter paths for ambitious learners</div>
+      <div class="designer-credit">
+        <span class="bangla-font" style="opacity:0.9;">design by</span>
+        <span class="designer-name">SAHIBUL MUSA SIUM</span>
+      </div>
+    </div>
+    <footer class="site-footer">
+      © 2025 ALIM-27 "Top Achievers Ignition Batch" (BOM). All rights reserved.
+    </footer>
+  </div>
+  <div id="subject-page" style="display: none;">
+    <header>
+      <nav class="nav container">
+        <button class="brand back-button" id="back-to-main"><i class="fas fa-arrow-left"></i> <span class="bangla-font">সব সাবজেক্ট</span></button>
+        <div class="filter-bar">
+          <input id="search" type="search" placeholder="🔍 সার্চ...">
+          <select id="sort">
+            <option value="desc" class="bangla-font">নতুন থেকে পুরানো</option>
+            <option value="asc" class="bangla-font">পুরানো থেকে নতুন</option>
+          </select>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <h2 id="subject-title" class="bangla-font"><i class="fas fa-book"></i> সাবজেক্ট</h2>
+      <div id="classGrid" class="grid"></div>
+    </main>
+    <div class="owner-wrap">
+      <div class="owner-sub2">Founder and visionary leader of Bangladesh Online Madrasa, guiding students toward excellence.</p></div>
+      <div class="owner-name bangla-font">MD. RIAD HASAN<span style="font-weight:600; font-size:0.86rem; color:rgba(226,232,240,0.85); margin-left:8px;">(CEO & Founder)</span></div>
+      <div class="owner-sub">building brighter paths for ambitious learners</div>
+      <div class="designer-credit">
+        <span class="bangla-font" style="opacity:0.9;">design by</span>
+        <span class="designer-name">SAHIBUL MUSA SIUM</span>
+      </div>
+    </div>
+    <footer class="site-footer">
+      © 2025 ALIM-27 "Top Achievers Ignition Batch" (BOM). All rights reserved.
+    </footer>
+  </div>
+  <div id="video-player-page" style="display: none;">
+    <div class="wrap">
+      <div class="player-card">
+        <!-- নতুন বাটনগুলো ভিডিও বক্সের উপরে -->
+        <div class="top-buttons">
+          <div class="custom-btn" id="youtubeBtn">
+            <small>direct</small>
+            <span>YouTube Play</span>
+          </div>
+          <div class="custom-btn" id="folderBtn">
+            <small>Back to</small>
+            <span>Folder Page</span>
+          </div>
+        </div>
+        <div id="aspect" class="aspect">
+          <div id="player"></div>
+          <!-- লোডিং ইন্ডিকেটর -->
+          <div id="loading">
+            <div class="spinner"></div>
+            <p id="loading-text">ভিডিও লোড হচ্ছে...<br>ইন্টারনেট স্পিড ঠিক রাখুন</p>
+            <div id="loading-progress">
+              <div id="loading-progress-bar"></div>
+            </div>
+          </div>
+          <!-- ব্লকার: iframe-এ সরাসরি টাচ/ক্লিক যাবে না; এটাই ট্যাপ ধরে portrait->landscape পরিবর্তন করবে -->
+          <div id="blocker" class="blocker" title="কোনো কন্ট্রোল করতে নিচের বোতন ব্যবহার করুন"></div>
+        </div>
+        <!-- প্রগ্রেস বার ভিডিওর নিচে - UPDATED -->
+        <div id="progress-container">
+          <div id="progress-bar">
+            <div id="progress-thumb"></div>
+          </div>
+        </div>
+        <div class="controls" style="margin-top:12px">
+          <!-- প্লে/পজ বাটন আলাদা লাইনে, বড় এবং ভিন্ন কালার -->
+          <div class="control-row">
+            <button class="btn play-btn big-btn" id="togglePlayBtn">Play</button>
+          </div>
+          <!-- অন্য বাটনগুলো এক লাইনে -->
+          <div class="control-row">
+            <button class="btn" id="stopBtn">Stop</button>
+            <button class="btn" id="rewindBtn">« 10s</button>
+            <button class="btn" id="forwardBtn">10s »</button>
+            <button class="btn" id="muteBtn">Mute</button>
+          </div>
+          <!-- পোর্ট্রেট বাটন আলাদা লাইনে, বড় -->
+          <div class="control-row">
+            <button class="btn secondary big-btn" id="portraitBtn">Portrait (Fullscreen)</button>
+          </div>
+        </div>
+        
+        <!-- Updated note section with table-like structure -->
+        <div class="note-section">
+          <div class="note-header bangla-font">গুরুত্বপূর্ণ তথ্য</div>
+          <div class="note-table">
+            <div class="note-row">
+              <div class="note-cell">
+                <i class="fas fa-info-circle"></i>
+                <span class="bangla-font">ভিডিও পোর্ট্রেট করার পরে মোবাইলের ডিসপ্লের কোনো অংশ বা সাইট ফাকা থাকলে ভিডিও ফ্রম স্ক্রল করে সরিয়ে নিন, ফ্রেম সরে যেয়ে ফুল ইস্কিনে দেখাবে। আপনারা যুম করেও এডজাষ্ট করে নিতে পারবেন পারবেন। এবং প্রট্রেট মোড বন্ধ করতে ভিডিও ফ্রেমের উপরে ক্লিক করুন।</span>
+              </div>
+            </div>
+            <div class="note-row">
+              <div class="note-cell">
+                <i class="fas fa-wifi"></i>
+                <span class="bangla-font">সেরা ভিডিও মান উপভোগ করতে আপনার ইন্টারনেট সংযোগ স্থির ও দ্রুত রাখুন। এই প্লেয়ারটি আপনার ইন্টারনেট গতির উপর ভিত্তি করে ভিডিওর কোয়ালিটি স্বয়ংক্রিয়ভাবে সমন্বয় করে। স্পিড ভালো থাকলে কিছুক্ষণের মধ্যেই ভিডিও ধীরে ধীরে HD মানে চলে যাবে।</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drive Player Page -->
+  <div id="drive-player-page" style="display: none;">
+    <!-- Loader -->
+    <div class="loader">
+      <div class="spinner">⟳</div>
+      <p id="drive-loading-text">ফাইল লোড হচ্ছে...<br>কিছুক্ষণ অপেক্ষা করুন এবং ইন্টারনেট স্পিড ঠিক রাখুন!</p>
+    </div>
+
+    <!-- Google Drive Viewer -->
+    <iframe id="viewer"></iframe>
+
+    <!-- ক্লিক ব্লক এরিয়া -->
+    <div class="top-block"></div>
+
+    <!-- স্থির বাটন -->
+    <button id="backBtn">
+      <div class="small">Back to</div>
+      <div class="big">Folder Page</div>
+    </button>
+  </div>
+
+  <div id="warning-modal" class="warning-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="bangla-font">লগইন সফল হয়েছে!</h2>
+      </div>
+      <div class="modal-body">
+        <p class="bangla-font">অনুগ্রহ করে নোট করুন: <br>BOM এর ওয়েবসাইটের এক্সেস তথ্য সর্বদা গোপনীয় রাখুন এবং কারোর সাথে পাসওয়ার্ড শেয়ার করবেন না।</p>
+        <p class="bangla-font">যদি কোনো ব্যবহারকারীর পাসওয়ার্ড শেয়ার করতে দেখা যায়, তাহলে তাকে এই ওয়েবসাইট থেকে স্থায়ীভাবে নিষিদ্ধ করা হবে।</p>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-ok-btn bangla-font" onclick="closeWarningModal()">ঠিক আছে</button>
+      </div>
+    </div>
+  </div>
+  <div id="loading-modal" class="warning-modal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="bangla-font">ডাটা লোড হচ্ছে...</h2>
+      </div>
+      <div class="modal-body">
+        <p class="bangla-font">দয়াকরে ডাটা লোড সম্পন্ন হওয়া পর্যন্ত অপেক্ষা করুন</p>
+        <div class="loading"></div>
+      </div>
+    </div>
+  </div>
+  <div id="notification" class="notification"></div>
+  <!-- Dashboard Modal -->
+  <div id="dashboard-modal" class="dashboard-modal">
+    <div class="modal-content">
+      <div class="modal-body" id="dashboard-body">
+        <!-- ডাইনামিক কনটেন্ট এখানে লোড হবে -->
+      </div>
+    </div>
+  </div>
+  <!-- Name Set Modal -->
+<div class="modal" id="nameModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="hideNameModal()">×</button>
+    <div class="modal-intro">
+      <h2 class="bangla-font">নাম সেট করুন</h2>
+      <p class="bangla-font">আপনার নাম লিখুন। এটি সেভ হয়ে যাবে এবং পরবর্তীতে কমেন্ট ও রিপ্লাই দেখার জন্য ব্যবহৃত হবে।</p>
+      <div class="warning-message bangla-font">
+        দয়া করে আপনার পূর্ণ নাম ব্যবহার করুন, যাতে অন্য কারো সাথে নামের কোনো মিল না হয়। একটি স্বতন্ত্র নাম নির্বাচন করুন, যেন আপনার মতামত এবং উত্তর সঠিকভাবে সনাক্ত করা যায়।
+      </div>
+    </div>
+    <div class="form-section">
+      <form id="nameForm" onsubmit="saveName(event)">
+        <label class="bangla-font" for="userName">নাম</label>
+        <input type="text" id="userName" placeholder="আপনার পূর্ণ নাম লিখুন" required class="bangla-font">
+        <button type="submit" class="submit-button bangla-font">সেভ করুন</button>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Form Modal -->
+<div class="modal" id="formModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="hideForm()">×</button>
+    <div class="modal-intro">
+      <h2 class="bangla-font">আপনার মতামত আমাদের কাছে মূল্যবান</h2>
+      <p class="bangla-font">প্রিয় শিক্ষার্থী, আমাদের শিক্ষামূলক ওয়েবসাইট আপনাদের শিক্ষা ও জ্ঞানার্জনের পথকে আরও সহজ ও ফলপ্রসূ করতে প্রতিশ্রুতিবদ্ধ। নিচের ফর্মটি পূরণ করুন।</p>
+    </div>
+    <div class="form-section">
+      <form id="myForm" onsubmit="submitForm(event)">
+        <label class="bangla-font" for="name">নাম</label>
+        <input type="text" name="name" id="name" placeholder="আপনার নাম" required class="bangla-font" readonly><br>
+        <label class="bangla-font" for="batch">ব্যাচ নাম</label>
+        <select name="batch" id="batch" required class="bangla-font">
+          <option value="" disabled selected class="bangla-font">ব্যাচ নির্বাচন করুন</option>
+          <option value="ALIM-27" class="bangla-font">আলিম-২৭</option>
+          </select><br>
+        <label class="bangla-font" for="message">মতামত/পরামর্শ/অভিযোগ</label>
+        <textarea name="message" id="message" placeholder="আপনার মতামত লিখুন" required class="bangla-font"></textarea>
+        <button type="submit" class="submit-button bangla-font" id="submitBtn">জমা দিন <span class="spinner"></span></button>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Submissions Modal -->
+<div class="modal" id="submissionsModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="hideSubmissions()">×</button>
+    <div class="modal-intro">
+      <h2 class="bangla-font">সাবমিশন তালিকা</h2>
+      <p class="bangla-font">এখানে সকল সাবমিশন দেখুন।</p>
+    </div>
+    <div id="submissions-list" class="submissions-list"></div>
+  </div>
+</div>
+
+<!-- Reply Modal (for admin/editor) -->
+<div class="reply-modal" id="replyModal">
+  <div class="reply-modal-content">
+    <button class="reply-modal-close" onclick="hideReplyModal()">×</button>
+    <div class="modal-intro">
+      <h2 class="bangla-font">উত্তর দিন</h2>
+      <p class="bangla-font">শিক্ষার্থীর প্রশ্নের উত্তর প্রদান করুন</p>
+    </div>
+    
+    <div class="token-box">
+      <div class="token-label bangla-font">টোকেন নম্বর</div>
+      <div class="token-value" id="reply-token-display"></div>
+    </div>
+    
+    <div class="student-info">
+      <div class="info-row">
+        <div class="info-label bangla-font">শিক্ষার্থীর নাম:</div>
+        <div class="info-value" id="reply-student-name"></div>
+      </div>
+      <div class="info-row">
+        <div class="info-label bangla-font">ব্যাচ:</div>
+        <div class="info-value" id="reply-student-batch"></div>
+      </div>
+    </div>
+    
+    <div class="student-comment-box">
+      <div class="info-label bangla-font">শিক্ষার্থীর মন্তব্য:</div>
+      <div class="info-value" id="reply-student-comment"></div>
+    </div>
+    
+    <form class="reply-form" id="replyForm" onsubmit="submitReply(event)">
+      <label class="bangla-font" for="reply-message">উত্তর লিখুন</label>
+      <textarea name="replyMessage" id="reply-message" placeholder="আপনার উত্তর এখানে লিখুন" required class="bangla-font"></textarea>
+      <button type="submit" class="submit-button bangla-font" id="replySubmitBtn">উত্তর পাঠান <span class="spinner"></span></button>
+    </form>
+  </div>
+</div>
+
+<!-- UPDATED Answer Modal (for students) - Now with "বুঝেছি" button -->
+<div class="answer-modal" id="answerModal">
+  <div class="answer-modal-content">
+    <button class="answer-modal-close" onclick="hideAnswerModal()">×</button>
+    <div class="answer-header">
+      <h2 class="bangla-font">আপনার প্রশ্নের উত্তর</h2>
+      <p class="bangla-font" id="answer-token-info"></p>
+    </div>
+    
+    <div class="token-display">
+      <div class="token-display-label bangla-font">আপনার টোকেন নম্বর</div>
+      <div class="token-display-value" id="answer-token-value"></div>
+    </div>
+    
+    <div class="answer-box">
+      <div class="question-box">
+        <div class="question-label bangla-font">আপনার প্রশ্ন/মতামত:</div>
+        <div class="question-content bangla-font" id="answer-question"></div>
+      </div>
+      
+      <div class="reply-box">
+        <div class="reply-label bangla-font">উত্তর:</div>
+        <div class="reply-content bangla-font" id="answer-reply"></div>
+      </div>
+      
+      <div class="answered-by">
+        <span class="bangla-font">উত্তর দাতা: </span>
+        <span class="answered-by-name bangla-font" id="answer-answered-by"></span>
+      </div>
+    </div>
+    
+    <!-- New "বুঝেছি" Button -->
+    <button class="answer-understood-btn bangla-font" id="answer-understood-btn" onclick="removeTokenAndClose()">
+      <i class="fas fa-check-circle"></i> বুঝেছি (টোকেন ডিলিট হবে)
+    </button>
+    
+    <div class="answered-by">
+      <small class="bangla-font" style="color: var(--text-muted);">
+        * "বুঝেছি" বাটনে ক্লিক করলে এই টোকেনটি আপনার ডিভাইস থেকে ডিলিট হয়ে যাবে এবং এই উত্তর আর দেখাবে না
+      </small>
+    </div>
+  </div>
+</div>
+
+<!-- UPDATED Success Message with Countdown -->
+<div class="success-message" id="successMessage">
+  <div class="success-message-countdown" id="successCountdown">20s</div>
+  <div id="successMessageContent"></div>
+</div>
+<div id="notification" class="notification"></div>
+  <script>
+    // Default Page Functionality
+    let motivationList = [
+      "শেখা বন্ধ হলে উন্নতি বন্ধ হয়ে যায়।",
+      "আপনি পারবে — শুধু শুরুটা করে ফেলুন।",
+      "ধৈর্য আর পরিশ্রমই সফলতার চাবিকাঠি।",
+      "প্রতিদিন ছোট ছোট উন্নতিই বড় সফলতা আনে।",
+      "জ্ঞানই মানুষের আসল শক্তি।",
+      "যে চেষ্টা করে, আল্লাহ তার পথ খুলে দেন।"
+    ];
+
+    let mIndex = 0;
+
+    function rotateMotivationText() {
+      mIndex = (mIndex + 1) % motivationList.length;
+      document.getElementById("motivationText").innerText = motivationList[mIndex];
+    }
+
+    // Set initial motivation text
+    document.getElementById("motivationText").innerText = motivationList[mIndex];
+    
+    // Start rotating motivation text every 5 seconds
+    setInterval(rotateMotivationText, 5000);
+
+    // Course Details Data (Demo)
+    const courseDetails = {
+      1: {
+        img: "https://i.imgur.com/N72gn3k.jpeg",
+        details: "বাংলাদেশ অনলাইন মাদ্রাসার আলিম–২৭ ব্যাচের জন্য প্রস্তুত করা Top Achievers – Ignition Batch হলো একটি সম্পূর্ণ পরীক্ষাভিত্তিক ও সুসংগঠিত কোর্স, যেখানে রয়েছে ১৫০+ ইন্টার‌্যাকটিভ লাইভ ক্লাস, ৩০+ মডেল টেস্ট, ওয়ান-টু-ওয়ান মেন্টরশিপ, অ্যাডভান্স টিচার্স প্যানেলের গাইডলাইন, ভিডিও লাইব্রেরি, প্রিমিয়াম লেকচার স্লাইডস ও দৈনিক স্টাডি প্ল্যানসহ সবকিছু এক জায়গায় সাজানো। প্রথম ৩০০ জন শিক্ষার্থী পাচ্ছেন ‘BOM জিম সিক্রেট আল্টিমেট বুক’ সম্পূর্ণ ফ্রি, আর মাত্র ৯৯৯ টাকায় এই পুরো কোর্সে অ্যাক্সেস পাওয়া যাবে। একজন শিক্ষার্থী হিসেবে আপনার নিয়মিত অগ্রগতি, পরীক্ষার প্রস্তুতি এবং প্রতিটি বিষয়ে গভীর ধারণা গড়ে তোলার জন্য এটি একটি পারফেক্ট অল-ইন-ওয়ান সল্যুশন। তাই শুধু আপনি নন—আপনার বন্ধু, ক্লাসমেট এবং ব্যাচমেটদেরও এই কোর্সে যুক্ত করতে উৎসাহ দিন, কারণ একসাথে পড়লে শেখা সহজ হয়, প্রতিযোগিতা বাড়ে এবং সবারই রেজাল্ট আরও ভালো হয়"
+      },
+      2: {
+        img: "COURSE_IMAGE_2",
+        details: "কোনো তথ্য যুক্ত করা হয়নি"
+      },
+      3: {
+        img: "COURSE_IMAGE_3",
+        details: "কোনো তথ্য যুক্ত করা হয়নি"
+      },
+      4: {
+        img: "COURSE_IMAGE_4",
+        details: "কোনো তথ্য যুক্ত করা হয়নি"
+      }
+    };
+
+    // Modal Functionality for default page
+    const modal = document.getElementById("courseModal");
+    const modalImg = document.getElementById("modalImage");
+    const modalDetails = document.getElementById("modalDetails");
+    const closeBtn = document.getElementsByClassName("close")[0];
+
+    document.querySelectorAll(".details-btn").forEach(btn => {
+      btn.addEventListener("click", function() {
+        const courseId = this.getAttribute("data-course");
+        const course = courseDetails[courseId];
+        modalImg.src = course.img;
+        modalDetails.innerHTML = course.details;
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden"; // Prevent background scrolling
+      });
+    });
+
+    closeBtn.addEventListener("click", function() {
+      modal.style.display = "none";
+      document.body.style.overflow = ""; // Restore scrolling
+    });
+
+    window.addEventListener("click", function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = ""; // Restore scrolling
+      }
+    });
+
+    // Main Website Functionality
+    const API_URL = "https://script.google.com/macros/s/AKfycbzpPx0YmWHgDCp7_KmvV7CB36mbKSuQD9XqBPtlgZ03k3gUiI6ki5y0hTsO0wp0VPWd0w/exec";
+
+    function $(sel, root = document) { return root.querySelector(sel); }
+    function $all(sel, root = document) { return Array.from(root.querySelectorAll(sel)); }
+
+    let currentSubject = null;
+    let highlightedClassTimestamp = null;
+    const loginPage = $('#login-page');
+    const mainPage = $('#main-page');
+    const subjectPage = $('#subject-page');
+    const defaultPage = $('#default-page');
+    const videoPlayerPage = $('#video-player-page');
+    const drivePlayerPage = $('#drive-player-page'); // New drive player page
+    const warningModal = $('#warning-modal');
+    const loadingModal = $('#loading-modal');
+    const loadingOverlay = $('#loading-overlay'); // New loading overlay
+    let allClasses = [];
+    let groupedClassesCache = {};
+    let mainScrollPosition = 0; // To save main page scroll position
+    let subjectScrollPosition = 0; // To save subject page scroll position
+    let driveScrollPosition = 0; // To save drive player page scroll position
+
+    const availableSubjects = [
+          "কুরআন মাজীদ",
+          "হাদীস ও উসূলুল হাদীস",
+          "আল ফিকহ প্রথম পত্র",
+          "আল ফিকহ দ্বিতীয় পত্র",
+          "আরবি প্রথম পত্র",
+          "আরবি দ্বিতীয় পত্র",
+          "আরবি সাহিত্য",
+          "বালাগাত ও মানতিক",
+          "বাংলা প্রথম পত্র",
+          "বাংলা দ্বিতীয় পত্র",
+          "ইংরেজি প্রথম পত্র",
+          "ইংরেজি দ্বিতীয় পত্র",
+          "ইসলামের ইতিহাস",
+          "তথ্য ও যোগাযোগ প্রযুক্তি",
+          "পদার্থবিজ্ঞান প্রথম পত্র",
+          "পদার্থবিজ্ঞান দ্বিতীয় পত্র",
+          "রসায়ন প্রথম পত্র",
+          "রসায়ন দ্বিতীয় পত্র",
+          "জীববিজ্ঞান প্রথম পত্র",
+          "জীববিজ্ঞান দ্বিতীয় পত্র",
+          "অর্থনীতি প্রথম পত্র",
+          "অর্থনীতি দ্বিতীয় পত্র",
+          "পৌরনীতি ও সুশাসন প্রথম পত্র",
+          "পৌরনীতি ও সুশাসন দ্বিতীয় পত্র",
+          "উচ্চতর গণিত প্রথম পত্র",
+          "উচ্চতর গণিত দ্বিতীয় পত্র",
+          "মিশন",
+          "ইক্সাম",
+          "ক্লাসের লেকচার শীট",
+          "পরীক্ষার রেজাল্ট শীট",
+          "সাজেশন্স"
+        ];
+
+    const LOGIN_EXPIRY_KEY = 'alim27_login_expiry';
+    const IS_LOGGED_IN_KEY = 'alim27_is_logged_in';
+    const USER_ROLE_KEY = 'alim27_user_role';
+    const HAS_VISITED_MAIN_KEY = 'alim27_has_visited_main';
+
+    // Dashboard-specific storage keys (unique to avoid conflicts)
+    const DASHBOARD_STORAGE_KEYS = {
+      STUDENT_NAME: 'alim27_dashboard_student_name',
+      JOIN_DATE: 'alim27_dashboard_join_date',
+      LAST_LOGIN: 'alim27_dashboard_last_login',
+      LAST_ACTIVITY: 'alim27_dashboard_last_activity',
+      COMPLETED_ITEMS: 'alim27_dashboard_completed_items',
+      NOTES: 'alim27_dashboard_notes'
+    };
+
+    // Video player tracking variables
+    let videoPlayer = null;
+    let videoTrackId = null;
+    let videoType = null;
+    let videoUrl = null;
+    let videoDuration = 0;
+    let videoWatchTime = 0;
+    let videoCheckInterval = null;
+    let videoIsYouTube = false;
+    let isPortraitMode = false; // Track portrait mode status
+    let progressUpdateInterval = null; // For updating progress bar
+    let isDraggingProgress = false; // Track if user is dragging progress thumb
+
+    // Drive player variables
+    let driveUrl = null;
+    let driveTrackId = null;
+    let driveType = null;
+    let driveLoadingTimeout = null;
+    let videoLoadingTimeout = null; // Video loading timeout
+
+    // Back button history state management
+    let currentPageState = 'default';
+    let historyStack = [];
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function setLoginExpiry(role) {
+      // No expiry time set for lifetime access
+      localStorage.setItem(IS_LOGGED_IN_KEY, 'true');
+      localStorage.setItem(USER_ROLE_KEY, role);
+    }
+
+    function checkLoginExpiry() {
+      const isLoggedIn = localStorage.getItem(IS_LOGGED_IN_KEY);
+      return isLoggedIn === 'true';
+    }
+
+    function getUserRole() {
+      return localStorage.getItem(USER_ROLE_KEY) || 'user';
+    }
+
+    function logout() {
+      localStorage.removeItem(IS_LOGGED_IN_KEY);
+      localStorage.removeItem(USER_ROLE_KEY);
+      loginPage.style.display = 'flex';
+      mainPage.style.display = 'none';
+      subjectPage.style.display = 'none';
+      videoPlayerPage.style.display = 'none';
+      drivePlayerPage.style.display = 'none';
+    }
+
+    function showWarningModal() {
+      warningModal.classList.add('show');
+    }
+
+    function closeWarningModal() {
+      warningModal.classList.remove('show');
+    }
+
+    // New loading overlay functions
+    function showLoadingOverlay() {
+      loadingOverlay.classList.remove('hidden');
+    }
+
+    function hideLoadingOverlay() {
+      loadingOverlay.classList.add('hidden');
+    }
+
+    function updateLoadingProgress(progress) {
+      const progressBar = $('#loading-progress-bar');
+      if (progressBar) {
+        progressBar.style.width = `${progress}%`;
+      }
+    }
+
+    function showLoadingModal() {
+      loadingModal.style.display = 'flex';
+    }
+
+    function hideLoadingModal() {
+      loadingModal.style.display = 'none';
+    }
+
+    function showNotification(message, isError = false, isWarning = false) {
+      const notification = $('#notification');
+      notification.innerHTML = "<i class=\"" + (isError ? 'fas fa-exclamation-circle' : isWarning ? 'fas fa-exclamation-triangle' : 'fas fa-check-circle') + "\"></i> " + message;
+      notification.className = 'notification ' + (isError ? 'error' : isWarning ? 'warning' : 'success');
+      notification.classList.add('show');
+
+      setTimeout(() => {
+        notification.classList.remove('show');
+      }, 3000);
+    }
+
+    function setButtonVisibility() {
+      const role = getUserRole();
+      const formButton = $('#form-button');
+      const submissionsButton = $('#submissions-button');
+      
+      // Reset both first
+      formButton.style.display = 'none';
+      submissionsButton.style.display = 'none';
+      
+      if (role === 'user' || role === 'editor') {
+        formButton.style.display = 'inline-flex';
+      } 
+      if (role === 'owner' || role === 'editor') {
+        submissionsButton.style.display = 'inline-flex';
+      }
+    }
+
+    function checkPassword() {
+      const password = $('#password').value.trim();
+      const errorElement = $('#error-message');
+      
+      if (password === 'USERALIM27') {
+        setLoginExpiry('user');
+        loginPage.style.display = 'none';
+        mainPage.style.display = 'block';
+        showWarningModal();
+        showLoadingOverlay(); // Show loading overlay
+        loadInitialData();
+        showDashboardButton();
+        setButtonVisibility(); // Set button visibility based on role
+        scrollToTop();
+      } else if (password === 'OWNERALIM27') {
+        setLoginExpiry('owner');
+        loginPage.style.display = 'none';
+        mainPage.style.display = 'block';
+        showWarningModal();
+        showLoadingOverlay(); // Show loading overlay
+        loadInitialData();
+        setButtonVisibility(); // Set button visibility based on role
+        scrollToTop();
+      } else if (password === 'EDITOR@BOM-435') {
+        setLoginExpiry('editor');
+        loginPage.style.display = 'none';
+        mainPage.style.display = 'block';
+        showWarningModal();
+        showLoadingOverlay(); // Show loading overlay
+        loadInitialData();
+        setButtonVisibility(); // Set button visibility based on role
+        scrollToTop();
+      } else {
+        errorElement.style.display = 'block';
+        setTimeout(() => {
+          errorElement.style.display = 'none';
+        }, 3000);
+      }
+    }
+
+    function showDashboardButton() {
+      const dashboardBtn = $('#dashboard-btn');
+      const role = getUserRole();
+      if (role === 'user' || role === 'editor') {
+        dashboardBtn.style.display = 'inline-flex';
+      }
+    }
+
+    function showAddClassButton() {
+      const addClassBtn = $('#add-class-btn');
+      if (addClassBtn && (getUserRole() === 'owner' || getUserRole() === 'editor')) {
+        addClassBtn.style.display = 'inline-flex';
+      }
+    }
+
+    $('#password').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        checkPassword();
+      }
+    });
+
+    function getDateFromTimestamp(timestamp) {
+      if (!timestamp) return getTodayDate();
+
+      try {
+        const date = new Date(timestamp);
+        if (!isNaN(date)) {
+          const year = date.getFullYear();
+          const month = String(date.getMonth() + 1).padStart(2, '0');
+          const day = String(date.getDate()).padStart(2, '0');
+          return `${day}-${month}-${year}`; // ফরম্যাট: DD-MM-YYYY
+        }
+        return getTodayDate();
+      } catch (error) {
+        console.error("Timestamp parsing error:", error, timestamp);
+        return getTodayDate();
+      }
+    }
+
+    function getTimeFromTimestamp(timestamp) {
+      if (!timestamp) return '12:00 AM';
+
+      try {
+        const date = new Date(timestamp);
+        if (!isNaN(date)) {
+          return date.toLocaleTimeString('en-US', { 
+            timeZone: 'Asia/Dhaka', 
+            hour: 'numeric', 
+            minute: '2-digit', 
+            hour12: true 
+          });
+        }
+        return '12:00 AM';
+      } catch (error) {
+        console.error("Time parsing error:", error, timestamp);
+        return '12:00 AM';
+      }
+    }
+
+    function getTodayDate() {
+      const today = new Date();
+      const year = today.getFullYear();
+      const month = String(today.getMonth() + 1).padStart(2, '0');
+      const day = String(today.getDate()).padStart(2, '0');
+      return `${day}-${month}-${year}`; // ফরম্যাট: DD-MM-YYYY
+    }
+
+    function formatDateToBangla(dateStr) {
+      if (!dateStr) return '';
+
+      try {
+        if (/^\d{2}-\d{2}-\d{4}$/.test(dateStr)) {
+          return dateStr; // ইতিমধ্যে DD-MM-YYYY ফরম্যাটে থাকলে রিটার্ন
+        }
+        const [year, month, day] = dateStr.split('-');
+        return `${day}-${month}-${year}`; // ফরম্যাট: DD-MM-YYYY
+      } catch (error) {
+        console.error("Date formatting error:", error, dateStr);
+        return dateStr;
+      }
+    }
+
+    function findBestMatchingSubject(subjectFromSheet) {
+      if (!subjectFromSheet) return null;
+
+      const cleanSubject = subjectFromSheet.toString().trim();
+      for (const availableSubject of availableSubjects) {
+        if (cleanSubject === availableSubject) {
+          return availableSubject;
+        }
+      }
+      return cleanSubject;
+    }
+
+    async function fetchData() {
+      try {
+        updateLoadingProgress(30);
+        const res = await fetch(API_URL, {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+
+        updateLoadingProgress(60);
+        const data = await res.json();
+        if (data && data.ok) {
+          updateLoadingProgress(90);
+          console.log("API Response:", data);
+          return data.rows || [];
+        } else {
+          throw new Error(data.error || "ডেটা লোড করতে সমস্যা");
+        }
+      } catch (error) {
+        console.error("ডেটা লোড করতে সমস্যা:", error);
+        showNotification("ডেটা লোড করা যায়নি: " + error.message, true);
+        return [];
+      }
+    }
+
+    function normalizeRows(rows) {
+      try {
+        updateLoadingProgress(40);
+        // Sort all rows by timestamp ascending for global tracking ID
+        const sortedRows = rows.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
+
+        // Assign global tracking ID
+        sortedRows.forEach((row, index) => {
+          row.globalId = index + 1;
+        });
+
+        updateLoadingProgress(60);
+        // Group by subject for display serial
+        const groupedBySubject = sortedRows.reduce((acc, row) => {
+          const subjectFromSheet = row.subject || 'Unknown Subject';
+          const matchedSubject = findBestMatchingSubject(subjectFromSheet) || subjectFromSheet;
+          if (!acc[matchedSubject]) {
+            acc[matchedSubject] = [];
+          }
+          acc[matchedSubject].push(row);
+          return acc;
+        }, {});
+
+        const specialFolders = ["মিশন", "ক্লাসের লেকচার শীট", "পরীক্ষার রেজাল্ট শীট", "সাজেশন্স"];
+
+        const normalizedRows = [];
+        Object.keys(groupedBySubject).forEach(subject => {
+          const subjectRows = groupedBySubject[subject].sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
+          subjectRows.forEach((row, index) => {
+            const timestamp = row.timestamp || '';
+            let link = row.link || '#';
+            if (specialFolders.includes(subject)) {
+              link = row.file || row.link || '#';
+            }
+            const title = row.title || (subject === 'মিশন' ? 'মিশন' : subject === 'ইক্সাম' ? 'ইক্সাম' : 'ক্লাস ভিডিও');
+            const date = getDateFromTimestamp(timestamp);
+            const time = getTimeFromTimestamp(timestamp);
+            const displaySerial = index + 1;
+            const type = specialFolders.includes(subject) ? 'special' : subject === 'মিশন' ? 'mission' : subject === 'ইক্সাম' ? 'exam' : 'class';
+
+            normalizedRows.push({
+              subject: subject,
+              originalSubject: row.subject,
+              link: link,
+              title: title,
+              date: date,
+              time: time,
+              displaySerial: displaySerial,
+              timestamp: timestamp,
+              globalId: row.globalId,
+              type: type
+            });
+          });
+        });
+
+        updateLoadingProgress(80);
+        return normalizedRows;
+      } catch (error) {
+        console.error("Rows normalization error:", error);
+        return [];
+      }
+    }
+
+    function isExamTimeExpired(timestamp) {
+      if (!timestamp) return false;
+      try {
+        const examTime = new Date(timestamp).getTime();
+        const now = new Date().getTime();
+        const twentyFourHoursInMs = 24 * 60 * 60 * 1000;
+        return (now - examTime) > twentyFourHoursInMs;
+      } catch (error) {
+        console.error("Exam expiry check error:", error, timestamp);
+        return false;
+      }
+    }
+
+    function filterClassesByTimeRange(range) {
+      const now = new Date();
+      const today = getTodayDate(); // DD-MM-YYYY ফরম্যাটে আজকের তারিখ
+
+      if (range === 'today') {
+        return allClasses.filter(cls => cls && cls.date === today);
+      } else if (range === 'all') {
+        return allClasses;
+      }
+
+      const weekAgo = new Date(now.setDate(now.getDate() - 7));
+      const monthAgo = new Date(now.setMonth(now.getMonth() - 1));
+
+      return allClasses.filter(cls => {
+        if (!cls || !cls.date) return false;
+        const classDateParts = cls.date.split('-'); // DD-MM-YYYY ফরম্যাট
+        const classDate = new Date(`${classDateParts[2]}-${classDateParts[1]}-${classDateParts[0]}`);
+        
+        if (range === 'week') {
+          return classDate >= weekAgo && classDate <= new Date();
+        } else if (range === 'month') {
+          return classDate >= monthAgo && classDate <= new Date();
+        }
+        return true;
+      });
+    }
+
+    function groupClassesBySubject(classes) {
+      if (groupedClassesCache[JSON.stringify(classes)]) {
+        return groupedClassesCache[JSON.stringify(classes)];
+      }
+
+      const grouped = classes.reduce((acc, cls) => {
+        if (!cls || !cls.subject) return acc;
+        if (!acc[cls.subject]) {
+          acc[cls.subject] = [];
+        }
+        acc[cls.subject].push(cls);
+        return acc;
+      }, {});
+
+      // প্রতিটি সাবজেক্টের ক্লাসগুলোকে টাইমস্ট্যাম্প অনুযায়ী সাজানো (নতুন থেকে পুরানো)
+      Object.keys(grouped).forEach(subject => {
+        grouped[subject].sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+      });
+
+      groupedClassesCache[JSON.stringify(classes)] = grouped;
+      return grouped;
+    }
+
+    function renderTodayClassesSummary(classes) {
+      const container = $('#today-classes-body');
+      const sortValue = $('#sort-classes').value;
+
+      if (!classes || classes.length === 0) {
+        container.innerHTML = `<tr><td colspan="3" class="bangla-font" style="text-align: center; padding: 20px;">আজকের জন্য কোন ক্লাস পাওয়া যায়নি</td></tr>`;
+        return;
+      }
+
+      let tableHTML = '';
+      classes.forEach(cls => {
+        if (!cls) return;
+        const displayValue = sortValue === 'today' ? cls.time : cls.date;
+        tableHTML += `
+          <tr data-subject="${cls.subject}" data-timestamp="${cls.timestamp}">
+            <td><span class="subject-badge bangla-font">${cls.subject}</span></td>
+            <td class="class-info bangla-font">${cls.title}</td>
+            <td class="bangla-font">${displayValue}</td>
+          </tr>
+        `;
+      });
+      container.innerHTML = tableHTML;
+
+      $all('#today-classes-body tr').forEach(row => {
+        row.addEventListener('click', () => {
+          const subject = row.getAttribute('data-subject');
+          highlightedClassTimestamp = row.getAttribute('data-timestamp');
+          showSubjectPage(subject, true);
+        });
+      });
+    }
+
+    function renderCards(rows, root) {
+      if (!rows || rows.length === 0) {
+        root.innerHTML = '<div class="empty-state"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><p class="bangla-font">কোন ক্লাস পাওয়া যায়নি</p></div>';
+        return;
+      }
+
+      root.innerHTML = '';
+      rows.forEach(r => {
+        if (!r) return;
+
+        const specialFolders = ["ক্লাসের লেকচার শীট", "পরীক্ষার রেজাল্ট শীট", "সাজেশন্স"];
+        let buttonText;
+        let isExpired = false;
+
+        if (specialFolders.includes(r.subject)) {
+          buttonText = "দেখুন";
+        } else if (r.subject === "মিশন") {
+          buttonText = "মিশন সম্পন্ন করুন";
+        } else if (r.subject === "ইক্সাম") {
+          buttonText = "পরীক্ষায় অংশগ্রহণ করুন";
+          isExpired = isExamTimeExpired(r.timestamp);
+        } else {
+          buttonText = "ক্লাস দেখুন";
+        }
+
+        const card = document.createElement('div');
+        card.className = 'card fade-in';
+        card.setAttribute('data-timestamp', r.timestamp);
+        if (highlightedClassTimestamp === r.timestamp) {
+          card.classList.add('highlight');
+          setTimeout(() => {
+            card.classList.remove('highlight');
+            highlightedClassTimestamp = null;
+          }, 5000);
+        }
+        const idPrefix = r.type === 'mission' ? 'm' : r.type === 'exam' ? 'e' : 'c';
+        const trackId = idPrefix + r.globalId;
+        
+        // Check if it's a YouTube link or Drive link
+        const isYouTube = r.link && r.link.includes('youtube.com') || r.link && r.link.includes('youtu.be');
+        const isDrive = r.link && r.link.includes('drive.google.com');
+        
+        // Set onclick attribute based on link type
+        let onclickAttr = '';
+        if (isYouTube) {
+          onclickAttr = `onclick="openVideoPlayer('${r.link}', '${trackId}', '${r.type}')"`;
+        } else if (isDrive) {
+          onclickAttr = `onclick="openDrivePlayer('${r.link}', '${trackId}', '${r.type}')"`;
+        } else {
+          // For other links, track and open in new tab
+          onclickAttr = `onclick="trackAndOpenLink('${r.link}', '${trackId}', '${r.type}')"`;
+        }
+        
+        card.innerHTML = `
+          <span class="card-badge bangla-font">ক্লাস ${r.displaySerial}</span>
+          <div class="subject"><i class="fas fa-book"></i> <span class="bangla-font">${r.subject}</span></div>
+          <div class="video-title bangla-font">${r.title}</div>
+          <div class="time"><i class="fas fa-clock"></i> ${r.time} | <span class="bangla-font">${r.date}</span></div>
+          ${r.subject === "ইক্সাম" && isExpired ? '<div class="exam-expiry-notice bangla-font"><i class="fas fa-exclamation-triangle"></i> পরীক্ষায় অংশগ্রহণ করার নির্দিষ্ট সময় শেষ হয়ে গেছে</div>' : ''}
+          <a class="btn" href="javascript:void(0)" ${onclickAttr}><i class="fas fa-play-circle"></i> <span class="bangla-font">${buttonText}</span></a>
+        `;
+        root.appendChild(card);
+      });
+    }
+
+    // NEW FUNCTION: Track and open non-YouTube links
+    window.trackAndOpenLink = function(url, trackId, type) {
+      trackItem(trackId, type);
+      window.open(url, '_blank');
+    };
+
+    function filterTodayClasses(classes) {
+      const today = getTodayDate();
+      return classes.filter(cls => cls && cls.date === today);
+    }
+
+    function similarity(s1, s2) {
+      s1 = s1.toLowerCase();
+      s2 = s2.toLowerCase();
+      const m = s1.length;
+      const n = s2.length;
+      const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+      for (let i = 0; i <= m; i++) dp[i][0] = i;
+      for (let j = 0; j <= n; j++) dp[0][j] = j;
+      for (let i = 1; i <= m; i++) {
+        for (let j = 1; j <= n; j++) {
+          const cost = s1[i - 1] === s2[j - 1] ? 0 : 1;
+          dp[i][j] = Math.min(
+            dp[i - 1][j] + 1,
+            dp[i][j - 1] + 1,
+            dp[i - 1][j - 1] + cost
+          );
+        }
+      }
+      const distance = dp[m][n];
+      const maxLen = Math.max(m, n);
+      return maxLen ? (maxLen - distance) / maxLen : 0;
+    }
+
+    function maxWordSimilarity(searchTerm, title) {
+      const words = title.toLowerCase().split(/\s+/);
+      let maxSim = 0;
+      words.forEach(word => {
+        const sim = similarity(searchTerm, word);
+        if (sim > maxSim) maxSim = sim;
+      });
+      // Also check full title
+      const fullSim = similarity(searchTerm, title.toLowerCase());
+      return Math.max(maxSim, fullSim);
+    }
+
+    function renderSearchResults(results) {
+      const container = $('#search-results');
+      if (results.length === 0) {
+        container.style.display = 'none';
+        container.innerHTML = '';
+        return;
+      }
+      
+      container.style.display = 'flex';
+      container.innerHTML = '';
+      results.forEach(res => {
+        const item = document.createElement('div');
+        item.className = 'search-result-item';
+        item.innerHTML = `<span class="title bangla-font">${res.title}</span><span class="subject bangla-font">(${res.subject})</span>`;
+        item.addEventListener('click', () => {
+          highlightedClassTimestamp = res.timestamp;
+          showSubjectPage(res.subject, true);
+          container.innerHTML = '';
+          $('#search-subjects').value = '';
+          container.style.display = 'none';
+        });
+        container.appendChild(item);
+      });
+    }
+
+    // Comment and Reply System
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxUJ5tm1S8a0hYIcubNhQJCHAmqv-iLoqp70yyP6cWa_52vp9HcT7w8m_wUhfn2_51SMQ/exec";
+    
+    // Storage keys for tokens
+    const TOKEN_STORAGE_KEY = 'alim27_comment_tokens';
+    
+    // Function to generate token that matches App Script format - UPDATED
+    function generateToken() {
+      const now = new Date();
+      const day = now.getDate(); // 1-31 (no padding)
+      const month = String(now.getMonth() + 1).padStart(2, '0'); // 01-12
+      const year = now.getFullYear(); // 2025
+      const hour = String(now.getHours()).padStart(2, '0'); // 00-23
+      const minute = String(now.getMinutes()).padStart(2, '0'); // 00-59
+      const second = String(now.getSeconds()).padStart(2, '0'); // 00-59
+      
+      // Format: DMMYYYYHHMMSS (e.g., 3122025150019 for 03-12-2025 15:00:19)
+      // Important: Return as string, not integer, to prevent losing leading zeros
+      return day.toString() + month + year + hour + minute + second;
+    }
+    
+    // Function to save token to local storage
+    function saveToken(token) {
+      let tokens = JSON.parse(localStorage.getItem(TOKEN_STORAGE_KEY)) || [];
+      // Convert token to string for consistent storage
+      const tokenStr = token.toString();
+      if (!tokens.includes(tokenStr)) {
+        tokens.push(tokenStr);
+        localStorage.setItem(TOKEN_STORAGE_KEY, JSON.stringify(tokens));
+      }
+      return token;
+    }
+    
+    // Function to remove token from local storage
+    function removeToken(token) {
+      let tokens = JSON.parse(localStorage.getItem(TOKEN_STORAGE_KEY)) || [];
+      tokens = tokens.filter(t => t !== token.toString());
+      localStorage.setItem(TOKEN_STORAGE_KEY, JSON.stringify(tokens));
+    }
+    
+    // Function to get all tokens from local storage
+    function getTokens() {
+      return JSON.parse(localStorage.getItem(TOKEN_STORAGE_KEY)) || [];
+    }
+    
+    // Modified submitForm function to include token - UPDATED
+    function submitForm(event) {
+      event.preventDefault();
+      const submitBtn = $('#submitBtn');
+      submitBtn.classList.add('loading');
+      submitBtn.disabled = true;
+      
+      const form = $('#myForm');
+      const token = generateToken();
+      
+      const data = {
+        name: form.name.value.trim(),
+        batch: form.batch.value,
+        message: form.message.value.trim(),
+        token: token
+      };
+
+      fetch(WEB_APP_URL, {
+        method: 'POST',
+        mode: 'no-cors', // CORS সমস্যা এড়াতে
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+        if (response.ok || response.type === 'opaque') {
+          // Save token to local storage
+          saveToken(token);
+          
+          // Show success message with token and countdown
+          showSuccessMessageWithToken(token);
+          form.reset(); 
+          hideForm();
+          
+          // Reload submissions to show new comment
+          setTimeout(() => {
+            loadSubmissions();
+          }, 1000);
+        } else {
+          showNotification("ডেটা জমা হয়নি! আবার চেষ্টা করুন।", true);
+        }
+      })
+      .catch((error) => {
+        console.error('Submission error:', error);
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+        showNotification("ডেটা জমা হয়নি! আবার চেষ্টা করুন।", true);
+      });
+    }
+    
+    // UPDATED: Function to show success message with token and countdown (10 seconds)
+    function showSuccessMessageWithToken(token) {
+      const successMessage = $('#successMessage');
+      const successMessageContent = $('#successMessageContent');
+      let timeLeft = 10; // Changed from 20 to 10 seconds
+      
+      successMessageContent.innerHTML = `
+        ফর্ম সফলভাবে জমা হয়েছে!<br>
+        আপনার টোকেন নম্বর: <strong>${token}</strong><br>
+        <small>এই টোকেন নম্বরটি উত্তর পেতে সাহায্য করবে</small>
+      `;
+      
+      successMessage.style.display = 'block';
+      successMessage.style.zIndex = '10003';
+      
+      // Update countdown every second
+      const countdownElement = $('#successCountdown');
+      countdownElement.textContent = timeLeft + 's';
+      
+      const countdownInterval = setInterval(() => {
+        timeLeft--;
+        countdownElement.textContent = timeLeft + 's';
+        
+        if (timeLeft <= 0) {
+          clearInterval(countdownInterval);
+          successMessage.style.display = 'none';
+        }
+      }, 1000);
+      
+      // Also show notification
+      showNotification(`কমেন্ট জমা হয়েছে! টোকেন: ${token}`, false);
+    }
+    
+    // FIXED: Modified loadSubmissions function to show reply buttons for admin/editor
+    function loadSubmissions() {
+      // Show loading message
+      const list = $('#submissions-list');
+      list.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-muted)" class="bangla-font">লোড হচ্ছে...</div>';
+      
+      fetch(WEB_APP_URL + '?action=getSubmissions', {
+        method: 'GET',
+        mode: 'cors'
+      })
+        .then(res => {
+          if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+          }
+          return res.json();
+        })
+        .then(response => {
+          // Check if response is successful
+          if (!response.ok || !response.data) {
+            list.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-muted)" class="bangla-font">ডেটা লোড করা যায়নি</div>';
+            return;
+          }
+          
+          // Filter only ALIM-27 batch submissions
+          const alim27Submissions = response.data.filter(item => 
+            item.batch && item.batch.toString().toLowerCase().includes('alim-27')
+          );
+          
+          // Sort from newest to oldest
+          alim27Submissions.sort((a, b) => new Date(b.timestamp || b.time) - new Date(a.timestamp || a.time));
+          
+          if (alim27Submissions.length === 0) {
+            list.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-muted)" class="bangla-font">ALIM-27 ব্যাচের কোন সাবমিশন নেই</div>';
+            return;
+          }
+          
+          const userRole = getUserRole();
+          const isAdminOrEditor = userRole === 'owner' || userRole === 'editor';
+          const userTokens = getTokens();
+          
+          list.innerHTML = '';
+          alim27Submissions.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'submission-item';
+            
+            // Check if this submission has a reply
+            const hasReply = item.reply && item.reply.trim() !== '';
+            const tokenStr = item.token ? item.token.toString() : '';
+            const hasToken = tokenStr && userTokens.includes(tokenStr);
+            
+            let html = `
+              <div class="submission-name bangla-font">${item.name || 'নাম নেই'}</div>
+              <div class="submission-batch bangla-font">ব্যাচ: ${item.batch || 'ব্যাচ নেই'}</div>
+              <div class="submission-message bangla-font">${item.message || 'মেসেজ নেই'}</div>
+            `;
+            
+            if (hasReply) {
+              html += `<div class="reply-indicator bangla-font">উত্তর দেওয়া হয়েছে</div>`;
+              html += `<div class="submission-reply bangla-font"><strong>উত্তর:</strong> ${item.reply}</div>`;
+              html += `<div class="submission-time bangla-font">উত্তর দাতা: ${item.answeredBy || 'Admin'} | ${item.time || 'সময় নেই'}</div>`;
+            } else {
+              html += `<div class="submission-time bangla-font">${item.time || 'সময় নেই'}</div>`;
+            }
+            
+            // Add reply button for admin/editor
+            if (isAdminOrEditor && !hasReply) {
+              html += `<button class="reply-btn bangla-font" data-token="${item.token}" data-name="${item.name}" data-batch="${item.batch}" data-message="${item.message}">উত্তর দিন</button>`;
+            }
+            
+            // Add view answer button for students (if they have a reply and token matches)
+            if (hasReply && hasToken) {
+              html += `<button class="reply-btn bangla-font" onclick="showAnswerForToken('${tokenStr}')">উত্তর দেখুন</button>`;
+            }
+            
+            div.innerHTML = html;
+            list.appendChild(div);
+          });
+          
+          // Add event listeners to reply buttons
+          if (isAdminOrEditor) {
+            document.querySelectorAll('.reply-btn[data-token]').forEach(btn => {
+              btn.addEventListener('click', function() {
+                const token = this.getAttribute('data-token');
+                const name = this.getAttribute('data-name');
+                const batch = this.getAttribute('data-batch');
+                const message = this.getAttribute('data-message');
+                showReplyModal(token, name, batch, message);
+              });
+            });
+          }
+        })
+        .catch((error) => {
+          console.error('Error loading submissions:', error);
+          list.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-muted)" class="bangla-font">সাবমিশন লোড হয়নি! আবার চেষ্টা করুন।</div>';
+          showNotification("সাবমিশন লোড হয়নি! আবার চেষ্টা করুন।", true);
+        });
+    }
+    
+    // Function to show reply modal
+    function showReplyModal(token, name, batch, message) {
+      $('#reply-token-display').textContent = token;
+      $('#reply-student-name').textContent = name;
+      $('#reply-student-batch').textContent = batch;
+      $('#reply-student-comment').textContent = message;
+      $('#reply-message').value = '';
+      $('#replyModal').style.display = 'flex';
+      
+      // Reset form event listeners to prevent duplicate submissions
+      const replyForm = $('#replyForm');
+      const newReplyForm = replyForm.cloneNode(true);
+      replyForm.parentNode.replaceChild(newReplyForm, replyForm);
+      
+      // Add event listener to the new form
+      newReplyForm.onsubmit = submitReply;
+    }
+    
+    // Function to hide reply modal
+    function hideReplyModal() {
+      $('#replyModal').style.display = 'none';
+      // Reset the form
+      $('#replyForm')[0].reset();
+    }
+    
+    // Function to submit reply
+    function submitReply(event) {
+      event.preventDefault();
+      const submitBtn = $('#replySubmitBtn');
+      submitBtn.classList.add('loading');
+      submitBtn.disabled = true;
+      
+      const token = $('#reply-token-display').textContent;
+      const studentName = $('#reply-student-name').textContent;
+      const studentBatch = $('#reply-student-batch').textContent;
+      const studentComment = $('#reply-student-comment').textContent;
+      const replyMessage = $('#reply-message').value.trim();
+      
+      const userRole = getUserRole();
+      const answeredBy = userRole === 'owner' ? 'Admin : BOM' : 'Editor : Sahibul Musa Sium';
+      
+      const data = {
+        action: 'submitReply',
+        token: token,
+        studentName: studentName,
+        studentBatch: studentBatch,
+        studentComment: studentComment,
+        replyMessage: replyMessage,
+        answeredBy: answeredBy
+      };
+
+      fetch(WEB_APP_URL, {
+        method: 'POST',
+        mode: 'no-cors', // CORS সমস্যা এড়াতে
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+        if (response.ok || response.type === 'opaque') {
+          hideReplyModal();
+          showNotification(`টোকেন নম্বর ${token} এর উত্তর পাঠানো হয়েছে!`, false);
+          // Reload submissions to update the UI
+          setTimeout(() => {
+            loadSubmissions();
+          }, 1000);
+        } else {
+          showNotification("উত্তর পাঠানো যায়নি! আবার চেষ্টা করুন।", true);
+        }
+      })
+      .catch((error) => {
+        console.error('Reply submission error:', error);
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+        showNotification("উত্তর পাঠানো যায়নি! আবার চেষ্টা করুন।", true);
+      });
+    }
+    
+    // FIXED: Function to check for replies - SIMPLIFIED VERSION
+    function checkForReplies() {
+      const tokens = getTokens();
+      if (tokens.length === 0) return;
+      
+      fetch(WEB_APP_URL + '?action=getSubmissions', {
+        method: 'GET',
+        mode: 'cors'
+      })
+        .then(res => {
+          if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+          }
+          return res.json();
+        })
+        .then(response => {
+          if (!response.ok || !response.data) {
+            return;
+          }
+          
+          // Filter only ALIM-27 batch submissions
+          const alim27Submissions = response.data.filter(item => 
+            item.batch && item.batch.toString().toLowerCase().includes('alim-27')
+          );
+          
+          // Find submissions that have replies and match our tokens
+          const repliedSubmissions = [];
+          
+          tokens.forEach(token => {
+            const submission = alim27Submissions.find(item => 
+              item.token && item.token.toString() === token && 
+              item.reply && item.reply.trim() !== ''
+            );
+            
+            if (submission) {
+              repliedSubmissions.push(submission);
+            }
+          });
+          
+          // Show modal for the first replied submission (most recent)
+          if (repliedSubmissions.length > 0) {
+            // Sort by timestamp descending (most recent first)
+            repliedSubmissions.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+            showAnswerModal(repliedSubmissions[0]);
+          }
+        })
+        .catch(error => {
+          console.error("Error checking for replies:", error);
+        });
+    }
+    
+    // UPDATED: Function to show answer modal with correct data structure
+    function showAnswerModal(item) {
+      const studentName = localStorage.getItem('userName') || 'শিক্ষার্থী';
+      $('#answer-token-info').textContent = `প্রিয় ${studentName}, আপনার কমেন্টের উত্তর পাওয়া গেছে!`;
+      $('#answer-token-value').textContent = item.token;
+      $('#answer-question').textContent = item.message || item.studentComment || 'কোনো প্রশ্ন নেই';
+      $('#answer-reply').textContent = item.reply || 'কোনো উত্তর নেই';
+      $('#answer-answered-by').textContent = item.answeredBy || 'Admin';
+      
+      // Set up the "বুঝেছি" button with current token
+      const understoodBtn = $('#answer-understood-btn');
+      understoodBtn.onclick = function() {
+        removeToken(item.token.toString());
+        hideAnswerModal();
+        showNotification("টোকেন ডিলিট হয়েছে! উত্তর সফলভাবে দেখা হয়েছে।", false);
+      };
+      
+      $('#answerModal').style.display = 'flex';
+      $('#answerModal').style.zIndex = '10001';
+    }
+    
+    // NEW: Function to remove token and close modal
+    function removeTokenAndClose() {
+      const tokenValue = $('#answer-token-value').textContent;
+      if (tokenValue) {
+        removeToken(tokenValue);
+      }
+      hideAnswerModal();
+      showNotification("টোকেন ডিলিট হয়েছে! উত্তর সফলভাবে দেখা হয়েছে।", false);
+    }
+    
+    // Function to show answer for token (new function)
+    function showAnswerForToken(token) {
+      fetch(WEB_APP_URL + '?action=getSubmissions', {
+        method: 'GET',
+        mode: 'cors'
+      })
+        .then(res => {
+          if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+          }
+          return res.json();
+        })
+        .then(response => {
+          if (!response.ok || !response.data) {
+            showNotification("উত্তর লোড করা যায়নি", true);
+            return;
+          }
+          
+          const submission = response.data.find(item => 
+            item.token && item.token.toString() === token
+          );
+          
+          if (submission && submission.reply && submission.reply.trim() !== '') {
+            showAnswerModal(submission);
+          } else {
+            showNotification("এই টোকেনের জন্য কোন উত্তর নেই", true);
+          }
+        })
+        .catch(error => {
+          console.error("Error checking for replies:", error);
+          showNotification("উত্তর চেক করা যায়নি", true);
+        });
+    }
+
+    // Function to hide answer modal
+    function hideAnswerModal() {
+      $('#answerModal').style.display = 'none';
+    }
+
+    async function loadInitialData() {
+      showLoadingOverlay();
+      updateLoadingProgress(10);
+      if (!checkLoginExpiry()) {
+        logout();
+        return;
+      }
+
+      const rows = await fetchData();
+      updateLoadingProgress(95);
+      allClasses = normalizeRows(rows);
+      renderTodayClassesSummary(filterTodayClasses(allClasses));
+
+      showAddClassButton();
+      showDashboardButton();
+      
+      // Check for replies
+      checkForReplies();
+      
+      // Set button visibility
+      setButtonVisibility();
+      
+      // Hide loading overlay after a short delay to ensure everything is loaded
+      setTimeout(() => {
+        hideLoadingOverlay();
+        updateLoadingProgress(0);
+      }, 100);
+    }
+
+    function showSubjectPage(subject, fromTable = false) {
+      currentSubject = subject;
+      mainScrollPosition = window.scrollY; // Save main page scroll position
+      
+      // Push state to history for back button navigation
+      history.pushState({ page: 'subject', subject: subject }, '');
+      currentPageState = 'subject';
+      
+      mainPage.style.display = 'none';
+      subjectPage.style.display = 'block';
+      $('#subject-title').innerHTML = `<i class="fas fa-book"></i> <span class="bangla-font">${subject}</span>`;
+      scrollToTop();
+
+      const classes = filterClassesByTimeRange('all');
+      const groupedClasses = groupClassesBySubject(classes);
+      const subjectClasses = groupedClasses[subject] || [];
+
+      const root = $('#classGrid');
+      renderCards(subjectClasses, root);
+
+      if (fromTable) {
+        const highlightedCard = $all('#classGrid .card').find(card => card.getAttribute('data-timestamp') === highlightedClassTimestamp);
+        if (highlightedCard) {
+          highlightedCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+
+      $('#search').value = '';
+      
+      // Check for replies when subject page loads
+      checkForReplies();
+    }
+
+    function returnToMainPage() {
+      subjectPage.style.display = 'none';
+      mainPage.style.display = 'block';
+      $('#search-subjects').value = '';
+      const pills = $all('.subject-link');
+      pills.forEach(pill => {
+        pill.style.display = 'flex';
+      });
+      window.scrollTo(0, mainScrollPosition); // Restore scroll position
+      currentPageState = 'main';
+    }
+
+    // Video Player Functions
+    function extractVideoId(url) {
+      const match = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/);
+      return match ? match[1] : '';
+    }
+
+    function openVideoPlayer(url, trackId, type) {
+      videoUrl = url;
+      videoTrackId = trackId;
+      videoType = type;
+      videoIsYouTube = url.includes('youtube.com') || url.includes('youtu.be');
+      
+      // Save current scroll position
+      subjectScrollPosition = window.scrollY;
+      
+      if (videoIsYouTube) {
+        // Show video player page for YouTube videos
+        subjectPage.style.display = 'none';
+        videoPlayerPage.style.display = 'block';
+        
+        // Set up back button immediately - FIX FOR ISSUE 1
+        document.getElementById('folderBtn').addEventListener('click', () => {
+          // Return to subject page and reset video player
+          closeVideoPlayer();
+        });
+        
+        // Push state to history for back button navigation
+        history.pushState({ page: 'video', url: url, trackId: trackId, type: type }, '');
+        currentPageState = 'video';
+        
+        // Always start from top when opening video player
+        window.scrollTo(0, 0);
+        
+        // Initialize YouTube player
+        const videoId = extractVideoId(url);
+        if (videoId) {
+          initializeYouTubePlayer(videoId);
+          
+          // Set timeout for loading message - FIX FOR ISSUE 2
+          videoLoadingTimeout = setTimeout(() => {
+            const loadingText = document.getElementById('loading-text');
+            if (loadingText) {
+              loadingText.innerHTML = "সম্ভবত নেটওয়ার্ক জনিত সমস্যা হচ্ছে!<br>দয়া করে আরো কিছুক্ষণ অপেক্ষা করুন অথবা পুনরায় চেষ্টা করুন..";
+            }
+          }, 20000); // 20 seconds
+        } else {
+          showNotification("ভিডিও লোড করতে সমস্যা হয়েছে", true);
+        }
+      } else {
+        // For non-YouTube links, track immediately and open in new tab
+        trackAndOpenLink(url, trackId, type);
+      }
+    }
+
+    function initializeYouTubePlayer(videoId) {
+      // YouTube IFrame API initialization
+      if (typeof YT === 'undefined') {
+        // Load YouTube API if not already loaded
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        
+        // Wait for API to load
+        window.onYouTubeIframeAPIReady = function() {
+          createYouTubePlayer(videoId);
+        };
+      } else {
+        createYouTubePlayer(videoId);
+      }
+    }
+
+    function createYouTubePlayer(videoId) {
+      videoPlayer = new YT.Player('player', {
+        height: '100%',
+        width: '100%',
+        videoId: videoId,
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          modestbranding: 1,
+          rel: 0,
+          iv_load_policy: 3,
+          disablekb: 1,
+          fs: 0,
+          playsinline: 1
+        },
+        events: {
+          onReady: onPlayerReady,
+          onStateChange: onPlayerStateChange,
+          onPlaybackQualityChange: onPlaybackQualityChange,
+          onPlaybackRateChange: onPlaybackRateChange,
+          onError: onPlayerError
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      // Clear video loading timeout - FIX FOR ISSUE 2
+      if (videoLoadingTimeout) {
+        clearTimeout(videoLoadingTimeout);
+        videoLoadingTimeout = null;
+      }
+      
+      // Set up video player controls
+      const togglePlayBtn = document.getElementById('togglePlayBtn');
+      togglePlayBtn.addEventListener('click', () => {
+        if (videoPlayer.getPlayerState() === YT.PlayerState.PLAYING) {
+          videoPlayer.pauseVideo();
+          togglePlayBtn.textContent = 'Play';
+        } else {
+          videoPlayer.playVideo();
+          togglePlayBtn.textContent = 'Pause';
+        }
+      });
+
+      document.getElementById('stopBtn').addEventListener('click', () => {
+        videoPlayer.stopVideo();
+        togglePlayBtn.textContent = 'Play';
+      });
+      
+      document.getElementById('rewindBtn').addEventListener('click', () => {
+        const t = Math.max(0, videoPlayer.getCurrentTime() - 10); 
+        videoPlayer.seekTo(t, true);
+      });
+      
+      document.getElementById('forwardBtn').addEventListener('click', () => {
+        const t = Math.min(videoPlayer.getDuration() || 99999, videoPlayer.getCurrentTime() + 10); 
+        videoPlayer.seekTo(t, true);
+      });
+      
+      document.getElementById('muteBtn').addEventListener('click', () => {
+        if(videoPlayer.isMuted()) {
+          videoPlayer.unMute();
+          document.getElementById('muteBtn').textContent = 'Mute';
+        } else {
+          videoPlayer.mute();
+          document.getElementById('muteBtn').textContent = 'Unmute';
+        }
+      });
+
+      document.getElementById('portraitBtn').addEventListener('click', enterPortrait);
+
+      // Set up top buttons
+      document.getElementById('youtubeBtn').addEventListener('click', () => {
+        // Open in YouTube directly without tracking
+        window.open(videoUrl, '_blank');
+      });
+
+      // Set up blocker for portrait mode exit
+      const blocker = document.getElementById('blocker');
+      blocker.addEventListener('click', exitPortraitOnTap);
+
+      // Set up progress bar - UPDATED
+      const progressContainer = document.getElementById('progress-container');
+      const progressBar = document.getElementById('progress-bar');
+      const progressThumb = document.getElementById('progress-thumb');
+      
+      progressContainer.addEventListener('click', (e) => {
+        if (isDraggingProgress) return;
+        const rect = progressContainer.getBoundingClientRect();
+        const pos = (e.clientX - rect.left) / progressContainer.offsetWidth;
+        const newTime = pos * videoPlayer.getDuration();
+        videoPlayer.seekTo(newTime, true);
+        updateProgressBar(pos * 100);
+      });
+      
+      // Add drag functionality to progress thumb
+      progressThumb.addEventListener('mousedown', startDrag);
+      progressThumb.addEventListener('touchstart', startDrag);
+      
+      function startDrag(e) {
+        e.preventDefault();
+        isDraggingProgress = true;
+        
+        const moveHandler = (e) => {
+          if (!isDraggingProgress) return;
+          
+          const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+          const rect = progressContainer.getBoundingClientRect();
+          let pos = (clientX - rect.left) / progressContainer.offsetWidth;
+          pos = Math.max(0, Math.min(1, pos));
+          
+          updateProgressBar(pos * 100);
+        };
+        
+        const endHandler = () => {
+          isDraggingProgress = false;
+          const pos = parseFloat(progressBar.style.width) / 100;
+          const newTime = pos * videoPlayer.getDuration();
+          videoPlayer.seekTo(newTime, true);
+          
+          document.removeEventListener('mousemove', moveHandler);
+          document.removeEventListener('touchmove', moveHandler);
+          document.removeEventListener('mouseup', endHandler);
+          document.removeEventListener('touchend', endHandler);
+        };
+        
+        document.addEventListener('mousemove', moveHandler);
+        document.addEventListener('touchmove', moveHandler, { passive: false });
+        document.addEventListener('mouseup', endHandler);
+        document.addEventListener('touchend', endHandler);
+      }
+
+      // Get video duration for tracking
+      videoDuration = videoPlayer.getDuration();
+      
+      // Start tracking watch time
+      videoWatchTime = 0;
+      videoCheckInterval = setInterval(updateVideoProgress, 1000);
+      
+      // Start updating progress bar
+      progressUpdateInterval = setInterval(updateProgressFromPlayer, 200);
+      
+      // Hide loading indicator
+      const loading = document.getElementById('loading');
+      loading.classList.add('hidden');
+    }
+
+    function updateProgressFromPlayer() {
+      if (videoPlayer && !isDraggingProgress) {
+        const currentTime = videoPlayer.getCurrentTime();
+        const duration = videoPlayer.getDuration();
+        
+        if (duration > 0) {
+          const progressPercent = (currentTime / duration) * 100;
+          updateProgressBar(progressPercent);
+        }
+      }
+    }
+
+    function updateProgressBar(percent) {
+      const progressBar = document.getElementById('progress-bar');
+      progressBar.style.width = percent + '%';
+    }
+
+    function updateVideoProgress() {
+      if (videoPlayer && videoPlayer.getPlayerState() === YT.PlayerState.PLAYING) {
+        videoWatchTime += 1; // Increment by 1 second
+        
+        const currentTime = videoPlayer.getCurrentTime();
+        const duration = videoPlayer.getDuration();
+        
+        if (duration > 0) {
+          // Check if 40% of video has been watched
+          if ((currentTime / duration) >= 0.4) {
+            trackItem(videoTrackId, videoType);
+            clearInterval(videoCheckInterval);
+          }
+        }
+      }
+    }
+
+    function onPlayerStateChange(event) {
+      const togglePlayBtn = document.getElementById('togglePlayBtn');
+      const loading = document.getElementById('loading');
+      
+      if (event.data === YT.PlayerState.PLAYING) {
+        togglePlayBtn.textContent = 'Pause';
+        loading.classList.add('hidden');
+      } else if (event.data === YT.PlayerState.PAUSED) {
+        togglePlayBtn.textContent = 'Play';
+      } else if (event.data === YT.PlayerState.ENDED) {
+        togglePlayBtn.textContent = 'Play';
+      }
+      
+      // Update loading progress based on buffering
+      if (event.data === YT.PlayerState.BUFFERING) {
+        updateLoadingProgressBar();
+      }
+    }
+
+    function updateLoadingProgressBar() {
+      if (videoPlayer && videoPlayer.getVideoLoadedFraction) {
+        const loadedFraction = videoPlayer.getVideoLoadedFraction();
+        const loadingProgressBar = document.getElementById('loading-progress-bar');
+        if (loadingProgressBar) {
+          loadingProgressBar.style.width = (loadedFraction * 100) + '%';
+        }
+      }
+    }
+
+    function onPlaybackQualityChange(event) {
+      console.log('Playback quality changed to:', event.data);
+      updateLoadingProgressBar();
+    }
+
+    function onPlaybackRateChange(event) {
+      console.log('Playback rate changed to:', event.data);
+    }
+
+    function onPlayerError(event) {
+      console.error('YouTube Player Error:', event.data);
+      showNotification("ভিডিও লোড করতে সমস্যা হয়েছে", true);
+    }
+
+    function enterPortrait() {
+      const aspect = document.getElementById('aspect');
+      aspect.classList.add('portrait', 'fullscreen-portrait');
+      document.body.classList.add('fullscreen-locked');
+      isPortraitMode = true;
+      
+      // Auto scroll to center when entering portrait mode
+      setTimeout(() => {
+        window.scrollTo({
+          top: window.innerHeight / 2,
+          behavior: 'smooth'
+        });
+      }, 100);
+    }
+
+    function exitPortraitOnTap() {
+      if (isPortraitMode) {
+        exitPortrait();
+      }
+    }
+
+    function exitPortrait() {
+      const aspect = document.getElementById('aspect');
+      aspect.classList.remove('portrait', 'fullscreen-portrait');
+      document.body.classList.remove('fullscreen-locked');
+      isPortraitMode = false;
+      
+      // Auto scroll back to top when exiting portrait mode
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }, 100);
+    }
+
+    function closeVideoPlayer() {
+      // Clear tracking interval
+      if (videoCheckInterval) {
+        clearInterval(videoCheckInterval);
+      }
+      
+      // Clear progress update interval
+      if (progressUpdateInterval) {
+        clearInterval(progressUpdateInterval);
+      }
+      
+      // Clear video loading timeout
+      if (videoLoadingTimeout) {
+        clearTimeout(videoLoadingTimeout);
+        videoLoadingTimeout = null;
+      }
+      
+      // Exit portrait mode if active
+      if (isPortraitMode) {
+        exitPortrait();
+      }
+      
+      // Stop video player
+      if (videoPlayer) {
+        videoPlayer.stopVideo();
+        videoPlayer.destroy();
+        videoPlayer = null;
+      }
+      
+      // Clear player element
+      const playerElement = document.getElementById('player');
+      if (playerElement) {
+        playerElement.innerHTML = '';
+      }
+      
+      // Return to subject page
+      videoPlayerPage.style.display = 'none';
+      subjectPage.style.display = 'block';
+      
+      // Restore scroll position
+      window.scrollTo(0, subjectScrollPosition);
+      currentPageState = 'subject';
+    }
+
+    // Drive Player Functions
+    function extractDriveId(url) {
+      try {
+        let u = new URL(url);
+        return u.searchParams.get("id") || url.match(/\/d\/(.+?)\//)?.[1];
+      } catch(e) { 
+        return null; 
+      }
+    }
+
+    function openDrivePlayer(url, trackId, type) {
+      driveUrl = url;
+      driveTrackId = trackId;
+      driveType = type;
+      
+      // Save current scroll position
+      driveScrollPosition = window.scrollY;
+      
+      // Show drive player page
+      subjectPage.style.display = 'none';
+      drivePlayerPage.style.display = 'block';
+      
+      // Push state to history for back button navigation
+      history.pushState({ page: 'drive', url: url, trackId: trackId, type: type }, '');
+      currentPageState = 'drive';
+      
+      // Always start from top when opening drive player
+      window.scrollTo(0, 0);
+      
+      // Initialize drive player
+      const driveId = extractDriveId(url);
+      if (driveId) {
+        initializeDrivePlayer(driveId);
+      } else {
+        showNotification("ডকুমেন্ট লোড করতে সমস্যা হয়েছে", true);
+      }
+    }
+
+    function initializeDrivePlayer(driveId) {
+      const viewer = document.getElementById('viewer');
+      viewer.src = "https://drive.google.com/file/d/" + driveId + "/preview";
+
+      // Set up back button
+      const backBtn = document.getElementById('backBtn');
+      backBtn.onclick = function() {
+        closeDrivePlayer();
+      };
+
+      // Set up loading timeout - FIX FOR ISSUE 2
+      driveLoadingTimeout = setTimeout(() => {
+        const loader = document.getElementById('drive-loading-text');
+        if (loader) {
+          loader.innerHTML = "সম্ভবত নেটওয়ার্ক জনিত সমস্যা হচ্ছে! দয়া করে অপেক্ষা করুন অথবা পুনরায় চেষ্টা করুন..";
+        }
+      }, 20000); // 20 seconds
+
+      // When iframe loads, hide loader
+      viewer.onload = () => {
+        clearTimeout(driveLoadingTimeout);
+        document.querySelector('#drive-player-page .loader').style.display = "none";
+        trackItem(driveTrackId, driveType);
+      };
+
+      // Track immediately for drive documents
+      trackItem(driveTrackId, driveType);
+    }
+
+    function closeDrivePlayer() {
+      // Clear loading timeout
+      if (driveLoadingTimeout) {
+        clearTimeout(driveLoadingTimeout);
+        driveLoadingTimeout = null;
+      }
+      
+      // Return to subject page
+      drivePlayerPage.style.display = 'none';
+      subjectPage.style.display = 'block';
+      
+      // Restore scroll position
+      window.scrollTo(0, driveScrollPosition);
+      currentPageState = 'subject';
+    }
+
+    // Back button handling
+    function handleBackButton() {
+      if (currentPageState === 'video') {
+        if (isPortraitMode) {
+          exitPortrait();
+        } else {
+          document.getElementById('folderBtn').click();
+        }
+      } else if (currentPageState === 'drive') {
+        document.getElementById('backBtn').click();
+      } else if (currentPageState === 'subject') {
+        document.getElementById('back-to-main').click();
+      } else if (currentPageState === 'main') {
+        goToDefaultPage();
+      } else if (currentPageState === 'default') {
+        // Let the browser handle exit (do nothing)
+      }
+    }
+
+    function goToDefaultPage() {
+      mainPage.style.display = 'none';
+      defaultPage.style.display = 'block';
+      currentPageState = 'default';
+    }
+
+    // Initialize event listeners with back button support
+    function initializeEventListeners() {
+      $('#sort-classes').addEventListener('change', () => {
+        const range = $('#sort-classes').value;
+        const filteredClasses = filterClassesByTimeRange(range);
+        renderTodayClassesSummary(filteredClasses);
+      });
+
+      $('#search-subjects').addEventListener('input', () => {
+      const searchTerm = $('#search-subjects').value.trim().toLowerCase();
+      const resultsContainer = $('#search-results');
+      if (!searchTerm) {
+        resultsContainer.innerHTML = '';
+        resultsContainer.style.display = 'none';
+        return;
+      }
+      const filtered = allClasses
+        .map(cls => ({ ...cls, sim: maxWordSimilarity(searchTerm, cls.title) }))
+        .filter(res => res.sim > 0.3)
+        .sort((a, b) => b.sim - a.sim);
+      renderSearchResults(filtered);
+    });
+
+      $all('.subject-link').forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const subject = link.getAttribute('data-name');
+          showSubjectPage(subject);
+        });
+      });
+
+      $('#search').addEventListener('input', () => {
+        const searchTerm = $('#search').value.trim().toLowerCase();
+        const classes = filterClassesByTimeRange('all');
+        const groupedClasses = groupClassesBySubject(classes);
+        const subjectClasses = groupedClasses[currentSubject] || [];
+        const filteredClasses = subjectClasses.filter(cls => cls.title.toLowerCase().includes(searchTerm));
+        
+        const sortOrder = $('#sort').value;
+        if (sortOrder === 'asc') {
+          filteredClasses.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
+        } else {
+          filteredClasses.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+        }
+        
+        renderCards(filteredClasses, $('#classGrid'));
+      });
+
+      $('#sort').addEventListener('change', () => {
+        const searchTerm = $('#search').value.trim().toLowerCase();
+        const classes = filterClassesByTimeRange('all');
+        const groupedClasses = groupClassesBySubject(classes);
+        const subjectClasses = groupedClasses[currentSubject] || [];
+        const filteredClasses = subjectClasses.filter(cls => cls.title.toLowerCase().includes(searchTerm));
+        
+        const sortOrder = $('#sort').value;
+        if (sortOrder === 'asc') {
+          filteredClasses.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
+        } else {
+          filteredClasses.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+        }
+        
+        renderCards(filteredClasses, $('#classGrid'));
+      });
+
+      // Fix back button to return to main page
+      $('#back-to-main').addEventListener('click', e => {
+        e.preventDefault();
+        returnToMainPage();
+      });
+
+      // Handle browser back button
+      window.addEventListener('popstate', (event) => {
+        handleBackButton();
+      });
+
+      $('#refresh-data-btn').addEventListener('click', async () => {
+        showLoadingOverlay();
+        updateLoadingProgress(10);
+        const rows = await fetchData();
+        allClasses = normalizeRows(rows);
+        groupedClassesCache = {};
+        renderTodayClassesSummary(filterClassesByTimeRange($('#sort-classes').value));
+        
+        if (subjectPage.style.display === 'block' && currentSubject) {
+          showSubjectPage(currentSubject);
+        }
+        
+        hideLoadingOverlay();
+        showNotification("ডেটা রিফ্রেশ হয়েছে!");
+      });
+    }
+
+    /* Dashboard Script */
+    const motivationalQuotes = [
+      "প্রতিদিনের ক্লাস প্রতিদিন করুন, সাফল্য আপনার কাছে আসবে! 🌟",
+      "ছোট ছোট পদক্ষেপই বড় সাফল্যের পথ তৈরি করে! 💪",
+      "নিয়মিত পড়াশোনা আপনাকে লক্ষ্যের কাছে নিয়ে যাবে! 🚀",
+      "প্রতিটি ক্লাস আপনাকে এক ধাপ এগিয়ে নেয়! 🏆"
+    ];
+
+    const badges = [
+      { name: 'Starter', threshold: 0, class: 'badge-starter', icon: '🏁' },
+      { name: 'Bronze Cup', threshold: 30, class: 'badge-bronze', icon: '🥉' },
+      { name: 'Silver Cup', threshold: 50, class: 'badge-silver', icon: '🥈' },
+      { name: 'Gold Cup', threshold: 65, class: 'badge-gold', icon: '🥇' },
+      { name: 'Platinum Trophy', threshold: 80, class: 'badge-platinum', icon: '🏆' }
+    ];
+
+    function parseDate(dateStr) {
+      if (!dateStr) return new Date(0);
+      const [day, month, year] = dateStr.split('-').map(Number);
+      return new Date(year, month - 1, day);
+    }
+
+    function saveStudentData(name, joinDate, lastLogin, lastActivity, completedItems) {
+      localStorage.setItem(DASHBOARD_STORAGE_KEYS.STUDENT_NAME, name || 'শিক্ষার্থী');
+      localStorage.setItem(DASHBOARD_STORAGE_KEYS.JOIN_DATE, joinDate || getTodayDate());
+      localStorage.setItem(DASHBOARD_STORAGE_KEYS.LAST_LOGIN, lastLogin || new Date().toISOString());
+      localStorage.setItem(DASHBOARD_STORAGE_KEYS.LAST_ACTIVITY, lastActivity || new Date().toISOString());
+      localStorage.setItem(DASHBOARD_STORAGE_KEYS.COMPLETED_ITEMS, JSON.stringify(completedItems || []));
+    }
+
+    function getStudentData() {
+      return {
+        name: localStorage.getItem(DASHBOARD_STORAGE_KEYS.STUDENT_NAME) || 'শিক্ষার্থী',
+        joinDate: localStorage.getItem(DASHBOARD_STORAGE_KEYS.JOIN_DATE) || getTodayDate(),
+        lastLogin: localStorage.getItem(DASHBOARD_STORAGE_KEYS.LAST_LOGIN) || new Date().toISOString(),
+        lastActivity: localStorage.getItem(DASHBOARD_STORAGE_KEYS.LAST_ACTIVITY) || new Date().toISOString(),
+        completedItems: JSON.parse(localStorage.getItem(DASHBOARD_STORAGE_KEYS.COMPLETED_ITEMS)) || []
+      };
+    }
+
+    // Tracking function - UPDATED: No scroll condition for YouTube videos
+    window.trackItem = function(id, type) {
+      const studentData = getStudentData();
+      let completed = studentData.completedItems;
+      if (completed.includes(id)) {
+        return; // Already completed
+      }
+
+      // For all types (including YouTube videos with 40% watch time), complete immediately
+      completed.push(id);
+      saveStudentData(studentData.name, studentData.joinDate, new Date().toISOString(), new Date().toISOString(), completed);
+      showNotification(`${type} সম্পন্ন হয়েছে!`, false);
+    };
+
+    function getItemsFromAllClasses() {
+      const items = {
+        classes: [],
+        missions: [],
+        exams: []
+      };
+
+      allClasses.forEach(cls => {
+        const idPrefix = cls.type === 'mission' ? 'm' : cls.type === 'exam' ? 'e' : 'c';
+        const trackId = idPrefix + cls.globalId;
+        const item = { id: trackId, addDate: cls.date };
+        if (cls.type === 'mission') {
+          items.missions.push(item);
+        } else if (cls.type === 'exam') {
+          items.exams.push(item);
+        } else {
+          items.classes.push(item);
+        }
+      });
+
+      return items;
+    }
+
+    function calculateStats(joinDate, completed) {
+      const joinDateObj = parseDate(joinDate);
+      const items = getItemsFromAllClasses();
+
+      function filterItems(itemList, isAfter) {
+        return itemList.filter(item => {
+          const addDateObj = parseDate(item.addDate);
+          return isAfter ? addDateObj >= joinDateObj : addDateObj < joinDateObj;
+        });
+      }
+
+      const afterClasses = filterItems(items.classes, true);
+      const beforeClasses = filterItems(items.classes, false);
+      const afterMissions = filterItems(items.missions, true);
+      const beforeMissions = filterItems(items.missions, false);
+      const afterExams = filterItems(items.exams, true);
+      const beforeExams = filterItems(items.exams, false);
+
+      const doneAfterClasses = afterClasses.filter(item => completed.includes(item.id)).length;
+      const doneBeforeClasses = beforeClasses.filter(item => completed.includes(item.id)).length;
+      const doneAfterMissions = afterMissions.filter(item => completed.includes(item.id)).length;
+      const doneBeforeMissions = beforeMissions.filter(item => completed.includes(item.id)).length;
+      const doneAfterExams = afterExams.filter(item => completed.includes(item.id)).length;
+      const doneBeforeExams = beforeExams.filter(item => completed.includes(item.id)).length;
+
+      const totalAll = items.classes.length + items.missions.length + items.exams.length;
+      const totalCompleted = completed.length;
+      const progress = totalAll > 0 ? (totalCompleted / totalAll) * 100 : 0;
+
+      return {
+        after: {
+          totalClasses: afterClasses.length,
+          doneClasses: doneAfterClasses,
+          pendingClasses: afterClasses.length - doneAfterClasses,
+          totalMissions: afterMissions.length,
+          doneMissions: doneAfterMissions,
+          pendingMissions: afterMissions.length - doneAfterMissions,
+          totalExams: afterExams.length,
+          doneExams: doneAfterExams,
+          pendingExams: afterExams.length - doneAfterExams
+        },
+        before: {
+          totalClasses: beforeClasses.length,
+          doneClasses: doneBeforeClasses,
+          pendingClasses: beforeClasses.length - doneBeforeClasses,
+          totalMissions: beforeMissions.length,
+          doneMissions: doneBeforeMissions,
+          pendingMissions: beforeMissions.length - doneBeforeMissions,
+          totalExams: beforeExams.length,
+          doneExams: doneBeforeExams,
+          pendingExams: beforeExams.length - doneBeforeExams
+        },
+        progress: progress.toFixed(1)
+      };
+    }
+
+    function getCurrentBadge(progress) {
+      for (let i = badges.length - 1; i >= 0; i--) {
+        if (progress >= badges[i].threshold) {
+          return badges[i];
+        }
+      }
+      return badges[0];
+    }
+
+    function saveNotes(notes) {
+      localStorage.setItem(DASHBOARD_STORAGE_KEYS.NOTES, JSON.stringify(notes));
+    }
+
+    function getNotes() {
+      return JSON.parse(localStorage.getItem(DASHBOARD_STORAGE_KEYS.NOTES)) || [];
+    }
+
+    function renderNotes() {
+      const notesList = $('#notes-list');
+      const notes = getNotes();
+      notesList.innerHTML = '';
+      notes.forEach((note, index) => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <span>${note}</span>
+          <button onclick="deleteNote(${index})">মুছে ফেলুন</button>
+        `;
+        notesList.appendChild(li);
+      });
+    }
+
+    window.deleteNote = function(index) {
+      let notes = getNotes();
+      notes.splice(index, 1);
+      saveNotes(notes);
+      renderNotes();
+    };
+
+    function showDashboard() {
+      const studentData = getStudentData();
+      const isNewUser = !localStorage.getItem(DASHBOARD_STORAGE_KEYS.STUDENT_NAME);
+      const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
+      const stats = calculateStats(studentData.joinDate, studentData.completedItems);
+      const currentBadge = getCurrentBadge(stats.progress);
+      const lastActivityDate = new Date(studentData.lastActivity);
+      const daysSinceActivity = (new Date() - lastActivityDate) / (1000 * 60 * 60 * 24);
+
+      const dashboardBody = $('#dashboard-body');
+      dashboardBody.innerHTML = `
+        ${isNewUser ? `
+          <div class="alert-box success bangla-font">
+            <i class="fas fa-info-circle"></i> আপনার নাম লিখুন এবং ড্যাশবোর্ড কাস্টমাইজ করুন!
+          </div>
+          <form class="name-input-form">
+            <input type="text" id="student-name-input" placeholder="আপনার নাম লিখুন" class="bangla-font">
+            <button type="submit" class="bangla-font">নাম সংরক্ষণ করুন</button>
+          </form>
+        ` : `
+          <header class="modal-header bangla-font">
+            <h2>স্বাগতম, ${studentData.name}!</h2>
+            <div class="badge-current ${currentBadge.class}" id="current-badge">${currentBadge.icon} ${currentBadge.name}</div>
+            <div id="close-btn" class="close-btn">✕</div>
+          </header>
+
+          <section class="motivation">
+            <p id="motivation-text" class="bangla-font">${randomQuote}</p>
+          </section>
+
+          <section class="stats after-join bangla-font">
+            <h2>জয়েন-এর পর</h2>
+            <table class="stats-table">
+              <thead>
+                <tr>
+                  <th>আইটেম</th>
+                  <th>মোট</th>
+                  <th>সম্পন্ন</th>
+                  <th>বাকি</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ক্লাস</td>
+                  <td class="total">${stats.after.totalClasses}</td>
+                  <td class="done">${stats.after.doneClasses}</td>
+                  <td class="pending">${stats.after.pendingClasses}</td>
+                </tr>
+                <tr>
+                  <td>মিশন</td>
+                  <td class="total">${stats.after.totalMissions}</td>
+                  <td class="done">${stats.after.doneMissions}</td>
+                  <td class="pending">${stats.after.pendingMissions}</td>
+                </tr>
+                <tr>
+                  <td>পরীক্ষা</td>
+                  <td class="total">${stats.after.totalExams}</td>
+                  <td class="done">${stats.after.doneExams}</td>
+                  <td class="pending">${stats.after.pendingExams}</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="stats before-join bangla-font">
+            <h2>জয়েন-এর আগে</h2>
+            <table class="stats-table">
+              <thead>
+                <tr>
+                  <th>আইটেম</th>
+                  <th>মোট</th>
+                  <th>সম্পন্ন</th>
+                  <th>বাকি</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ক্লাস</td>
+                  <td class="total">${stats.before.totalClasses}</td>
+                  <td class="done">${stats.before.doneClasses}</td>
+                  <td class="pending">${stats.before.pendingClasses}</td>
+                </tr>
+                <tr>
+                  <td>মিশন</td>
+                  <td class="total">${stats.before.totalMissions}</td>
+                  <td class="done">${stats.before.doneMissions}</td>
+                  <td class="pending">${stats.before.pendingMissions}</td>
+                </tr>
+                <tr>
+                  <td>পরীক্ষা</td>
+                  <td class="total">${stats.before.totalExams}</td>
+                  <td class="done">${stats.before.doneExams}</td>
+                  <td class="pending">${stats.before.pendingExams}</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="alarms" class="alarms bangla-font"></section>
+
+          <section class="progress-section bangla-font">
+            <h3>সম্মক অগ্রগতি</h3>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" style="width: ${stats.progress}%"></div>
+            </div>
+            <p>${stats.progress}%</p>
+          </section>
+
+          <div class="badges-dropdown bangla-font">
+            <label for="badges-select">ব্যাজসমূহ:</label>
+            <select id="badges-select">
+              ${badges.map(badge => `
+                <option ${stats.progress >= badge.threshold ? '' : 'disabled'}>${badge.icon} ${badge.name} ${stats.progress >= badge.threshold ? '(প্রাপ্ত)' : '(লক)'}</option>
+              `).join('')}
+            </select>
+          </div>
+
+          <section class="notes-section bangla-font">
+            <h3>আমার নোটস</h3>
+            <textarea id="note-input" placeholder="নতুন নোট লিখুন..."></textarea>
+            <button id="add-note-btn">নোট যোগ করুন</button>
+            <ul id="notes-list"></ul>
+          </section>
+        `}
+      `;
+
+      if (isNewUser) {
+        const form = dashboardBody.querySelector('.name-input-form');
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const nameInput = $('#student-name-input').value.trim();
+          if (nameInput) {
+            saveStudentData(nameInput, getTodayDate(), new Date().toISOString(), new Date().toISOString(), []);
+            showNotification('নাম সফলভাবে সংরক্ষিত হয়েছে!', false);
+            showDashboard();
+          } else {
+            showNotification('অনুগ্রহ করে একটি বৈধ নাম লিখুন', true);
+          }
+        });
+      } else {
+        // Update last login
+        localStorage.setItem(DASHBOARD_STORAGE_KEYS.LAST_LOGIN, new Date().toISOString());
+
+        // Alarms
+        const alarms = $('#alarms');
+        if (stats.before.pendingClasses + stats.before.pendingMissions + stats.before.pendingExams > 0) {
+          alarms.innerHTML += `<div class="alert-box warning"><i class="fas fa-exclamation-triangle"></i> জয়েনের আগের ক্লাস, মিশন এবং পরীক্ষাগুলো নিজ দায়িত্বে সম্পন্ন করুন যতক্ষণ না সবগুলো শেষ হয়।</div>`;
+        }
+        if (daysSinceActivity > 7) {
+          alarms.innerHTML += `<div class="alert-box warning"><i class="fas fa-exclamation-triangle"></i> আপনি টানা ১ সপ্তাহের বেশি ক্লাস করেননি! আজকের ক্লাস বক্সে গিয়ে সপ্তাহের ক্লাস সিলেক্ট করে প্রতিটা ক্লাস করে নিন।</div>`;
+        }
+        if (daysSinceActivity > 30) {
+          alarms.innerHTML += `<div class="alert-box warning"><i class="fas fa-exclamation-triangle"></i> আপনি টানা ১ মাসের বেশি ক্লাস করেননি! আজকের ক্লাস বক্সে গিয়ে মাসের ক্লাস সিলেক্ট করে প্রতিটা ক্লাস করে নিন।</div>`;
+        }
+        if (stats.progress < 10 && !isNewUser) {
+          alarms.innerHTML += `<div class="alert-box warning"><i class="fas fa-exclamation-triangle"></i> আপনার অগ্রগতি খুব কম! নিয়মিত ক্লাস করে অগ্রসর হোন।</div>`;
+        }
+        if (stats.after.pendingClasses > 5) {
+          alarms.innerHTML += `<div class="alert-box warning"><i class="fas fa-exclamation-triangle"></i> জয়েনের পরের ক্লাসগুলোতে অনেক বাকি! দ্রুত সম্পন্ন করুন।</div>`;
+        }
+
+        // Close button
+        const closeBtn = $('#close-btn');
+        closeBtn.addEventListener('click', () => {
+          const dashboardModal = $('#dashboard-modal');
+          dashboardModal.classList.remove('show');
+        });
+
+        // Notes functionality
+        renderNotes();
+        const addNoteBtn = $('#add-note-btn');
+        addNoteBtn.addEventListener('click', () => {
+          const noteInput = $('#note-input');
+          const noteText = noteInput.value.trim();
+          if (noteText) {
+            let notes = getNotes();
+            notes.push(noteText);
+            saveNotes(notes);
+            renderNotes();
+            noteInput.value = '';
+            showNotification('নোট যোগ করা হয়েছে!', false);
+          } else {
+            showNotification('অনুগ্রহ করে নোট লিখুন', true);
+          }
+        });
+      }
+
+      const dashboardModal = $('#dashboard-modal');
+      dashboardModal.classList.add('show');
+    }
+
+    const dashboardBtn = $('#dashboard-btn');
+    dashboardBtn.addEventListener('click', () => {
+      showDashboard();
+    });
+
+    // Slideshow functionality with pause on click
+    function initSlideshow() {
+      const images = [
+        'https://i.imgur.com/FCv9CTv.jpeg', // Replace with actual URLs
+        'https://example.com/image2.jpg',
+        'https://example.com/image3.jpg',
+        'https://example.com/image4.jpg'
+      ];
+      
+      const slideshowImages = document.querySelectorAll('.slideshow-image');
+      let currentIndex = 0;
+      let slideshowInterval;
+      let isPlaying = true;
+      
+      function showNextImage() {
+        slideshowImages.forEach((img, index) => {
+          img.classList.remove('active');
+          if (index === currentIndex) {
+            img.classList.add('active');
+          }
+        });
+        currentIndex = (currentIndex + 1) % images.length;
+      }
+      
+      function startSlideshow() {
+        if (slideshowInterval) clearInterval(slideshowInterval);
+        slideshowInterval = setInterval(showNextImage, 4000);
+        isPlaying = true;
+      }
+      
+      function stopSlideshow() {
+        clearInterval(slideshowInterval);
+        isPlaying = false;
+      }
+      
+      // Add click event to each image
+      slideshowImages.forEach(img => {
+        img.addEventListener('click', function() {
+          if (isPlaying) {
+            stopSlideshow();
+          } else {
+            startSlideshow();
+          }
+        });
+      });
+      
+      // Initial show and start
+      showNextImage();
+      startSlideshow();
+    }
+
+    let storedName = localStorage.getItem('userName') || '';
+
+    function showNameModal(){ $('#nameModal').style.display='flex'; }
+    function hideNameModal(){ $('#nameModal').style.display='none'; }
+
+    function saveName(event){
+      event.preventDefault();
+      const name = $('#userName').value.trim();
+      if (name) {
+        localStorage.setItem('userName', name);
+        storedName = name;
+        hideNameModal();
+        showForm();
+      } else {
+        showNotification("নাম লিখুন!", true);
+      }
+    }
+
+    function handleFormClick() {
+      if (!storedName) {
+        showNameModal();
+      } else {
+        showForm();
+      }
+    }
+
+    function showForm(){ 
+      $('#formModal').style.display='flex'; 
+      // Reset the form completely to prevent duplicate submissions
+      const form = $('#myForm');
+      const newForm = form.cloneNode(true);
+      form.parentNode.replaceChild(newForm, form);
+      
+      // Set up the form again
+      $('#myForm').reset(); 
+      $('#name').value = storedName;
+      $('#myForm').onsubmit = submitForm;
+    }
+
+    function hideForm(){ 
+      $('#formModal').style.display='none'; 
+      // Reset the form
+      const form = $('#myForm');
+      if(form) form.reset();
+    }
+
+    function showSubmissions(){ 
+      $('#submissionsModal').style.display='flex'; 
+      loadSubmissions(); 
+    }
+
+    function hideSubmissions(){ $('#submissionsModal').style.display='none'; }
+
+    // Event listeners for form and submissions
+    $('#form-button').addEventListener('click', handleFormClick);
+    $('#submissions-button').addEventListener('click', showSubmissions);
+    
+    // Event listeners for modals
+    window.addEventListener('click', (e) => { 
+      if (e.target == $('#nameModal')) hideNameModal(); 
+      if (e.target == $('#formModal')) hideForm(); 
+      if (e.target == $('#submissionsModal')) hideSubmissions(); 
+      if (e.target == $('#replyModal')) hideReplyModal();
+      if (e.target == $('#answerModal')) hideAnswerModal();
+    });
+
+    // Dynamic placeholder functionality
+    function initDynamicPlaceholder() {
+      const searchInput = $('#search-subjects');
+      const placeholders = [
+        'সার্চ করুন🔎',
+        'কি খুজছেন?🤔',
+        'সাজেশন্স🔥',
+        'জিন্স সাজেশন্স💥',
+        '👉ক্লাস',
+        '💡মিশন',
+        '👉ইক্সাম',
+        'শীট🗞',
+      ];
+      
+      let currentIndex = 0;
+      
+      // Function to update placeholder
+      function updatePlaceholder() {
+        searchInput.placeholder = placeholders[currentIndex];
+        currentIndex = (currentIndex + 1) % placeholders.length;
+      }
+      
+      // Update every 3 seconds
+      setInterval(updatePlaceholder, 4000);
+      
+      // Initialize with first placeholder
+      updatePlaceholder();
+    }
+
+    // Default page to main website transition
+    function goToMainWebsite() {
+      defaultPage.style.display = 'none';
+      
+      // Always start main page from top regardless of default page scroll
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      
+      if (checkLoginExpiry()) {
+        mainPage.style.display = 'block';
+        loadInitialData();
+        showAddClassButton();
+        showDashboardButton();
+        setButtonVisibility(); // Set button visibility
+        currentPageState = 'main';
+      } else {
+        loginPage.style.display = 'flex';
+      }
+    }
+
+    // Check if user has visited main website before
+    document.addEventListener('DOMContentLoaded', () => {
+      // সবসময় ডিফল্ট পেজ দেখাবে
+      defaultPage.style.display = 'block';
+      loginPage.style.display = 'none';
+      mainPage.style.display = 'none';
+      subjectPage.style.display = 'none';
+      videoPlayerPage.style.display = 'none';
+      drivePlayerPage.style.display = 'none';
+      
+      // Initialize default page functionality
+      document.getElementById('main-website-btn').addEventListener('click', goToMainWebsite);
+      
+      // Initialize motivation rotation
+      setInterval(rotateMotivationText, 5000);
+      
+      // Initialize modal functionality for default page
+      document.querySelectorAll(".details-btn").forEach(btn => {
+        btn.addEventListener("click", function() {
+          const courseId = this.getAttribute("data-course");
+          const course = courseDetails[courseId];
+          document.getElementById("modalImage").src = course.img;
+          document.getElementById("modalDetails").innerHTML = course.details;
+          document.getElementById("courseModal").style.display = "block";
+          document.body.style.overflow = "hidden";
+        });
+      });
+      
+      // Close modal functionality
+      document.getElementsByClassName("close")[0].addEventListener("click", function() {
+        document.getElementById("courseModal").style.display = "none";
+        document.body.style.overflow = "";
+      });
+      
+      window.addEventListener("click", function(event) {
+        if (event.target == document.getElementById("courseModal")) {
+          document.getElementById("courseModal").style.display = "none";
+          document.body.style.overflow = "";
+        }
+      });
+      
+      initializeEventListeners();
+      
+      // Initialize dynamic placeholder
+      initDynamicPlaceholder();
+      
+      // Initialize slideshow
+      initSlideshow();
+      
+      // Initialize Clock
+      updateClock();
+      setInterval(updateClock, 1000);
+      
+      // Check for replies when page loads
+      setTimeout(() => {
+        if (checkLoginExpiry()) {
+          checkForReplies();
+        }
+      }, 2000);
+    });
+
+    function updateClock() {
+      const now = new Date();
+      const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+      const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+
+      // Time and date in Bengali
+      let timeStr = now.toLocaleTimeString('bn-BD', timeOptions); // Bengali digits for time
+      timeStr = timeStr.replace(/(AM|PM)/, '<small>$1</small>'); // Make AM/PM smaller
+      const dateStr = now.toLocaleDateString('bn-BD', dateOptions); // Bengali date
+
+      const clockTime = document.getElementById('clock-time');
+      const clockDate = document.getElementById('clock-date');
+      const examCountdown = document.getElementById('exam-countdown');
+
+      if (clockTime && clockDate && examCountdown) {
+        clockTime.innerHTML = timeStr; // Use innerHTML for <small> tag
+        clockDate.textContent = dateStr;
+
+        // Exam Countdown
+        const examDate = new Date(2027, 1, 8); // 08-02-2027 (Month is 0-indexed, so 1 = February)
+        let diff = examDate - now;
+
+        if (diff < 0) {
+          examCountdown.textContent = 'পরীক্ষা শুরু হয়েছে!';
+        } else {
+          const months = Math.floor(diff / (1000 * 60 * 60 * 24 * 30));
+          const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+          examCountdown.textContent = `বোর্ড পরীক্ষা শুরু: ${months} মাস ${days} দিন পর*`;
+        }
+      }
+    }
+
+    // Add event listener to the main website button in default page
+    // This is now handled inside DOMContentLoaded
+  </script>
+</body>
+</html>
