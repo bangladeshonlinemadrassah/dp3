@@ -4405,7 +4405,7 @@
       return JSON.parse(localStorage.getItem(TOKEN_STORAGE_KEY)) || [];
     }
     
-    // Modified submitForm function to include token - UPDATED
+    // Modified submitForm function - FIXED: Removed mode: 'no-cors' and improved error handling
     function submitForm(event) {
       event.preventDefault();
       const submitBtn = $('#submitBtn');
@@ -4424,16 +4424,17 @@
 
       fetch(WEB_APP_URL, {
         method: 'POST',
-        mode: 'no-cors', // CORS সমস্যা এড়াতে
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
       })
-      .then(response => {
+      .then(response => response.json())
+      .then(result => {
         submitBtn.classList.remove('loading');
         submitBtn.disabled = false;
-        if (response.ok || response.type === 'opaque') {
+        
+        if (result.ok) {
           // Save token to local storage
           saveToken(token);
           
@@ -4498,15 +4499,9 @@
       list.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-muted)" class="bangla-font">লোড হচ্ছে...</div>';
       
       fetch(WEB_APP_URL + '?action=getSubmissions', {
-        method: 'GET',
-        mode: 'cors'
+        method: 'GET'
       })
-        .then(res => {
-          if (!res.ok) {
-            throw new Error(`HTTP error! status: ${res.status}`);
-          }
-          return res.json();
-        })
+        .then(res => res.json())
         .then(response => {
           // Check if response is successful
           if (!response.ok || !response.data) {
@@ -4589,32 +4584,65 @@
         });
     }
     
-    // Function to show reply modal
+    // Function to show reply modal - FIXED: Reset form properly
     function showReplyModal(token, name, batch, message) {
-      $('#reply-token-display').textContent = token;
-      $('#reply-student-name').textContent = name;
-      $('#reply-student-batch').textContent = batch;
-      $('#reply-student-comment').textContent = message;
-      $('#reply-message').value = '';
-      $('#replyModal').style.display = 'flex';
+      // Hide any existing modal first
+      hideReplyModal();
       
-      // Reset form event listeners to prevent duplicate submissions
-      const replyForm = $('#replyForm');
-      const newReplyForm = replyForm.cloneNode(true);
-      replyForm.parentNode.replaceChild(newReplyForm, replyForm);
-      
-      // Add event listener to the new form
-      newReplyForm.onsubmit = submitReply;
+      // Wait a bit for DOM to update
+      setTimeout(() => {
+        $('#reply-token-display').textContent = token;
+        $('#reply-student-name').textContent = name;
+        $('#reply-student-batch').textContent = batch;
+        $('#reply-student-comment').textContent = message;
+        
+        // Clear the textarea
+        const replyTextarea = $('#reply-message');
+        if (replyTextarea) {
+          replyTextarea.value = '';
+        }
+        
+        // Reset submit button
+        const replySubmitBtn = $('#replySubmitBtn');
+        if (replySubmitBtn) {
+          replySubmitBtn.classList.remove('loading');
+          replySubmitBtn.disabled = false;
+        }
+        
+        $('#replyModal').style.display = 'flex';
+        
+        // Remove any existing form and create new one
+        const replyForm = $('#replyForm');
+        if (replyForm) {
+          // Remove old event listeners by cloning and replacing
+          const newReplyForm = replyForm.cloneNode(true);
+          replyForm.parentNode.replaceChild(newReplyForm, replyForm);
+          
+          // Add new event listener
+          newReplyForm.onsubmit = submitReply;
+        }
+      }, 50);
     }
     
-    // Function to hide reply modal
+    // Function to hide reply modal - FIXED: Properly reset modal
     function hideReplyModal() {
       $('#replyModal').style.display = 'none';
+      
       // Reset the form
-      $('#replyForm')[0].reset();
+      const replyForm = $('#replyForm');
+      if (replyForm) {
+        replyForm.reset();
+      }
+      
+      // Reset submit button
+      const replySubmitBtn = $('#replySubmitBtn');
+      if (replySubmitBtn) {
+        replySubmitBtn.classList.remove('loading');
+        replySubmitBtn.disabled = false;
+      }
     }
     
-    // Function to submit reply
+    // Function to submit reply - FIXED: Proper fetch with error handling
     function submitReply(event) {
       event.preventDefault();
       const submitBtn = $('#replySubmitBtn');
@@ -4626,6 +4654,13 @@
       const studentBatch = $('#reply-student-batch').textContent;
       const studentComment = $('#reply-student-comment').textContent;
       const replyMessage = $('#reply-message').value.trim();
+      
+      if (!replyMessage) {
+        showNotification("উত্তর লিখুন!", true);
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+        return;
+      }
       
       const userRole = getUserRole();
       const answeredBy = userRole === 'owner' ? 'Admin : BOM' : 'Editor : Sahibul Musa Sium';
@@ -4642,18 +4677,20 @@
 
       fetch(WEB_APP_URL, {
         method: 'POST',
-        mode: 'no-cors', // CORS সমস্যা এড়াতে
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
       })
-      .then(response => {
+      .then(response => response.json())
+      .then(result => {
         submitBtn.classList.remove('loading');
         submitBtn.disabled = false;
-        if (response.ok || response.type === 'opaque') {
+        
+        if (result.ok) {
           hideReplyModal();
           showNotification(`টোকেন নম্বর ${token} এর উত্তর পাঠানো হয়েছে!`, false);
+          
           // Reload submissions to update the UI
           setTimeout(() => {
             loadSubmissions();
@@ -4676,15 +4713,9 @@
       if (tokens.length === 0) return;
       
       fetch(WEB_APP_URL + '?action=getSubmissions', {
-        method: 'GET',
-        mode: 'cors'
+        method: 'GET'
       })
-        .then(res => {
-          if (!res.ok) {
-            throw new Error(`HTTP error! status: ${res.status}`);
-          }
-          return res.json();
-        })
+        .then(res => res.json())
         .then(response => {
           if (!response.ok || !response.data) {
             return;
@@ -4755,15 +4786,9 @@
     // Function to show answer for token (new function)
     function showAnswerForToken(token) {
       fetch(WEB_APP_URL + '?action=getSubmissions', {
-        method: 'GET',
-        mode: 'cors'
+        method: 'GET'
       })
-        .then(res => {
-          if (!res.ok) {
-            throw new Error(`HTTP error! status: ${res.status}`);
-          }
-          return res.json();
-        })
+        .then(res => res.json())
         .then(response => {
           if (!response.ok || !response.data) {
             showNotification("উত্তর লোড করা যায়নি", true);
@@ -5862,8 +5887,27 @@
 
     let storedName = localStorage.getItem('userName') || '';
 
-    function showNameModal(){ $('#nameModal').style.display='flex'; }
-    function hideNameModal(){ $('#nameModal').style.display='none'; }
+    // FIXED: showNameModal function - properly reset form
+    function showNameModal() { 
+      $('#nameModal').style.display='flex'; 
+      
+      // Reset the form
+      const nameForm = $('#nameForm');
+      if (nameForm) {
+        nameForm.reset();
+      }
+      
+      // Reset button state
+      const saveBtn = nameForm.querySelector('button[type="submit"]');
+      if (saveBtn) {
+        saveBtn.disabled = false;
+        saveBtn.textContent = 'সেভ করুন';
+      }
+    }
+    
+    function hideNameModal(){ 
+      $('#nameModal').style.display='none'; 
+    }
 
     function saveName(event){
       event.preventDefault();
@@ -5886,24 +5930,42 @@
       }
     }
 
-    function showForm(){ 
+    // FIXED: showForm function - properly reset form
+    function showForm() { 
       $('#formModal').style.display='flex'; 
-      // Reset the form completely to prevent duplicate submissions
-      const form = $('#myForm');
-      const newForm = form.cloneNode(true);
-      form.parentNode.replaceChild(newForm, form);
       
-      // Set up the form again
-      $('#myForm').reset(); 
-      $('#name').value = storedName;
-      $('#myForm').onsubmit = submitForm;
+      // Reset the form completely
+      const form = $('#myForm');
+      if (form) {
+        form.reset();
+        $('#name').value = storedName;
+      }
+      
+      // Reset submit button
+      const submitBtn = $('#submitBtn');
+      if (submitBtn) {
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'জমা দিন <span class="spinner"></span>';
+      }
     }
 
-    function hideForm(){ 
+    // FIXED: hideForm function - properly reset modal
+    function hideForm() { 
       $('#formModal').style.display='none'; 
+      
       // Reset the form
       const form = $('#myForm');
-      if(form) form.reset();
+      if (form) {
+        form.reset();
+      }
+      
+      // Reset submit button
+      const submitBtn = $('#submitBtn');
+      if (submitBtn) {
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+      }
     }
 
     function showSubmissions(){ 
@@ -5911,13 +5973,15 @@
       loadSubmissions(); 
     }
 
-    function hideSubmissions(){ $('#submissionsModal').style.display='none'; }
+    function hideSubmissions(){ 
+      $('#submissionsModal').style.display='none'; 
+    }
 
     // Event listeners for form and submissions
     $('#form-button').addEventListener('click', handleFormClick);
     $('#submissions-button').addEventListener('click', showSubmissions);
     
-    // Event listeners for modals
+    // Event listeners for modals - FIXED: Added proper event delegation
     window.addEventListener('click', (e) => { 
       if (e.target == $('#nameModal')) hideNameModal(); 
       if (e.target == $('#formModal')) hideForm(); 
