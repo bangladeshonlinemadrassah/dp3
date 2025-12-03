@@ -3599,7 +3599,7 @@
   <div class="answer-modal-content">
     <button class="answer-modal-close" onclick="hideAnswerModal()">×</button>
     <div class="answer-header">
-      <h2 class="bangla-font">সাবমিশনের রিপ্লাই</h2>
+      <h2 class="bangla-font">আপনার প্রশ্নের উত্তর</h2>
       <p class="bangla-font" id="answer-token-info"></p>
     </div>
     
@@ -3627,7 +3627,7 @@
     
     <!-- New "বুঝেছি" Button -->
     <button class="answer-understood-btn bangla-font" id="answer-understood-btn" onclick="removeTokenAndClose()">
-      <i class="fas fa-check-circle"></i> বুঝেছি
+      <i class="fas fa-check-circle"></i> বুঝেছি (টোকেন ডিলিট হবে)
     </button>
     
     <div class="answered-by">
@@ -3640,7 +3640,7 @@
 
 <!-- UPDATED Success Message with Countdown -->
 <div class="success-message" id="successMessage">
-  <div class="success-message-countdown" id="successCountdown">10s</div>
+  <div class="success-message-countdown" id="successCountdown">20s</div>
   <div id="successMessageContent"></div>
 </div>
 <div id="notification" class="notification"></div>
@@ -4361,12 +4361,12 @@
     }
 
     // Comment and Reply System
-    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwt0L25Lvl6mEiUcr9Pv-5lLR289sQOvuIOsOc5g1jSy-oHT_LDAgmwBzQglB32aFeT1g/exec";
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxUJ5tm1S8a0hYIcubNhQJCHAmqv-iLoqp70yyP6cWa_52vp9HcT7w8m_wUhfn2_51SMQ/exec";
     
     // Storage keys for tokens
     const TOKEN_STORAGE_KEY = 'alim27_comment_tokens';
     
-    // Function to generate token that matches App Script format - UPDATED
+    // ফিক্সড: টোকেন জেনারেশন ফাংশন যা আগের মতোই স্ট্রিং রিটার্ন করে
     function generateToken() {
       const now = new Date();
       const day = now.getDate(); // 1-31 (no padding)
@@ -4376,8 +4376,8 @@
       const minute = String(now.getMinutes()).padStart(2, '0'); // 00-59
       const second = String(now.getSeconds()).padStart(2, '0'); // 00-59
       
-      // Format: DMMYYYYHHMMSS (e.g., 3122025150019 for 03-12-2025 15:00:19)
-      // Important: Return as string, not integer, to prevent losing leading zeros
+      // Format: DMMYYYYHHMMSS (e.g., "3122025150019" for 03-12-2025 15:00:19)
+      // দিনের জন্য padding নেই (1 অঙ্ক বা 2 অঙ্ক হতে পারে)
       return day.toString() + month + year + hour + minute + second;
     }
     
@@ -4405,7 +4405,7 @@
       return JSON.parse(localStorage.getItem(TOKEN_STORAGE_KEY)) || [];
     }
     
-    // Modified submitForm function - FIXED: Removed mode: 'no-cors' and improved error handling
+    // Modified submitForm function to include token
     function submitForm(event) {
       event.preventDefault();
       const submitBtn = $('#submitBtn');
@@ -4424,17 +4424,16 @@
 
       fetch(WEB_APP_URL, {
         method: 'POST',
+        mode: 'no-cors', // CORS সমস্যা এড়াতে
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
       })
-      .then(response => response.json())
-      .then(result => {
+      .then(response => {
         submitBtn.classList.remove('loading');
         submitBtn.disabled = false;
-        
-        if (result.ok) {
+        if (response.ok || response.type === 'opaque') {
           // Save token to local storage
           saveToken(token);
           
@@ -4459,11 +4458,11 @@
       });
     }
     
-    // UPDATED: Function to show success message with token and countdown (10 seconds)
+    // UPDATED: Function to show success message with token and countdown
     function showSuccessMessageWithToken(token) {
       const successMessage = $('#successMessage');
       const successMessageContent = $('#successMessageContent');
-      let timeLeft = 10; // Changed from 20 to 10 seconds
+      let timeLeft = 20;
       
       successMessageContent.innerHTML = `
         ফর্ম সফলভাবে জমা হয়েছে!<br>
@@ -4476,8 +4475,6 @@
       
       // Update countdown every second
       const countdownElement = $('#successCountdown');
-      countdownElement.textContent = timeLeft + 's';
-      
       const countdownInterval = setInterval(() => {
         timeLeft--;
         countdownElement.textContent = timeLeft + 's';
@@ -4499,9 +4496,15 @@
       list.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-muted)" class="bangla-font">লোড হচ্ছে...</div>';
       
       fetch(WEB_APP_URL + '?action=getSubmissions', {
-        method: 'GET'
+        method: 'GET',
+        mode: 'cors'
       })
-        .then(res => res.json())
+        .then(res => {
+          if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+          }
+          return res.json();
+        })
         .then(response => {
           // Check if response is successful
           if (!response.ok || !response.data) {
@@ -4584,65 +4587,22 @@
         });
     }
     
-    // Function to show reply modal - FIXED: Reset form properly
+    // Function to show reply modal
     function showReplyModal(token, name, batch, message) {
-      // Hide any existing modal first
-      hideReplyModal();
-      
-      // Wait a bit for DOM to update
-      setTimeout(() => {
-        $('#reply-token-display').textContent = token;
-        $('#reply-student-name').textContent = name;
-        $('#reply-student-batch').textContent = batch;
-        $('#reply-student-comment').textContent = message;
-        
-        // Clear the textarea
-        const replyTextarea = $('#reply-message');
-        if (replyTextarea) {
-          replyTextarea.value = '';
-        }
-        
-        // Reset submit button
-        const replySubmitBtn = $('#replySubmitBtn');
-        if (replySubmitBtn) {
-          replySubmitBtn.classList.remove('loading');
-          replySubmitBtn.disabled = false;
-        }
-        
-        $('#replyModal').style.display = 'flex';
-        
-        // Remove any existing form and create new one
-        const replyForm = $('#replyForm');
-        if (replyForm) {
-          // Remove old event listeners by cloning and replacing
-          const newReplyForm = replyForm.cloneNode(true);
-          replyForm.parentNode.replaceChild(newReplyForm, replyForm);
-          
-          // Add new event listener
-          newReplyForm.onsubmit = submitReply;
-        }
-      }, 50);
+      $('#reply-token-display').textContent = token;
+      $('#reply-student-name').textContent = name;
+      $('#reply-student-batch').textContent = batch;
+      $('#reply-student-comment').textContent = message;
+      $('#reply-message').value = '';
+      $('#replyModal').style.display = 'flex';
     }
     
-    // Function to hide reply modal - FIXED: Properly reset modal
+    // Function to hide reply modal
     function hideReplyModal() {
       $('#replyModal').style.display = 'none';
-      
-      // Reset the form
-      const replyForm = $('#replyForm');
-      if (replyForm) {
-        replyForm.reset();
-      }
-      
-      // Reset submit button
-      const replySubmitBtn = $('#replySubmitBtn');
-      if (replySubmitBtn) {
-        replySubmitBtn.classList.remove('loading');
-        replySubmitBtn.disabled = false;
-      }
     }
     
-    // Function to submit reply - FIXED: Proper fetch with error handling
+    // Function to submit reply
     function submitReply(event) {
       event.preventDefault();
       const submitBtn = $('#replySubmitBtn');
@@ -4654,13 +4614,6 @@
       const studentBatch = $('#reply-student-batch').textContent;
       const studentComment = $('#reply-student-comment').textContent;
       const replyMessage = $('#reply-message').value.trim();
-      
-      if (!replyMessage) {
-        showNotification("উত্তর লিখুন!", true);
-        submitBtn.classList.remove('loading');
-        submitBtn.disabled = false;
-        return;
-      }
       
       const userRole = getUserRole();
       const answeredBy = userRole === 'owner' ? 'Admin : BOM' : 'Editor : Sahibul Musa Sium';
@@ -4677,20 +4630,18 @@
 
       fetch(WEB_APP_URL, {
         method: 'POST',
+        mode: 'no-cors', // CORS সমস্যা এড়াতে
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
       })
-      .then(response => response.json())
-      .then(result => {
+      .then(response => {
         submitBtn.classList.remove('loading');
         submitBtn.disabled = false;
-        
-        if (result.ok) {
+        if (response.ok || response.type === 'opaque') {
           hideReplyModal();
           showNotification(`টোকেন নম্বর ${token} এর উত্তর পাঠানো হয়েছে!`, false);
-          
           // Reload submissions to update the UI
           setTimeout(() => {
             loadSubmissions();
@@ -4713,9 +4664,15 @@
       if (tokens.length === 0) return;
       
       fetch(WEB_APP_URL + '?action=getSubmissions', {
-        method: 'GET'
+        method: 'GET',
+        mode: 'cors'
       })
-        .then(res => res.json())
+        .then(res => {
+          if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+          }
+          return res.json();
+        })
         .then(response => {
           if (!response.ok || !response.data) {
             return;
@@ -4754,8 +4711,7 @@
     
     // UPDATED: Function to show answer modal with correct data structure
     function showAnswerModal(item) {
-      const studentName = localStorage.getItem('userName') || 'শিক্ষার্থী';
-      $('#answer-token-info').textContent = `প্রিয় ${studentName}, আপনার কমেন্টের উত্তর পাওয়া গেছে!`;
+      $('#answer-token-info').textContent = `আপনার প্রশ্নের উত্তর পাওয়া গেছে!`;
       $('#answer-token-value').textContent = item.token;
       $('#answer-question').textContent = item.message || item.studentComment || 'কোনো প্রশ্ন নেই';
       $('#answer-reply').textContent = item.reply || 'কোনো উত্তর নেই';
@@ -4786,9 +4742,15 @@
     // Function to show answer for token (new function)
     function showAnswerForToken(token) {
       fetch(WEB_APP_URL + '?action=getSubmissions', {
-        method: 'GET'
+        method: 'GET',
+        mode: 'cors'
       })
-        .then(res => res.json())
+        .then(res => {
+          if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+          }
+          return res.json();
+        })
         .then(response => {
           if (!response.ok || !response.data) {
             showNotification("উত্তর লোড করা যায়নি", true);
@@ -5887,27 +5849,8 @@
 
     let storedName = localStorage.getItem('userName') || '';
 
-    // FIXED: showNameModal function - properly reset form
-    function showNameModal() { 
-      $('#nameModal').style.display='flex'; 
-      
-      // Reset the form
-      const nameForm = $('#nameForm');
-      if (nameForm) {
-        nameForm.reset();
-      }
-      
-      // Reset button state
-      const saveBtn = nameForm.querySelector('button[type="submit"]');
-      if (saveBtn) {
-        saveBtn.disabled = false;
-        saveBtn.textContent = 'সেভ করুন';
-      }
-    }
-    
-    function hideNameModal(){ 
-      $('#nameModal').style.display='none'; 
-    }
+    function showNameModal(){ $('#nameModal').style.display='flex'; }
+    function hideNameModal(){ $('#nameModal').style.display='none'; }
 
     function saveName(event){
       event.preventDefault();
@@ -5930,58 +5873,26 @@
       }
     }
 
-    // FIXED: showForm function - properly reset form
-    function showForm() { 
+    function showForm(){ 
       $('#formModal').style.display='flex'; 
-      
-      // Reset the form completely
-      const form = $('#myForm');
-      if (form) {
-        form.reset();
-        $('#name').value = storedName;
-      }
-      
-      // Reset submit button
-      const submitBtn = $('#submitBtn');
-      if (submitBtn) {
-        submitBtn.classList.remove('loading');
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = 'জমা দিন <span class="spinner"></span>';
-      }
+      $('#myForm').reset(); 
+      $('#name').value = storedName;
     }
 
-    // FIXED: hideForm function - properly reset modal
-    function hideForm() { 
-      $('#formModal').style.display='none'; 
-      
-      // Reset the form
-      const form = $('#myForm');
-      if (form) {
-        form.reset();
-      }
-      
-      // Reset submit button
-      const submitBtn = $('#submitBtn');
-      if (submitBtn) {
-        submitBtn.classList.remove('loading');
-        submitBtn.disabled = false;
-      }
-    }
+    function hideForm(){ $('#formModal').style.display='none'; }
 
     function showSubmissions(){ 
       $('#submissionsModal').style.display='flex'; 
       loadSubmissions(); 
     }
 
-    function hideSubmissions(){ 
-      $('#submissionsModal').style.display='none'; 
-    }
+    function hideSubmissions(){ $('#submissionsModal').style.display='none'; }
 
     // Event listeners for form and submissions
     $('#form-button').addEventListener('click', handleFormClick);
     $('#submissions-button').addEventListener('click', showSubmissions);
     
-    // Event listeners for modals - FIXED: Added proper event delegation
+    // Event listeners for modals
     window.addEventListener('click', (e) => { 
       if (e.target == $('#nameModal')) hideNameModal(); 
       if (e.target == $('#formModal')) hideForm(); 
