@@ -1462,6 +1462,7 @@
       box-shadow: var(--shadow-md);
     }
 
+    /* FIX: Modal z-index increased to prevent overlap */
     .modal {
       display: none;
       position: fixed;
@@ -1472,7 +1473,7 @@
       background-color: rgba(0, 0, 0, 0.5);
       justify-content: center;
       align-items: center;
-      z-index: 1000;
+      z-index: 10004; /* Increased to be above success message */
       backdrop-filter: blur(5px);
     }
 
@@ -1623,7 +1624,7 @@
       color: white;
       padding: 20px 40px;
       border-radius: 10px;
-      z-index: 10000; /* Increased z-index */
+      z-index: 10003;
       font-size: 1rem;
       box-shadow: var(--shadow-md);
       text-align: center;
@@ -2753,7 +2754,7 @@
       display: none;
       justify-content: center;
       align-items: center;
-      z-index: 2000;
+      z-index: 10005; /* Increased to be above other modals */
     }
 
     .reply-modal-content {
@@ -2883,7 +2884,7 @@
       display: none;
       justify-content: center;
       align-items: center;
-      z-index: 10001; /* Higher z-index to ensure it's on top */
+      z-index: 10006; /* Higher z-index to ensure it's on top */
     }
 
     .answer-modal-content {
@@ -2920,7 +2921,7 @@
       font-size: 1.8rem;
       cursor: pointer;
       transition: var(--transition);
-      z-index: 10002;
+      z-index: 10007;
     }
 
     .answer-modal-close:hover {
@@ -2969,19 +2970,20 @@
       color: var(--text);
     }
 
-    .answered-by {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 0.95rem;
-      color: var(--text-muted);
+    /* NEW: Answer modal name colors */
+    .student-name-value {
+      color: #FFD700; /* Gold color for student */
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
     }
 
     .answered-by-name {
-      font-weight: 600;
-      color: var(--primary);
+      color: #00FFFF; /* Cyan color for replier */
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
     }
 
-    /* New "বুঝেছি" Button Styles */
+    /* Updated "বুঝেছি" Button Styles */
     .answer-understood-btn {
       display: block;
       margin: 25px auto 10px;
@@ -3055,6 +3057,20 @@
       font-weight: 700;
       color: var(--primary);
       letter-spacing: 1px;
+    }
+
+    /* New Owner Name Modal Styles */
+    .owner-name-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10008; /* Highest z-index */
     }
   </style>
 </head>
@@ -3633,6 +3649,10 @@
       <div class="question-box">
         <div class="question-label bangla-font">আপনার প্রশ্ন/মতামত:</div>
         <div class="question-content bangla-font" id="answer-question"></div>
+        <div class="student-name" style="margin-top: 10px;">
+          <span class="bangla-font" style="color: var(--text-muted);">প্রশ্নকারী: </span>
+          <span class="student-name-value bangla-font" id="answer-student-name"></span>
+        </div>
       </div>
       
       <div class="reply-box">
@@ -3641,7 +3661,7 @@
       </div>
       
       <div class="answered-by">
-        <span class="bangla-font">উত্তর দাতা: </span>
+        <span class="bangla-font" style="color: var(--text-muted);">উত্তর দাতা: </span>
         <span class="answered-by-name bangla-font" id="answer-answered-by"></span>
       </div>
     </div>
@@ -3655,6 +3675,27 @@
       <small class="bangla-font" style="color: var(--text-muted);">
         * "বুঝেছি" বাটনে ক্লিক করলে এই টোকেনটি আপনার ডিভাইস থেকে ডিলিট হয়ে যাবে এবং এই উত্তর আর দেখাবে না
       </small>
+    </div>
+  </div>
+</div>
+
+<!-- Owner Name Modal (for owners) -->
+<div class="owner-name-modal" id="ownerNameModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="hideOwnerNameModal()">×</button>
+    <div class="modal-intro">
+      <h2 class="bangla-font">নাম সেট করুন</h2>
+      <p class="bangla-font">আপনার নাম লিখুন। এটি সেভ হয়ে যাবে এবং পরবর্তীতে উত্তর দাতা হিসেবে দেখানো হবে।</p>
+      <div class="warning-message bangla-font">
+        দয়া করে আপনার পূর্ণ নাম ব্যবহার করুন, যাতে উত্তর সঠিকভাবে দেখানো যায়।
+      </div>
+    </div>
+    <div class="form-section">
+      <form id="ownerNameForm" onsubmit="saveOwnerName(event)">
+        <label class="bangla-font" for="ownerName">নাম</label>
+        <input type="text" id="ownerName" placeholder="আপনার পূর্ণ নাম লিখুন" required class="bangla-font">
+        <button type="submit" class="submit-button bangla-font">সেভ করুন</button>
+      </form>
     </div>
   </div>
 </div>
@@ -4386,6 +4427,7 @@
     
     // Storage keys for tokens
     const TOKEN_STORAGE_KEY = 'alim27_comment_tokens';
+    const OWNER_NAME_KEY = 'alim27_owner_name';
     
     // ফিক্সড: টোকেন জেনারেশন ফাংশন যা আগের মতোই স্ট্রিং রিটার্ন করে
     function generateToken() {
@@ -4426,7 +4468,7 @@
       return JSON.parse(localStorage.getItem(TOKEN_STORAGE_KEY)) || [];
     }
     
-    // Modified submitForm function to include token
+    // Modified submitForm function to include token - FIXED: Clear notification on modal open
     function submitForm(event) {
       event.preventDefault();
       const submitBtn = $('#submitBtn');
@@ -4608,8 +4650,24 @@
         });
     }
     
-    // Function to show reply modal - UPDATED: Reset form each time
+    // Function to show reply modal - UPDATED: Clear notification and hide success message
     function showReplyModal(token, name, batch, message) {
+      // Clear any existing notification
+      const notification = $('#notification');
+      notification.classList.remove('show');
+      
+      // Hide success message if visible
+      $('#successMessage').style.display = 'none';
+      
+      // Check if owner needs to set name
+      const userRole = getUserRole();
+      if (userRole === 'owner' && !localStorage.getItem(OWNER_NAME_KEY)) {
+        // Store reply data temporarily
+        window.pendingReplyData = { token, name, batch, message };
+        showOwnerNameModal();
+        return;
+      }
+      
       // Reset reply form
       $('#replyForm').reset();
       
@@ -4640,7 +4698,7 @@
       $('#replyForm').reset();
     }
     
-    // Function to submit reply
+    // Function to submit reply - UPDATED: Include owner name
     function submitReply(event) {
       event.preventDefault();
       const submitBtn = $('#replySubmitBtn');
@@ -4654,7 +4712,14 @@
       const replyMessage = $('#reply-message').value.trim();
       
       const userRole = getUserRole();
-      const answeredBy = userRole === 'owner' ? 'Admin : BOM' : 'Editor : Sahibul Musa Sium';
+      let answeredBy;
+      
+      if (userRole === 'owner') {
+        const ownerName = localStorage.getItem(OWNER_NAME_KEY) || 'Admin';
+        answeredBy = 'Admin : ' + ownerName;
+      } else {
+        answeredBy = 'Editor : Sahibul Musa Sium';
+      }
       
       const data = {
         action: 'submitReply',
@@ -4755,6 +4820,7 @@
       $('#answer-question').textContent = item.message || item.studentComment || 'কোনো প্রশ্ন নেই';
       $('#answer-reply').textContent = item.reply || 'কোনো উত্তর নেই';
       $('#answer-answered-by').textContent = item.answeredBy || 'Admin';
+      $('#answer-student-name').textContent = item.name || 'শিক্ষার্থী';
       
       // Set up the "বুঝেছি" button with current token
       const understoodBtn = $('#answer-understood-btn');
@@ -4765,7 +4831,7 @@
       };
       
       $('#answerModal').style.display = 'flex';
-      $('#answerModal').style.zIndex = '10001';
+      $('#answerModal').style.zIndex = '10006';
     }
     
     // NEW: Function to remove token and close modal
@@ -4815,6 +4881,40 @@
     // Function to hide answer modal
     function hideAnswerModal() {
       $('#answerModal').style.display = 'none';
+    }
+    
+    // Owner Name Modal Functions
+    function showOwnerNameModal() {
+      // Hide any success message
+      $('#successMessage').style.display = 'none';
+      // Clear any existing notification
+      const notification = $('#notification');
+      notification.classList.remove('show');
+      
+      $('#ownerNameModal').style.display = 'flex';
+    }
+    
+    function hideOwnerNameModal() {
+      $('#ownerNameModal').style.display = 'none';
+    }
+    
+    function saveOwnerName(event) {
+      event.preventDefault();
+      const ownerName = $('#ownerName').value.trim();
+      if (ownerName) {
+        localStorage.setItem(OWNER_NAME_KEY, ownerName);
+        hideOwnerNameModal();
+        showNotification('নাম সফলভাবে সংরক্ষিত হয়েছে!', false);
+        
+        // After saving, open the reply modal (if there is pending reply data)
+        if (window.pendingReplyData) {
+          const { token, name, batch, message } = window.pendingReplyData;
+          showReplyModal(token, name, batch, message);
+          window.pendingReplyData = null;
+        }
+      } else {
+        showNotification("নাম লিখুন!", true);
+      }
     }
 
     async function loadInitialData() {
@@ -5888,8 +5988,15 @@
 
     let storedName = localStorage.getItem('userName') || '';
 
-    // UPDATED: Show name modal function with form reset
+    // UPDATED: Show name modal function with form reset and notification clear
     function showNameModal(){ 
+      // Clear any existing notification
+      const notification = $('#notification');
+      notification.classList.remove('show');
+      
+      // Hide success message if visible
+      $('#successMessage').style.display = 'none';
+      
       $('#nameModal').style.display='flex'; 
       // Reset form
       $('#nameForm').reset();
@@ -5920,8 +6027,15 @@
       }
     }
 
-    // UPDATED: Show form with form reset
+    // UPDATED: Show form with form reset and notification clear
     function showForm(){ 
+      // Clear any existing notification
+      const notification = $('#notification');
+      notification.classList.remove('show');
+      
+      // Hide success message if visible
+      $('#successMessage').style.display = 'none';
+      
       $('#formModal').style.display='flex'; 
       // Reset form and set name
       $('#myForm').reset();
@@ -5972,6 +6086,9 @@
       }
       if (e.target == $('#answerModal')) {
         hideAnswerModal();
+      }
+      if (e.target == $('#ownerNameModal')) {
+        hideOwnerNameModal();
       }
     });
 
