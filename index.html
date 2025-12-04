@@ -2971,13 +2971,7 @@
     }
 
     /* NEW: Answer modal name colors */
-    .student-name-value {
-      color: #FFD700; /* Gold color for student */
-      font-weight: 700;
-      text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-    }
-
-    .answered-by-name {
+     .answered-by-name {
       color: #00FFFF; /* Cyan color for replier */
       font-weight: 700;
       text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
@@ -3636,7 +3630,7 @@
   <div class="answer-modal-content">
     <button class="answer-modal-close" onclick="hideAnswerModal()">×</button>
     <div class="answer-header">
-      <h2 class="bangla-font">আপনার প্রশ্নের উত্তর</h2>
+      <h2 class="bangla-font">আপনার মন্তব্যের উত্তর</h2>
       <p class="bangla-font" id="answer-token-info"></p>
     </div>
     
@@ -3649,10 +3643,6 @@
       <div class="question-box">
         <div class="question-label bangla-font">আপনার প্রশ্ন/মতামত:</div>
         <div class="question-content bangla-font" id="answer-question"></div>
-        <div class="student-name" style="margin-top: 10px;">
-          <span class="bangla-font" style="color: var(--text-muted);">প্রশ্নকারী: </span>
-          <span class="student-name-value bangla-font" id="answer-student-name"></span>
-        </div>
       </div>
       
       <div class="reply-box">
@@ -3668,12 +3658,12 @@
     
     <!-- New "বুঝেছি" Button -->
     <button class="answer-understood-btn bangla-font" id="answer-understood-btn" onclick="removeTokenAndClose()">
-      <i class="fas fa-check-circle"></i> বুঝেছি (টোকেন ডিলিট হবে)
+      <i class="fas fa-check-circle"></i> বুঝেছি!
     </button>
     
     <div class="answered-by">
       <small class="bangla-font" style="color: var(--text-muted);">
-        * "বুঝেছি" বাটনে ক্লিক করলে এই টোকেনটি আপনার ডিভাইস থেকে ডিলিট হয়ে যাবে এবং এই উত্তর আর দেখাবে না
+        " 'বুঝেছি' বাটনে ক্লিক করলে এই উত্তর আর দেখাবে না "
       </small>
     </div>
   </div>
@@ -4815,19 +4805,18 @@
     // UPDATED: Function to show answer modal with correct data structure and personalized message
     function showAnswerModal(item) {
       const studentName = localStorage.getItem('userName') || 'শিক্ষার্থী';
-      $('#answer-token-info').innerHTML = `প্রিয় <span style="color: var(--primary); font-weight: 600;">${studentName}</span> আপনার কমেন্টের উত্তর পাওয়া গেছে!`;
+      $('#answer-token-info').innerHTML = `প্রিয় <span style="color: var(--primary); font-weight: 600;">${studentName}</span> আপনার কমেন্টের উত্তর দেওয়া হয়েছে!`;
       $('#answer-token-value').textContent = item.token;
       $('#answer-question').textContent = item.message || item.studentComment || 'কোনো প্রশ্ন নেই';
       $('#answer-reply').textContent = item.reply || 'কোনো উত্তর নেই';
       $('#answer-answered-by').textContent = item.answeredBy || 'Admin';
-      $('#answer-student-name').textContent = item.name || 'শিক্ষার্থী';
       
       // Set up the "বুঝেছি" button with current token
       const understoodBtn = $('#answer-understood-btn');
       understoodBtn.onclick = function() {
         removeToken(item.token.toString());
         hideAnswerModal();
-        showNotification("টোকেন ডিলিট হয়েছে! উত্তর সফলভাবে দেখা হয়েছে।", false);
+        showNotification("উত্তর সফলভাবে দেখা হয়েছে!", false);
       };
       
       $('#answerModal').style.display = 'flex';
@@ -4841,7 +4830,7 @@
         removeToken(tokenValue);
       }
       hideAnswerModal();
-      showNotification("টোকেন ডিলিট হয়েছে! উত্তর সফলভাবে দেখা হয়েছে।", false);
+      showNotification("উত্তর সফলভাবে দেখা হয়েছে!", false);
     }
     
     // Function to show answer for token (new function)
