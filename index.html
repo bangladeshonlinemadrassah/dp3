@@ -582,6 +582,11 @@
       transform: scale(1.2);
     }
 
+    /* Slideshow paused state */
+.slideshow-container.paused .slideshow-image.active {
+  transform: scale(1) !important;
+        }
+
     .slideshow-dot:hover {
       background-color: rgba(255, 255, 255, 0.8);
     }
@@ -3314,7 +3319,7 @@
         <p class="bangla-font">শিক্ষার যাত্রায় এক নতুন দিগন্ত। বাংলাদেশ অনলাইন মাদ্রাসা (BOM) এর প্রাইভেট ব্যাচের আলিম-২৭ শিক্ষার্থীদের জন্য প্রিমিয়াম লার্নিং এক্সপেরিয়েন্স</p>
       </div>
       <!-- New Slideshow Box - UPDATED -->
-      <div class="slideshow-container fade-in">
+      <div class="slideshow-container fade-in" id="slideshowContainer">
         <img class="slideshow-image active" src="https://i.imgur.com/RldTGhI.jpeg" alt="Image 1">
         <img class="slideshow-image" src="https://i.imgur.com/dO8AshB.jpeg" alt="Image 2">
         <div class="slideshow-dots">
