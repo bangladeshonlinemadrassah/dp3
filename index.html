@@ -5966,56 +5966,90 @@
       showDashboard();
     });
 
-    // UPDATED Slideshow functionality
-    function initSlideshow() {
-      const slideshowImages = document.querySelectorAll('.slideshow-image');
-      const slideshowDots = document.querySelectorAll('.slideshow-dot');
-      let currentIndex = 0;
-      let slideshowInterval;
-      
-      function showNextImage() {
-        // Remove active class from all images and dots
-        slideshowImages.forEach(img => img.classList.remove('active'));
-        slideshowDots.forEach(dot => dot.classList.remove('active'));
-        
-        // Update current index
-        currentIndex = (currentIndex + 1) % slideshowImages.length;
-        
-        // Add active class to current image and dot
-        slideshowImages[currentIndex].classList.add('active');
-        slideshowDots[currentIndex].classList.add('active');
-      }
-      
-      function showImage(index) {
-        // Remove active class from all images and dots
-        slideshowImages.forEach(img => img.classList.remove('active'));
-        slideshowDots.forEach(dot => dot.classList.remove('active'));
-        
-        // Update current index
-        currentIndex = index;
-        
-        // Add active class to current image and dot
-        slideshowImages[currentIndex].classList.add('active');
-        slideshowDots[currentIndex].classList.add('active');
-        
-        // Restart the interval
-        restartSlideshow();
-      }
-      
-      function restartSlideshow() {
-        if (slideshowInterval) clearInterval(slideshowInterval);
-        slideshowInterval = setInterval(showNextImage, 4000);
-      }
-      
-      // Add click event to dots
-      slideshowDots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-          showImage(index);
-        });
-      });
-      
-      // Start slideshow
-      restartSlideshow();
+    // UPDATED Slideshow functionality with pause/resume on click
+function initSlideshow() {
+  const slideshowImages = document.querySelectorAll('.slideshow-image');
+  const slideshowDots = document.querySelectorAll('.slideshow-dot');
+  const slideshowContainer = document.getElementById('slideshowContainer');
+  let currentIndex = 0;
+  let slideshowInterval;
+  let isPlaying = true;
+  
+  function showNextImage() {
+    slideshowImages.forEach(img => img.classList.remove('active'));
+    slideshowDots.forEach(dot => dot.classList.remove('active'));
+    
+    currentIndex = (currentIndex + 1) % slideshowImages.length;
+    
+    slideshowImages[currentIndex].classList.add('active');
+    slideshowDots[currentIndex].classList.add('active');
+  }
+  
+  function showImage(index) {
+    slideshowImages.forEach(img => img.classList.remove('active'));
+    slideshowDots.forEach(dot => dot.classList.remove('active'));
+    
+    currentIndex = index;
+    
+    slideshowImages[currentIndex].classList.add('active');
+    slideshowDots[currentIndex].classList.add('active');
+    
+    restartSlideshow();
+  }
+  
+  function startSlideshow() {
+    if (slideshowInterval) clearInterval(slideshowInterval);
+    slideshowInterval = setInterval(showNextImage, 4000);
+    isPlaying = true;
+    slideshowContainer.classList.remove('paused');
+  }
+  
+  function pauseSlideshow() {
+    if (slideshowInterval) {
+      clearInterval(slideshowInterval);
+      slideshowInterval = null;
+    }
+    isPlaying = false;
+    slideshowContainer.classList.add('paused');
+  }
+  
+  function toggleSlideshow() {
+    if (isPlaying) {
+      pauseSlideshow();
+    } else {
+      startSlideshow();
+    }
+  }
+  
+  function restartSlideshow() {
+    if (isPlaying) {
+      startSlideshow();
+    }
+  }
+  
+  // Add click event to dots
+  slideshowDots.forEach((dot, index) => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showImage(index);
+    });
+  });
+  
+  // Add click event to images for pause/resume
+  slideshowImages.forEach(img => {
+    img.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleSlideshow();
+    });
+  });
+  
+  // Add click event to entire slideshow container
+  slideshowContainer.addEventListener('click', () => {
+    toggleSlideshow();
+  });
+  
+  // Start slideshow
+  startSlideshow();
     }
 
     let storedName = localStorage.getItem('userName') || '';
