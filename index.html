@@ -523,6 +523,7 @@
       line-height: 1.8;
     }
 
+    /* SLIDESHOW STYLES - UPDATED */
     .slideshow-container {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -534,21 +535,55 @@
       position: relative;
       overflow: hidden;
       font-size: 0.95rem;
-      max-height: 300px;
+      height: 350px; /* নির্দিষ্ট উচ্চতা */
       margin-bottom: 24px;
     }
 
     .slideshow-image {
       width: 100%;
-      height: auto;
-      display: none;
-      transition: opacity 0.5s ease-in-out;
-      cursor: pointer;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out, transform 8s ease-in-out;
+      transform: scale(1);
     }
 
     .slideshow-image.active {
-      display: block;
       opacity: 1;
+      transform: scale(1.05);
+    }
+
+    /* Slideshow navigation dots */
+    .slideshow-dots {
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      z-index: 10;
+    }
+
+    .slideshow-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .slideshow-dot.active {
+      background-color: var(--primary);
+      transform: scale(1.2);
+    }
+
+    .slideshow-dot:hover {
+      background-color: rgba(255, 255, 255, 0.8);
     }
 
     .today-classes-table {
@@ -3278,11 +3313,15 @@
         <h1 class="bangla-font">ALIM-27 "Top Achievers Ignition Batch"</h1>
         <p class="bangla-font">শিক্ষার যাত্রায় এক নতুন দিগন্ত। বাংলাদেশ অনলাইন মাদ্রাসা (BOM) এর প্রাইভেট ব্যাচের আলিম-২৭ শিক্ষার্থীদের জন্য প্রিমিয়াম লার্নিং এক্সপেরিয়েন্স</p>
       </div>
-      <!-- New Slideshow Box -->
+      <!-- New Slideshow Box - UPDATED -->
       <div class="slideshow-container fade-in">
-        <img class="slideshow-image" src="https://i.imgur.com/RldTGhI.jpeg" alt="Image 1">
+        <img class="slideshow-image active" src="https://i.imgur.com/RldTGhI.jpeg" alt="Image 1">
         <img class="slideshow-image" src="https://i.imgur.com/dO8AshB.jpeg" alt="Image 2">
+        <div class="slideshow-dots">
+          <div class="slideshow-dot active" data-index="0"></div>
+          <div class="slideshow-dot" data-index="1"></div>
         </div>
+      </div>
       <!-- Attractive Clock with Date -->
       <div class="clock-container fade-in stat-card">
         <div id="clock-time" class="clock-time"></div>
@@ -5922,55 +5961,56 @@
       showDashboard();
     });
 
-    // Slideshow functionality with pause on click
+    // UPDATED Slideshow functionality
     function initSlideshow() {
-      const images = [
-        'https://i.imgur.com/FCv9CTv.jpeg', // Replace with actual URLs
-        'https://example.com/image2.jpg',
-        'https://example.com/image3.jpg',
-        'https://example.com/image4.jpg'
-      ];
-      
       const slideshowImages = document.querySelectorAll('.slideshow-image');
+      const slideshowDots = document.querySelectorAll('.slideshow-dot');
       let currentIndex = 0;
       let slideshowInterval;
-      let isPlaying = true;
       
       function showNextImage() {
-        slideshowImages.forEach((img, index) => {
-          img.classList.remove('active');
-          if (index === currentIndex) {
-            img.classList.add('active');
-          }
-        });
-        currentIndex = (currentIndex + 1) % images.length;
+        // Remove active class from all images and dots
+        slideshowImages.forEach(img => img.classList.remove('active'));
+        slideshowDots.forEach(dot => dot.classList.remove('active'));
+        
+        // Update current index
+        currentIndex = (currentIndex + 1) % slideshowImages.length;
+        
+        // Add active class to current image and dot
+        slideshowImages[currentIndex].classList.add('active');
+        slideshowDots[currentIndex].classList.add('active');
       }
       
-      function startSlideshow() {
+      function showImage(index) {
+        // Remove active class from all images and dots
+        slideshowImages.forEach(img => img.classList.remove('active'));
+        slideshowDots.forEach(dot => dot.classList.remove('active'));
+        
+        // Update current index
+        currentIndex = index;
+        
+        // Add active class to current image and dot
+        slideshowImages[currentIndex].classList.add('active');
+        slideshowDots[currentIndex].classList.add('active');
+        
+        // Restart the interval
+        restartSlideshow();
+      }
+      
+      function restartSlideshow() {
         if (slideshowInterval) clearInterval(slideshowInterval);
         slideshowInterval = setInterval(showNextImage, 4000);
-        isPlaying = true;
       }
       
-      function stopSlideshow() {
-        clearInterval(slideshowInterval);
-        isPlaying = false;
-      }
-      
-      // Add click event to each image
-      slideshowImages.forEach(img => {
-        img.addEventListener('click', function() {
-          if (isPlaying) {
-            stopSlideshow();
-          } else {
-            startSlideshow();
-          }
+      // Add click event to dots
+      slideshowDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          showImage(index);
         });
       });
       
-      // Initial show and start
-      showNextImage();
-      startSlideshow();
+      // Start slideshow
+      restartSlideshow();
     }
 
     let storedName = localStorage.getItem('userName') || '';
@@ -6173,7 +6213,7 @@
       // Initialize dynamic placeholder
       initDynamicPlaceholder();
       
-      // Initialize slideshow
+      // Initialize slideshow - UPDATED
       initSlideshow();
       
       // Initialize Clock
