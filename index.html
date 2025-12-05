@@ -35,17 +35,49 @@
       border-bottom-right-radius: 12px;
     }
 
-    #default-page header .logo h3 {
-      font-family: "Russo One", sans-serif;
-      font-size: 40px;
-      letter-spacing: 2px;
-      background: linear-gradient(90deg, #ff00ff, #00eaff, #ffea00, #ff6bcb, #00ff55);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 12px #ffffff55;
-      display: inline-block;
-      margin: 6px 0;
-    }
+    /* Animated BOM Logo with Image Background */
+.animated-logo {
+  font-size: 60px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: scroll 15s linear infinite;
+  margin: 10px 0;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  letter-spacing: 3px;
+}
+
+.animated-logo {
+  background-image: 
+    url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?q=80&w=1600&auto=format&fit=crop'),
+    url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?q=80&w=1600&auto=format&fit=crop');
+}
+
+@keyframes scroll {
+  0% { background-position: 0 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .animated-logo {
+    font-size: 45px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-logo {
+    font-size: 35px;
+    letter-spacing: 1px;
+  }
+}
     
     /* TITLE */
     #default-page h1 {
@@ -3113,7 +3145,8 @@
   <div id="default-page">
     <header>
       <div class="logo">
-        <h3>BOM</h3></div>
+  <h3 class="animated-logo">BOM</h3>
+      </div>
     </header>
 
     <h1>বাংলাদেশ অনলাইন মাদ্রাসা</h1>
